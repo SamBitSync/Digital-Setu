@@ -21,3 +21,4 @@ venv/
 # Sensitive data
 .env
 *.key
+CLAUDE.md
