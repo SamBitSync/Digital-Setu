@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhimdhunga, Nagarjun Storymap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <!-- ALIN Foundation Splash Screen -->
+    <div id="splash-screen" class="splash-overlay">
+        <div class="splash-container">
+            <div class="logo-section">
+                <img src="ALIN_logo.jpg" alt="All In Foundation" class="alin-logo">
+                <h2 class="foundation-name">All In Foundation</h2>
+            </div>
+            
+            <div class="motto-section">
+                <div class="motto-text">
+                    <span class="check">Check</span>
+                    <span class="your">your</span>
+                    <span class="privilege">privilege</span>
+                    <span class="digital">digital</span>
+                </div>
+            </div>
+            
+            <div class="splash-footer">
+                <p>Exploring Digital Divides in Nepal</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- National Statistics Overlay -->
+    <div id="national-stats-overlay" class="stats-overlay">
+        <div class="stats-container">
+            <div class="stats-header">
+                <h1>Nepal's Digital Divide</h1>
+                <p class="stats-subtitle">Understanding the National Landscape</p>
+            </div>
+            
+            <div class="national-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-label">Internet Penetration</div>
+                    <div class="stat-detail">National Average</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">Rural Connectivity</div>
+                    <div class="stat-detail">vs 78% Urban</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">38%</div>
+                    <div class="stat-label">Digital Literacy</div>
+                    <div class="stat-detail">Population with basic digital skills</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">NPR 1,200</div>
+                    <div class="stat-label">Average Monthly Cost</div>
+                    <div class="stat-detail">Internet & Mobile Data</div>
+                </div>
+            </div>
+            
+            <div class="transition-text">
+                <p>But statistics tell only part of the story...</p>
+                <p><strong>Let's explore what digital access really means for families in Bhimdhunga, Nagarjun</strong></p>
+            </div>
+            
+            <div class="data-sources">
+                <h4>Sources:</h4>
+                <ul>
+                    <li>Nepal Telecommunications Authority (NTA) 2023</li>
+                    <li>Central Bureau of Statistics Nepal 2022</li>
+                    <li>World Bank Digital Nepal Report 2023</li>
+                    <li>Digital Literacy Survey Nepal 2023</li>
+                </ul>
+            </div>
+            
+            <div class="continue-prompt">
+                <p class="continue-text">Click anywhere or press any key to continue</p>
+                <div class="continue-indicator">▼</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="popup-header">
+                <h2 id="popup-title">Digital Divide Story</h2>
+                <div class="location-info">
+                    <p id="location-name" class="location-detail">-</p>
+                    <p id="interview-count" class="interview-detail">-</p>
+                </div>
+                <div class="access-indicator">
+                    <span id="access-level">Digital Access: </span>
+                    <span id="access-badge" class="badge">-</span>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="media-section">
+                    <div class="video-container">
+                        <video id="popup-video" controls>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="audio-container">
+                        <h4>Listen to their voice</h4>
+                        <audio id="popup-audio" controls>
+                            <source src="" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                
+                <div class="story-section">
+                    <div class="voice-panel">
+                        <h3>🎙️ In Their Own Words</h3>
+                        <blockquote id="resident-quote">-</blockquote>
+                        <p class="resident-name" id="resident-name">-</p>
+                        
+                        <div class="testimonial">
+                            <h4>Personal Experience:</h4>
+                            <p id="resident-testimonial">-</p>
+                        </div>
+                        
+                        <div class="reality-check">
+                            <h4>Behind the Statistics:</h4>
+                            <p id="reality-text">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-vs-reality">
+                    <div class="stats-panel">
+                        <h3>📊 Official Digital Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Internet Speed:</span>
+                                <span class="stat-value" id="internet-speed">-</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Devices:</span>
+                                <span class="stat-value" id="devices">-</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Monthly Cost:</span>
+                                <span class="stat-value" id="monthly-cost">-</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Digital Skills:</span>
+                                <span class="stat-value" id="digital-skills">-</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Online Services Used:</span>
+                                <span class="stat-value" id="online-services">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
