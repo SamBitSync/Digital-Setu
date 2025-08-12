@@ -13,6 +13,11 @@ body {
 #map {
     height: 100vh;
     width: 100%;
+    transition: width 0.3s ease;
+}
+
+.map-with-panel {
+    width: 60% !important;
 }
 
 /* ALIN Foundation Splash Screen */
@@ -495,25 +500,29 @@ body {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
+    right: -40%;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
+    transition: right 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.modal.show {
+    right: 0;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 2% auto;
+    margin: 0;
     padding: 0;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 800px;
-    max-height: 90vh;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.3s ease-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes slideIn {
@@ -920,5 +929,453 @@ body {
     
     .splash-footer p {
         font-size: 0.9rem;
+    }
+}
+
+/* Cinematic Video Overlay */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 2500;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#cinematic-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2600;
+}
+
+.skip-button {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid #60a5fa;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skip-button:hover {
+    background: rgba(96, 165, 250, 0.8);
+    transform: scale(1.05);
+}
+
+/* Video fade animations */
+@keyframes videoFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes videoFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.video-fade-in {
+    animation: videoFadeIn 0.5s ease-in;
+}
+
+.video-fade-out {
+    animation: videoFadeOut 0.5s ease-out forwards;
+}
+
+/* Responsive video overlay */
+@media (max-width: 768px) {
+    .video-controls {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .skip-button {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+/* Area marker animations and hover effects */
+.area-marker-container {
+    transition: all 0.3s ease;
+}
+
+.area-marker-container:hover .area-marker {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.area-marker {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Mixed access area styling */
+.mixed-area .area-marker {
+    background: linear-gradient(45deg, #8b5cf6, #fbbf24);
+    border-color: #7c3aed;
+}
+
+/* Pulse animation for area markers */
+@keyframes areaPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.area-marker-container.mixed-area {
+    animation: areaPulse 2s ease-in-out infinite;
+}
+
+/* Area text labels */
+.area-label-container {
+    pointer-events: none;
+}
+
+.area-text-label {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1f2937;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.ward-label {
+    background: rgba(139, 92, 246, 0.9);
+    color: white;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+/* Government Building Icon */
+.ward-office-marker {
+    cursor: pointer;
+}
+
+.government-building-icon {
+    width: 30px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.government-building-icon:hover {
+    transform: scale(1.1);
+}
+
+.building-base {
+    width: 30px;
+    height: 20px;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    border: 2px solid #6b7280;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+}
+
+.building-pillars {
+    display: flex;
+    justify-content: space-around;
+    width: 26px;
+    height: 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 2px;
+}
+
+.pillar {
+    width: 3px;
+    height: 12px;
+    background: #374151;
+    border-radius: 1px;
+}
+
+.building-roof {
+    width: 34px;
+    height: 8px;
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    border: 2px solid #5b21b6;
+    border-radius: 0 0 4px 4px;
+    margin-top: -2px;
+    position: relative;
+}
+
+.building-roof::before {
+    content: '🏛️';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    filter: grayscale(100%);
+}
+
+/* Government access badge styling */
+.badge.government-access {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    color: white;
+    border: 1px solid #6d28d9;
+}
+
+/* Education access badge styling */
+.badge.education-access {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: 1px solid #1d4ed8;
+}
+
+/* Social hub access badge styling */
+.badge.social-access {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+    border: 1px solid #991b1b;
+}
+
+/* Interview access badge styling */
+.badge.interview-access {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    border: 1px solid #3730a3;
+}
+
+/* Commerce access badge styling */
+.badge.commerce-access {
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+    color: white;
+    border: 1px solid #9a3412;
+}
+
+/* School Icon */
+.school-marker {
+    cursor: pointer;
+}
+
+.school-icon {
+    width: 45px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.school-icon:hover {
+    transform: scale(1.1);
+}
+
+.school-symbol {
+    font-size: 20px;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.school-base {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: 2px solid #1d4ed8;
+    border-radius: 8px;
+    padding: 3px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.school-text {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.school-label {
+    background: rgba(59, 130, 246, 0.9);
+    color: white;
+    border: 1px solid rgba(29, 78, 216, 0.3);
+}
+
+/* House marker styling */
+.house-marker {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.house-marker i {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.house-marker:hover i {
+    transform: scale(1.2);
+}
+
+/* House marker access level specific styling */
+.house-marker.high-access i {
+    filter: drop-shadow(0 2px 4px rgba(34, 197, 94, 0.4));
+}
+
+.house-marker.medium-access i {
+    filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.4));
+}
+
+.house-marker.low-access i {
+    filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.4));
+}
+
+/* Khajaghar marker styling */
+.khajaghar-marker {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.khajaghar-marker i {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.khajaghar-marker:hover i {
+    transform: scale(1.2);
+}
+
+.khajaghar-label {
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+    border: 1px solid rgba(185, 28, 28, 0.3);
+}
+
+/* Street Interview marker styling */
+.interview-marker {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interview-marker i {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.interview-marker:hover i {
+    transform: scale(1.2);
+}
+
+/* Shop marker styling */
+.shop-marker {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-marker i {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.shop-marker:hover i {
+    transform: scale(1.2);
+}
+
+/* Modal responsive design */
+@media (max-width: 768px) {
+    .modal {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .modal.show {
+        right: 0;
+    }
+    
+    .map-with-panel {
+        width: 100% !important;
+    }
+    
+    .modal-content {
+        width: 100%;
+        margin: 0;
+        max-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+/* Responsive adjustments for labels */
+@media (max-width: 768px) {
+    .area-text-label {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+    
+    .government-building-icon {
+        width: 25px;
+        height: 30px;
+    }
+    
+    .building-base {
+        width: 25px;
+        height: 16px;
+    }
+    
+    .building-pillars {
+        width: 21px;
+        height: 10px;
+        bottom: 6px;
+    }
+    
+    .building-roof {
+        width: 29px;
+        height: 6px;
+    }
+    
+    .school-icon {
+        width: 35px;
+        height: 32px;
+    }
+    
+    .school-symbol {
+        font-size: 16px;
+    }
+    
+    .school-text {
+        font-size: 7px;
+    }
+    
+    .house-marker i {
+        font-size: 20px;
+    }
+    
+    .khajaghar-marker i {
+        font-size: 16px;
+    }
+    
+    .interview-marker i {
+        font-size: 15px;
+    }
+    
+    .shop-marker i {
+        font-size: 18px;
     }
 }

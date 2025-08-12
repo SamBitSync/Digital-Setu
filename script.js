@@ -360,7 +360,7 @@ function loadFallbackBoundaries() {
 // Digital divide stories from Bhimdhunga, Nagarjun
 const houseData = [
     {
-        id: 2,
+        id: 1,
         lat: 27.725362, 
         lng: 85.224747,
         title: "The IT Professional's Home",
@@ -383,149 +383,307 @@ const houseData = [
     },
     {
         id: 2,
-        lat: 27.7466,
-        lng: 85.2656,
-        title: "The Elderly Couple's Struggle",
-        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-        audio: "audio/elderly_couple.mp3",
-        digitalAccess: "low",
+        lat: 27.738000,
+        lng: 85.238667,
+        title: "Connected Family Home",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/family2_testimony.mp3",
+        digitalAccess: "high",
         stats: {
-            internetSpeed: "5 Mbps Shared",
-            devices: "1 basic smartphone",
-            monthlyDataCost: "NPR 500",
-            digitalSkills: "Beginner",
-            onlineServices: "None regularly used"
+            internetSpeed: "50 Mbps Fiber",
+            devices: "4 smartphones, 2 laptops, 1 tablet",
+            monthlyDataCost: "NPR 1,800",
+            digitalSkills: "Good",
+            onlineServices: "Banking, Education, Shopping"
         },
         story: {
-            quote: "\"The mobile is too complicated. We can't even book doctor appointments online anymore.\"",
-            reality: "Official statistics count them as 'connected' because they own a smartphone, but they can't access most digital services independently.",
-            testimonial: "Banks say 'use mobile banking,' hospitals say 'book online,' but nobody teaches us how. We feel left behind in our own neighborhood.",
-            resident: "Laxmi & Ram Maharjan, Retired Teachers"
+            quote: "\"Our children can do homework online, but when internet fails, they struggle with offline alternatives.\"",
+            reality: "High-speed internet enables digital learning, but creates dependency. Power outages and connectivity issues significantly impact daily routines.",
+            testimonial: "We're digitally connected but realize how dependent we've become. During the last internet outage, even simple tasks became difficult.",
+            resident: "Maya Shrestha, Teacher"
         }
     },
     {
         id: 3,
-        lat: 27.7473,
-        lng: 85.2663,
-        title: "The Student's Dilemma",
-        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-        audio: "audio/student_voice.mp3",
+        lat: 27.738500,
+        lng: 85.237750,
+        title: "Multi-generational Digital Divide",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        audio: "audio/family3_voices.mp3",
         digitalAccess: "medium",
         stats: {
-            internetSpeed: "20 Mbps Shared",
-            devices: "1 smartphone, 1 shared laptop",
-            monthlyDataCost: "NPR 1,200",
-            digitalSkills: "Intermediate",
-            onlineServices: "Education, Social Media"
+            internetSpeed: "25 Mbps",
+            devices: "5 smartphones, 1 laptop",
+            monthlyDataCost: "NPR 1,500",
+            digitalSkills: "Mixed - youth advanced, elders basic",
+            onlineServices: "Social media, some banking"
         },
         story: {
-            quote: "\"I have internet but not reliable enough for online exams. Sometimes I walk to cyber cafe for important submissions.\"",
-            reality: "Studies show 80% household internet penetration in the area, but quality and reliability aren't measured in these statistics.",
-            testimonial: "My online classes freeze during monsoon. I've failed two assignments because of poor connection, but surveys count me as 'digitally literate.'",
-            resident: "Priya Tamang, University Student"
+            quote: "\"My grandchildren help me with digital payments, but I worry about being dependent on them.\"",
+            reality: "Three generations under one roof experience different levels of digital comfort, creating both support networks and dependencies.",
+            testimonial: "The young ones are always on phones helping us older people with apps and forms. It's good but also makes us feel helpless sometimes.",
+            resident: "Bishnu Maharjan, Retired Government Officer"
         }
     },
     {
         id: 4,
-        lat: 27.7464,
-        lng: 85.2653,
-        title: "The Small Business Owner",
-        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-        audio: "audio/business_owner.mp3",
-        digitalAccess: "medium",
+        lat: 27.739389,
+        lng: 85.236333,
+        title: "Small Business Digital Transition",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/business_family.mp3",
+        digitalAccess: "high",
         stats: {
-            internetSpeed: "25 Mbps",
-            devices: "2 smartphones, 1 laptop, 1 POS system",
-            monthlyDataCost: "NPR 1,800",
-            digitalSkills: "Self-taught",
-            onlineServices: "Digital payments, Social media marketing"
+            internetSpeed: "75 Mbps",
+            devices: "3 smartphones, 2 laptops, POS system",
+            monthlyDataCost: "NPR 2,200",
+            digitalSkills: "Business-focused",
+            onlineServices: "Digital payments, inventory, social marketing"
         },
         story: {
-            quote: "\"Digital payments brought more customers, but I lost many elderly ones who only know cash.\"",
-            reality: "Government data shows increasing digital payment adoption, but doesn't capture the social exclusion of those who can't adapt.",
-            testimonial: "I'm counted as a digital business success story, but I see daily how technology divides my community between those who can and cannot adapt.",
-            resident: "Binod Shrestha, Grocery Shop Owner"
+            quote: "\"Digital payments increased our customers, but we lost some elderly regulars who prefer cash only.\"",
+            reality: "Business digitization brings efficiency and new customers while potentially excluding those less comfortable with technology.",
+            testimonial: "Our business grew with digital tools, but we see how it creates barriers for some community members who struggle with technology.",
+            resident: "Raju Tamang, Shop Owner"
         }
     },
     {
         id: 5,
-        lat: 27.7476,
-        lng: 85.2666,
-        title: "The Working Mother's Balance",
-        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-        audio: "audio/working_mother.mp3",
-        digitalAccess: "high",
+        lat: 27.731611,
+        lng: 85.236083,
+        title: "Rural-Urban Digital Bridge",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        audio: "audio/rural_urban_family.mp3",
+        digitalAccess: "medium",
         stats: {
-            internetSpeed: "50 Mbps",
-            devices: "3 smartphones, 2 laptops, 1 tablet",
-            monthlyDataCost: "NPR 2,000",
-            digitalSkills: "Advanced",
-            onlineServices: "Work, Banking, Education, Healthcare"
+            internetSpeed: "20 Mbps (inconsistent)",
+            devices: "4 smartphones, 1 shared laptop",
+            monthlyDataCost: "NPR 1,200",
+            digitalSkills: "Developing",
+            onlineServices: "Remittances, video calls, basic banking"
         },
         story: {
-            quote: "\"Technology helps me work from home, but my domestic help can't use the digital payment apps I prefer.\"",
-            reality: "High digital usage statistics in the household mask the digital divide with domestic workers and service providers in the same locality.",
-            testimonial: "I'm empowered by technology, but I see how it creates barriers between me and others in my community who lack digital skills.",
-            resident: "Sunita Rajbhandari, Marketing Manager"
+            quote: "\"We moved here from the village for better internet, but still help relatives back home with digital services.\"",
+            reality: "Families serve as digital bridges between rural areas and urban connectivity, supporting extended networks while managing their own digital adaptation.",
+            testimonial: "Every week relatives call asking us to help them with online forms or digital payments. We're like the tech support for our whole extended family.",
+            resident: "Kamala Gurung, Homemaker"
         }
     },
     {
-        id: 1,
-        lat: 27.72446628479255,
-        lng: 85.22487217983753,
-        title: "Digital Access at Majuwa Village House",
-        locationName: "Traditional Village House, Majuwa",
-        interviewCount: "2 residents interviewed",
-        locationType: "village_house",
-        video: "", // To be added when interview content is available
-        audio: "", // To be added when interview content is available
-        digitalAccess: "high", // Placeholder - to be determined based on interview data
+        id: 6,
+        lat: 27.729194,
+        lng: 85.234389,
+        title: "Elderly Couple's Adaptation Journey",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        audio: "audio/elderly_adaptation.mp3",
+        digitalAccess: "low",
         stats: {
-            internetSpeed: "350 Mbps", // To be determined from interviews
-            devices: "TBD", // To be determined from interviews
-            monthlyDataCost: "TBD", // To be determined from interviews
-            digitalSkills: "TBD", // To be determined from interviews
-            onlineServices: "TBD" // To be determined from interviews
+            internetSpeed: "10 Mbps (shared)",
+            devices: "2 basic smartphones",
+            monthlyDataCost: "NPR 800",
+            digitalSkills: "Limited but learning",
+            onlineServices: "WhatsApp, some banking"
         },
         story: {
-            quote: "", // To be added when interview content is available
-            reality: "", // To be added when interview content is available
-            testimonial: "", // To be added when interview content is available
-            resident: "2 residents interviewed at Majuwa village house"
+            quote: "\"Our grandchildren taught us WhatsApp, but online banking still scares us.\"",
+            reality: "Senior citizens face the steepest learning curve in digital adoption, often relying on family members for digital tasks while trying to maintain independence.",
+            testimonial: "We want to learn but worry about making mistakes with money online. The buttons are small and the language is confusing.",
+            resident: "Devi & Hari Pradhan, Retired Farmers"
+        }
+    },
+    {
+        id: 7,
+        lat: 27.726012,
+        lng: 85.224607,
+        title: "Young Professional's Home Office",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/remote_worker.mp3",
+        digitalAccess: "high",
+        stats: {
+            internetSpeed: "100 Mbps dedicated",
+            devices: "2 laptops, 3 smartphones, tablet, smart TV",
+            monthlyDataCost: "NPR 3,000",
+            digitalSkills: "Expert level",
+            onlineServices: "All digital - work, banking, entertainment, shopping"
         },
-        context: "First interview site in our digital divide research - traditional Nepali village building"
+        story: {
+            quote: "\"I live completely digital, but I see how it isolates me from neighbors who aren't as connected.\"",
+            reality: "Remote workers represent the most digitally integrated segment but often become inadvertent examples of digital inequality in their communities.",
+            testimonial: "My internet is faster than some offices, but my elderly neighbor asks me to help with basic phone calls because her connection is unreliable.",
+            resident: "Anita Shrestha, Software Developer"
+        }
+    },
+    {
+        id: 8,
+        lat: 27.726464,
+        lng: 85.224558,
+        title: "Student Family Struggles",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        audio: "audio/student_family.mp3",
+        digitalAccess: "medium",
+        stats: {
+            internetSpeed: "15 Mbps (inconsistent)",
+            devices: "3 smartphones, 1 shared laptop",
+            monthlyDataCost: "NPR 1,000",
+            digitalSkills: "Students advanced, parents basic",
+            onlineServices: "Education, social media, limited banking"
+        },
+        story: {
+            quote: "\"During online classes, we have to choose which child gets to use the laptop for homework.\"",
+            reality: "Educational digitization reveals household resource constraints, where sharing devices becomes a daily challenge affecting children's academic performance.",
+            testimonial: "When both kids have online assignments, one has to wait. The internet slows down when everyone is using it, and classes get interrupted.",
+            resident: "Sita Maharjan, Mother of Two Students"
+        }
+    },
+    {
+        id: 9,
+        lat: 27.726005,
+        lng: 85.224614,
+        title: "Extended Family Digital Hub",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/extended_family.mp3",
+        digitalAccess: "high",
+        stats: {
+            internetSpeed: "60 Mbps fiber",
+            devices: "8 smartphones, 3 laptops, 2 tablets, smart appliances",
+            monthlyDataCost: "NPR 2,500",
+            digitalSkills: "Mixed across generations",
+            onlineServices: "Comprehensive digital services"
+        },
+        story: {
+            quote: "\"Our house became the family tech support center - relatives come here for internet and digital help.\"",
+            reality: "Well-connected households often become informal community digital service centers, supporting extended networks while managing their own high usage demands.",
+            testimonial: "Every weekend relatives visit to video call family abroad, print documents, or get help with government forms online. We're like a one-family internet cafe.",
+            resident: "Ramesh Tamang, Joint Family Head"
+        }
     }
 ];
 
-// Custom colored circle icons based on digital access level
+// Community area stories from Nagarjun Municipality Ward 8
+const areaData = [
+    {
+        id: 1,
+        lat: 27.732,
+        lng: 85.240,
+        title: "Majuwa Community Area",
+        areaName: "Majuwa",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/majuwa_community.mp3",
+        communityType: "traditional_village",
+        digitalAccess: "mixed",
+        stats: {
+            households: "45 households",
+            internetCoverage: "78% coverage",
+            averageSpeed: "15-25 Mbps",
+            digitalLiteracy: "45% adults, 85% youth",
+            mainChallenges: "Infrastructure gaps, cost barriers"
+        },
+        story: {
+            quote: "\"We live between two worlds - our traditional village life and the digital age demanding connection.\"",
+            community_voice: "Majuwa represents the intersection of traditional Nepali village culture with modern digital demands. While younger generations adapt quickly, older community members struggle with the rapid technological changes.",
+            digital_divide: "The community shows stark contrasts - tech-savvy youth helping elderly neighbors access government services online, while traditional practices continue alongside smartphone usage.",
+            resident: "Community Leaders & Residents of Majuwa"
+        },
+        challenges: [
+            "Inconsistent internet connectivity during monsoon",
+            "High data costs relative to local incomes", 
+            "Limited digital literacy programs for seniors",
+            "Language barriers with English-only interfaces"
+        ]
+    },
+    {
+        id: 2,
+        lat: 27.728,
+        lng: 85.245,
+        title: "Thaple Community Area", 
+        areaName: "Thaple",
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        audio: "audio/thaple_voices.mp3",
+        communityType: "mixed_residential",
+        digitalAccess: "moderate",
+        stats: {
+            households: "62 households",
+            internetCoverage: "82% coverage", 
+            averageSpeed: "20-40 Mbps",
+            digitalLiteracy: "58% adults, 90% youth",
+            mainChallenges: "Quality inconsistency, digital skills gap"
+        },
+        story: {
+            quote: "\"Every family has smartphones, but not every family knows how to use them for anything beyond calls and social media.\"",
+            community_voice: "Thaple has better infrastructure than neighboring areas but faces quality and reliability issues. The community is actively working on digital inclusion initiatives.",
+            digital_divide: "While most households have internet access, there's a significant divide in how effectively different demographics utilize digital services - from basic communication to accessing healthcare and education services online.",
+            resident: "Thaple Community Development Committee"
+        },
+        challenges: [
+            "Service interruptions affect home-based businesses",
+            "Lack of local technical support",
+            "Digital payment adoption slow among elderly",
+            "Online education challenges during COVID highlighted gaps"
+        ]
+    },
+    {
+        id: 3,
+        lat: 27.735,
+        lng: 85.238,
+        title: "Buspark Community Area",
+        areaName: "Buspark", 
+        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        audio: "audio/buspark_interviews.mp3",
+        communityType: "commercial_residential",
+        digitalAccess: "high",
+        stats: {
+            households: "38 households + businesses",
+            internetCoverage: "95% coverage",
+            averageSpeed: "30-50 Mbps", 
+            digitalLiteracy: "72% adults, 95% youth",
+            mainChallenges: "Digital security, information overload"
+        },
+        story: {
+            quote: "\"Being near the bus park means we're connected to everything - roads, internet, opportunities, but also all the problems that come with connectivity.\"",
+            community_voice: "Buspark area benefits from commercial infrastructure with high-speed internet and digital services, but faces challenges of urban digital life including security concerns and information management.",
+            digital_divide: "The divide here isn't about access but about digital wellness and security. High connectivity brings cybersecurity risks, online fraud attempts, and the challenge of managing information overload.",
+            resident: "Local Business Owners & Residents"
+        },
+        challenges: [
+            "Cybersecurity threats and online fraud attempts",
+            "Information overload affecting productivity", 
+            "Privacy concerns with multiple digital services",
+            "Balancing screen time in families"
+        ]
+    }
+];
+
+// Custom house icons based on digital access level
 const getLocationIcon = (accessLevel) => {
     let color, className;
     
     switch(accessLevel) {
         case 'high':
             color = '#22c55e'; // Green for good connectivity
-            className = 'access-marker high-access';
+            className = 'house-marker high-access';
             break;
         case 'medium':
             color = '#fbbf24'; // Yellow for limited access
-            className = 'access-marker medium-access';
+            className = 'house-marker medium-access';
             break;
         case 'low':
             color = '#ef4444'; // Red for poor connectivity/high digital divide
-            className = 'access-marker low-access';
+            className = 'house-marker low-access';
             break;
         default:
             color = '#6b7280'; // Gray for unknown
-            className = 'access-marker';
+            className = 'house-marker';
     }
     
     return L.divIcon({
-        html: `<div class="access-circle" style="background-color: ${color};"></div>`,
-        iconSize: [35, 35],
+        html: `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`,
+        iconSize: [30, 30],
         className: className,
-        iconAnchor: [22.5, 22.5]
+        iconAnchor: [15, 25]
     });
 };
+
+// Area data kept for reference (not used for markers, but for future community information)
 
 // Store markers but don't add them immediately
 let houseMarkers = [];
@@ -534,6 +692,259 @@ houseData.forEach(house => {
         .on('click', () => openPopup(house));
     houseMarkers.push(marker);
 });
+
+// Community area circles (oval overlays with center + radius)
+let thapleCircle = null;
+let busparkCircle = null; 
+let wardOfficeCircle = null;
+let majuwaCircle = null;
+
+// Area text labels
+let areaLabels = [];
+let wardOfficeMarker = null;
+let schoolMarker = null;
+let khajagharMarkers = [];
+let streetInterviewMarkers = [];
+let shopMarker = null;
+
+// Create area circular overlays
+function createAreaBoundaries() {
+    // Thaple: blue theme, 400m radius
+    thapleCircle = L.circle([27.738486, 85.235668], {
+        color: '#2563eb',
+        weight: 3,
+        opacity: 0,
+        fillColor: '#3b82f6',
+        fillOpacity: 0,
+        radius: 400,
+        className: 'thaple-highlight'
+    }).addTo(map);
+    
+    // Bhimdhunga Buspark: orange theme, 350m radius
+    busparkCircle = L.circle([27.729622, 85.236152], {
+        color: '#ea580c',
+        weight: 3,
+        opacity: 0,
+        fillColor: '#f97316',
+        fillOpacity: 0,
+        radius: 350,
+        className: 'buspark-highlight'
+    }).addTo(map);
+    
+    // Ward Office: purple theme, 50m radius (reduced)
+    wardOfficeCircle = L.circle([27.730474, 85.234039], {
+        color: '#7c3aed',
+        weight: 3,
+        opacity: 0,
+        fillColor: '#8b5cf6',
+        fillOpacity: 0,
+        radius: 50,
+        className: 'wardoffice-highlight'
+    }).addTo(map);
+    
+    // Majuwa: green theme, 250m radius
+    majuwaCircle = L.circle([27.725122, 85.226066], {
+        color: '#16a34a',
+        weight: 3,
+        opacity: 0,
+        fillColor: '#22c55e',
+        fillOpacity: 0,
+        radius: 250,
+        className: 'majuwa-highlight'
+    }).addTo(map);
+    
+    // Add text labels for all areas
+    createAreaLabels();
+    
+    // Create government building icon for Ward Office
+    createWardOfficeMarker();
+    
+    // Create school icon
+    createSchoolMarker();
+    
+    // Create khajaghar (tea shop) markers
+    createKhajagharMarkers();
+    
+    // Create street interview markers
+    createStreetInterviewMarkers();
+    
+    // Create shop marker
+    createShopMarker();
+}
+
+// Create text labels for areas
+function createAreaLabels() {
+    const labelStyle = {
+        permanent: true,
+        direction: 'center',
+        className: 'area-label'
+    };
+    
+    // Thaple label
+    const thapleLabel = L.marker([27.738486, 85.235668], {
+        icon: L.divIcon({
+            html: '<div class="area-text-label">Thaple</div>',
+            className: 'area-label-container',
+            iconSize: [60, 20],
+            iconAnchor: [30, 10]
+        })
+    }).addTo(map);
+    areaLabels.push(thapleLabel);
+    
+    // Buspark label
+    const busparkLabel = L.marker([27.729622, 85.236152], {
+        icon: L.divIcon({
+            html: '<div class="area-text-label">Buspark</div>',
+            className: 'area-label-container',
+            iconSize: [60, 20],
+            iconAnchor: [30, 10]
+        })
+    }).addTo(map);
+    areaLabels.push(busparkLabel);
+    
+    // Majuwa label
+    const majuwaLabel = L.marker([27.725122, 85.226066], {
+        icon: L.divIcon({
+            html: '<div class="area-text-label">Majuwa</div>',
+            className: 'area-label-container',
+            iconSize: [60, 20],
+            iconAnchor: [30, 10]
+        })
+    }).addTo(map);
+    areaLabels.push(majuwaLabel);
+    
+    // Ward Office label (positioned slightly above the building icon)
+    const wardLabel = L.marker([27.730474, 85.234059], {
+        icon: L.divIcon({
+            html: '<div class="area-text-label ward-label">Ward Office</div>',
+            className: 'area-label-container',
+            iconSize: [80, 20],
+            iconAnchor: [40, 10]
+        })
+    }).addTo(map);
+    areaLabels.push(wardLabel);
+}
+
+// Create government building marker for Ward Office
+function createWardOfficeMarker() {
+    wardOfficeMarker = L.marker([27.730474, 85.234039], {
+        icon: L.divIcon({
+            html: `
+                <div class="government-building-icon">
+                    <div class="building-base"></div>
+                    <div class="building-pillars">
+                        <div class="pillar"></div>
+                        <div class="pillar"></div>
+                        <div class="pillar"></div>
+                    </div>
+                    <div class="building-roof"></div>
+                </div>
+            `,
+            className: 'ward-office-marker',
+            iconSize: [40, 40],
+            iconAnchor: [20, 35]
+        })
+    }).on('click', () => openWardOfficePopup()).addTo(map);
+}
+
+// Create school marker
+function createSchoolMarker() {
+    schoolMarker = L.marker([27.724667, 85.228028], {
+        icon: L.divIcon({
+            html: `
+                <div class="school-icon">
+                    <div class="school-symbol">🎓</div>
+                    <div class="school-base">
+                        <div class="school-text">School</div>
+                    </div>
+                </div>
+            `,
+            className: 'school-marker',
+            iconSize: [50, 45],
+            iconAnchor: [25, 40]
+        })
+    }).on('click', () => openSchoolPopup()).addTo(map);
+}
+
+// Create khajaghar (tea shop) markers
+function createKhajagharMarkers() {
+    // Khajaghar locations (positioned around the community areas)
+    const khajagharLocations = [
+        {
+            lat: 27.724592,
+            lng: 85.224491,
+            name: "Khajaghar 1"
+        },
+        {
+            lat: 27.739199,
+            lng: 85.236208,
+            name: "Khajaghar 2"
+        }
+    ];
+    
+    khajagharLocations.forEach((location, index) => {
+        const khajagharMarker = L.marker([location.lat, location.lng], {
+            icon: L.divIcon({
+                html: `<i class="fa-solid fa-mug-hot fa-bounce" style="color: #dc2626; font-size: 20px;"></i>`,
+                iconSize: [25, 25],
+                className: 'khajaghar-marker',
+                iconAnchor: [12.5, 20]
+            })
+        }).on('click', () => openKhajagharPopup(location)).addTo(map);
+        
+        khajagharMarkers.push(khajagharMarker);
+    });
+}
+
+// Create street interview markers
+function createStreetInterviewMarkers() {
+    // Street interview locations
+    const interviewLocations = [
+        {
+            lat: 27.731906,
+            lng: 85.236138,
+            name: "Street Interview 1",
+            interviewType: "pedestrian"
+        },
+        {
+            lat: 27.737444,
+            lng: 85.233972,
+            name: "Street Interview 2", 
+            interviewType: "community"
+        },
+        {
+            lat: 27.726670,
+            lng: 85.224680,
+            name: "Street Interview 3",
+            interviewType: "neighborhood"
+        }
+    ];
+    
+    interviewLocations.forEach((location, index) => {
+        const interviewMarker = L.marker([location.lat, location.lng], {
+            icon: L.divIcon({
+                html: `<i class="fa-solid fa-comments fa-beat" style="color: #6366f1; font-size: 18px;"></i>`,
+                iconSize: [22, 22],
+                className: 'interview-marker',
+                iconAnchor: [11, 18]
+            })
+        }).on('click', () => openStreetInterviewPopup(location)).addTo(map);
+        
+        streetInterviewMarkers.push(interviewMarker);
+    });
+}
+
+// Create shop marker
+function createShopMarker() {
+    shopMarker = L.marker([27.729750, 85.236056], {
+        icon: L.divIcon({
+            html: `<i class="fa-solid fa-shop" style="color: #ea580c; font-size: 20px;"></i>`,
+            iconSize: [25, 25],
+            className: 'shop-marker',
+            iconAnchor: [12.5, 20]
+        })
+    }).on('click', () => openShopPopup()).addTo(map);
+}
 
 // Enhanced cinematic sequence with user interaction
 let userInteracted = false;
@@ -555,125 +966,106 @@ function waitForUserInput() {
     });
 }
 
-// Geographic zoom sequence
-async function startGeographicSequence() {
+// Cinematic video sequence to replace manual zoom
+async function startVideoSequence() {
     const statsOverlay = document.getElementById('national-stats-overlay');
+    const videoOverlay = document.getElementById('cinematic-video-overlay');
+    const cinematicVideo = document.getElementById('cinematic-video');
+    const skipButton = document.getElementById('skip-video');
     
     // Wait for user input
     await waitForUserInput();
     
-    // Phase 1: Fade out stats, show Nepal highlighted
+    // Phase 1: Fade out stats, show video
     statsOverlay.style.animation = 'overlayFadeOut 1s ease-out forwards';
     
-    setTimeout(async () => {
+    setTimeout(() => {
         statsOverlay.style.display = 'none';
+        videoOverlay.style.display = 'flex';
+        videoOverlay.classList.add('video-fade-in');
         
-        // Highlight Nepal prominently
-        if (nepalPolygon) {
-            if (nepalPolygon.setStyle) {
-                nepalPolygon.setStyle({
-                    color: '#34d399',
-                    weight: 4,
-                    opacity: 1,
-                    fillColor: '#34d399',
-                    fillOpacity: 0.2
-                });
-            } else {
-                nepalPolygon.setStyle({
-                    color: '#34d399',
-                    weight: 4,
-                    opacity: 1,
-                    fillColor: '#34d399',
-                    fillOpacity: 0.2
-                });
-            }
+        // Play the video
+        cinematicVideo.currentTime = 0;
+        cinematicVideo.play().catch(e => {
+            console.warn('Video autoplay failed:', e);
+            // If autoplay fails, skip directly to map
+            skipToMap();
+        });
+        
+        // Skip button functionality
+        skipButton.onclick = skipToMap;
+        
+        // When video ends, automatically go to map
+        cinematicVideo.onended = skipToMap;
+        
+    }, 1000);
+    
+    function skipToMap() {
+        videoOverlay.classList.add('video-fade-out');
+        cinematicVideo.pause();
+        
+        setTimeout(() => {
+            videoOverlay.style.display = 'none';
+            videoOverlay.classList.remove('video-fade-in', 'video-fade-out');
+            
+            // Set map to Nagarjun Municipality Ward 8 center
+            map.setView([27.733, 85.240], 15);
+            
+            // Create area boundaries
+            createAreaBoundaries();
+            
+            // Start area highlighting sequence
+            setTimeout(() => {
+                startAreaHighlighting();
+            }, 1000);
+            
+        }, 500);
+    }
+    
+    // Load all Nagarjun areas at once - no dramatic sequence
+    function startAreaHighlighting() {
+        // Show all areas immediately with subtle highlighting
+        if (thapleCircle) {
+            thapleCircle.setStyle({
+                color: '#2563eb',
+                weight: 2,
+                opacity: 0.7,
+                fillColor: '#3b82f6',
+                fillOpacity: 0.15
+            });
         }
         
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        if (busparkCircle) {
+            busparkCircle.setStyle({
+                color: '#ea580c',
+                weight: 2,
+                opacity: 0.7,
+                fillColor: '#f97316',
+                fillOpacity: 0.15
+            });
+        }
         
-        // Phase 2: Zoom to Nepal and highlight Bagmati Province
-        map.flyTo([27.7, 85.3], 8, {
-            animate: true,
-            duration: 2.5,
-            easeLinearity: 0.1
-        });
+        if (wardOfficeCircle) {
+            wardOfficeCircle.setStyle({
+                color: '#7c3aed',
+                weight: 2,
+                opacity: 0.7,
+                fillColor: '#8b5cf6',
+                fillOpacity: 0.15
+            });
+        }
         
-        setTimeout(() => {
-            if (bagmatiPolygon) {
-                if (bagmatiPolygon.setStyle) {
-                    bagmatiPolygon.setStyle({
-                        color: '#60a5fa',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#60a5fa',
-                        fillOpacity: 0.3
-                    });
-                } else {
-                    bagmatiPolygon.setStyle({
-                        color: '#60a5fa',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#60a5fa',
-                        fillOpacity: 0.3
-                    });
-                }
-            }
-        }, 1500);
+        if (majuwaCircle) {
+            majuwaCircle.setStyle({
+                color: '#16a34a',
+                weight: 2,
+                opacity: 0.7,
+                fillColor: '#22c55e',
+                fillOpacity: 0.15
+            });
+        }
         
-        await new Promise(resolve => setTimeout(resolve, 4000));
-        
-        // Phase 3: Zoom to Bagmati and highlight Nagarjun
-        map.flyTo([27.75, 85.25], 11, {
-            animate: true,
-            duration: 2.5,
-            easeLinearity: 0.1
-        });
-        
-        setTimeout(() => {
-            if (nagarjunPolygon) {
-                if (nagarjunPolygon.setStyle) {
-                    nagarjunPolygon.setStyle({
-                        color: '#fbbf24',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#fbbf24',
-                        fillOpacity: 0.4
-                    });
-                } else {
-                    nagarjunPolygon.setStyle({
-                        color: '#fbbf24',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#fbbf24',
-                        fillOpacity: 0.4
-                    });
-                }
-            }
-        }, 1500);
-        
-        await new Promise(resolve => setTimeout(resolve, 4000));
-        
-        // Phase 4: Final zoom to Bhimdhunga location
-        map.flyTo([27.7469, 85.2658], 15, {
-            animate: true,
-            duration: 3,
-            easeLinearity: 0.1
-        });
-        
-        // Fade out all highlighting
-        setTimeout(() => {
-            if (nepalPolygon && nepalPolygon.setStyle) {
-                nepalPolygon.setStyle({ opacity: 0, fillOpacity: 0 });
-            }
-            if (bagmatiPolygon && bagmatiPolygon.setStyle) {
-                bagmatiPolygon.setStyle({ opacity: 0, fillOpacity: 0 });
-            }
-            if (nagarjunPolygon && nagarjunPolygon.setStyle) {
-                nagarjunPolygon.setStyle({ opacity: 0, fillOpacity: 0 });
-            }
-        }, 1000);
-        
-        // Phase 5: Add house markers
+        // Add house markers immediately after areas load
         setTimeout(() => {
             houseMarkers.forEach((marker, index) => {
                 setTimeout(() => {
@@ -684,18 +1076,19 @@ async function startGeographicSequence() {
                     }
                 }, index * 200);
             });
-        }, 3500);
-        
-    }, 1000);
+        }, 500);
+    }
 }
 
 // Complete cinematic sequence on page load
 window.addEventListener('load', async () => {
     const splashScreen = document.getElementById('splash-screen');
     const statsOverlay = document.getElementById('national-stats-overlay');
+    const videoOverlay = document.getElementById('cinematic-video-overlay');
     
-    // Initially hide stats overlay until we're ready
+    // Initially hide overlays until we're ready
     statsOverlay.style.display = 'none';
+    videoOverlay.style.display = 'none';
     
     // Load geographic boundaries in background
     console.log('Starting boundary loading...');
@@ -710,31 +1103,8 @@ window.addEventListener('load', async () => {
             splashScreen.style.display = 'none';
             statsOverlay.style.display = 'flex';
             
-            // Highlight Nepal behind overlay if loaded
-            if (nepalPolygon) {
-                if (nepalPolygon.setStyle) {
-                    // Leaflet polygon
-                    nepalPolygon.setStyle({
-                        color: '#60a5fa',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#60a5fa',
-                        fillOpacity: 0.3
-                    });
-                } else {
-                    // GeoJSON layer
-                    nepalPolygon.setStyle({
-                        color: '#60a5fa',
-                        weight: 4,
-                        opacity: 1,
-                        fillColor: '#60a5fa',
-                        fillOpacity: 0.3
-                    });
-                }
-            }
-            
-            // Start the geographic sequence (waits for user input)
-            startGeographicSequence();
+            // Start the video sequence (waits for user input) - no Nepal highlighting
+            startVideoSequence();
             
         }, 1000);
     }, 4000);
@@ -743,6 +1113,186 @@ window.addEventListener('load', async () => {
 // Modal elements
 const modal = document.getElementById('popup-modal');
 const closeBtn = document.querySelector('.close');
+
+// Function to open Shop popup
+function openShopPopup() {
+    document.getElementById('popup-title').textContent = 'Local Shop - Community Commerce Hub';
+    document.getElementById('popup-video').src = '';
+    document.getElementById('popup-audio').src = '';
+    
+    // Update location information  
+    document.getElementById('location-name').textContent = 'Neighborhood Shop';
+    document.getElementById('interview-count').textContent = 'Commercial Digital Services';
+    
+    // Update access level badge
+    const accessBadge = document.getElementById('access-badge');
+    accessBadge.textContent = 'COMMERCE';
+    accessBadge.className = 'badge commerce-access';
+    
+    // Update content with shop information
+    document.getElementById('resident-quote').textContent = '"Digital payments have changed our business, but we still need to serve customers who prefer cash transactions."';
+    document.getElementById('resident-name').textContent = '— Shop Owner';
+    document.getElementById('resident-testimonial').textContent = 'Local shops serve as important digital transition points in the community. They introduce customers to digital payment systems while maintaining traditional cash services. Shop owners often help customers navigate digital payment apps and mobile banking.';
+    document.getElementById('reality-text').textContent = 'Shops experience the digital divide directly through customer payment preferences. While digital payments increase efficiency and reduce cash handling risks, they can exclude customers uncomfortable with technology.';
+    
+    // Update statistics with shop data
+    document.getElementById('internet-speed').textContent = '30 Mbps business connection';
+    document.getElementById('devices').textContent = 'POS system, business smartphone, calculator';
+    document.getElementById('monthly-cost').textContent = 'NPR 1,500 (business plan)';
+    document.getElementById('digital-skills').textContent = 'Payment systems, inventory apps';
+    document.getElementById('online-services').textContent = 'Digital payments, mobile banking, suppliers';
+    
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Function to open Street Interview popup
+function openStreetInterviewPopup(location) {
+    document.getElementById('popup-title').textContent = `${location.name} - Street Interview`;
+    document.getElementById('popup-video').src = '';
+    document.getElementById('popup-audio').src = '';
+    
+    // Update location information  
+    document.getElementById('location-name').textContent = 'Public Space Interview';
+    document.getElementById('interview-count').textContent = 'Street-level Perspectives';
+    
+    // Update access level badge
+    const accessBadge = document.getElementById('access-badge');
+    accessBadge.textContent = 'INTERVIEW';
+    accessBadge.className = 'badge interview-access';
+    
+    // Update content with street interview information
+    document.getElementById('resident-quote').textContent = '"Street interviews reveal the everyday challenges people face with digital services in public spaces."';
+    document.getElementById('resident-name').textContent = '— Community Members';
+    document.getElementById('resident-testimonial').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community. These interviews provide unfiltered perspectives on digital divide realities.';
+    document.getElementById('reality-text').textContent = 'Public space interviews often reveal different digital behaviors than household interviews, showing how people adapt to connectivity challenges while away from home wifi and reliable power sources.';
+    
+    // Update statistics with interview data
+    document.getElementById('internet-speed').textContent = 'Mobile data dependent';
+    document.getElementById('devices').textContent = 'Personal smartphones';
+    document.getElementById('monthly-cost').textContent = 'Variable data plans';
+    document.getElementById('digital-skills').textContent = 'Practical mobile skills';
+    document.getElementById('online-services').textContent = 'On-the-go digital needs';
+    
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Function to open Khajaghar popup
+function openKhajagharPopup(location) {
+    document.getElementById('popup-title').textContent = `${location.name} - Community Tea Shop`;
+    document.getElementById('popup-video').src = '';
+    document.getElementById('popup-audio').src = '';
+    
+    // Update location information  
+    document.getElementById('location-name').textContent = 'Traditional Tea Shop (Khajaghar)';
+    document.getElementById('interview-count').textContent = 'Community Gathering Place';
+    
+    // Update access level badge
+    const accessBadge = document.getElementById('access-badge');
+    accessBadge.textContent = 'SOCIAL HUB';
+    accessBadge.className = 'badge social-access';
+    
+    // Update content with khajaghar information
+    document.getElementById('resident-quote').textContent = '"The khajaghar is where people come to discuss everything - from local news to digital services. It\'s our informal information center."';
+    document.getElementById('resident-name').textContent = '— Local Tea Shop Owner';
+    document.getElementById('resident-testimonial').textContent = 'Traditional khajaghar serve as important social spaces where community members share information about digital services, help each other with online forms, and discuss the challenges of adapting to digital systems. They often become informal digital literacy centers.';
+    document.getElementById('reality-text').textContent = 'While khajaghar don\'t typically have formal internet access, they play a crucial role in the digital divide story as spaces where people share knowledge about digital services and help each other navigate online systems.';
+    
+    // Update statistics with khajaghar data
+    document.getElementById('internet-speed').textContent = 'Personal mobile data only';
+    document.getElementById('devices').textContent = 'Customer smartphones, radio';
+    document.getElementById('monthly-cost').textContent = 'Varies by customer';
+    document.getElementById('digital-skills').textContent = 'Community knowledge sharing';
+    document.getElementById('online-services').textContent = 'Informal digital help center';
+    
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Function to open School popup
+function openSchoolPopup() {
+    document.getElementById('popup-title').textContent = 'Local School - Digital Education Hub';
+    document.getElementById('popup-video').src = '';
+    document.getElementById('popup-audio').src = '';
+    
+    // Update location information  
+    document.getElementById('location-name').textContent = 'Educational Institution';
+    document.getElementById('interview-count').textContent = 'Digital Learning Center';
+    
+    // Update access level badge
+    const accessBadge = document.getElementById('access-badge');
+    accessBadge.textContent = 'EDUCATION';
+    accessBadge.className = 'badge education-access';
+    
+    // Update content with school information
+    document.getElementById('resident-quote').textContent = '"Technology has transformed how our students learn, but the digital divide affects which students can fully participate."';
+    document.getElementById('resident-name').textContent = '— School Administration';
+    document.getElementById('resident-testimonial').textContent = 'The school serves as a digital bridge in the community, providing computer labs and internet access for students. However, homework requiring internet access creates challenges for students from households with limited connectivity.';
+    document.getElementById('reality-text').textContent = 'While the school has good digital infrastructure, students\' varying levels of home internet access create educational inequalities. Online learning during COVID-19 highlighted these disparities in digital access among families.';
+    
+    // Update statistics with school data
+    document.getElementById('internet-speed').textContent = 'High-speed institutional connection';
+    document.getElementById('devices').textContent = 'Computer lab, tablets, smart boards';
+    document.getElementById('monthly-cost').textContent = 'Educational funding';
+    document.getElementById('digital-skills').textContent = 'Teachers trained in digital pedagogy';
+    document.getElementById('online-services').textContent = 'E-learning platforms, digital resources';
+    
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Function to open Ward Office popup
+function openWardOfficePopup() {
+    document.getElementById('popup-title').textContent = 'Nagarjun Municipality Ward 8 Office';
+    document.getElementById('popup-video').src = '';
+    document.getElementById('popup-audio').src = '';
+    
+    // Update location information  
+    document.getElementById('location-name').textContent = 'Ward Office - Government Building';
+    document.getElementById('interview-count').textContent = 'Administrative Center';
+    
+    // Update access level badge
+    const accessBadge = document.getElementById('access-badge');
+    accessBadge.textContent = 'GOVERNMENT';
+    accessBadge.className = 'badge government-access';
+    
+    // Update content with government office information
+    document.getElementById('resident-quote').textContent = '"The Ward Office serves as the local administrative hub connecting residents with digital government services."';
+    document.getElementById('resident-name').textContent = '— Ward Office Administration';
+    document.getElementById('resident-testimonial').textContent = 'The Ward Office facilitates digital service delivery including online forms, digital payments for municipal services, and e-governance initiatives. It serves as a bridge between traditional governance and digital transformation.';
+    document.getElementById('reality-text').textContent = 'While the office promotes digital services, many residents still prefer in-person visits for government transactions, highlighting the ongoing digital divide in public service delivery.';
+    
+    // Update statistics with government office data
+    document.getElementById('internet-speed').textContent = 'High-speed fiber connection';
+    document.getElementById('devices').textContent = 'Government workstations, public terminals';
+    document.getElementById('monthly-cost').textContent = 'Government funded';
+    document.getElementById('digital-skills').textContent = 'Staff trained in e-governance';
+    document.getElementById('online-services').textContent = 'Birth certificates, tax payments, permits';
+    
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
 
 // Function to open popup with digital divide story
 function openPopup(house) {
@@ -778,11 +1328,21 @@ function openPopup(house) {
     }
     
     modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
 }
 
 // Close modal when clicking X
 closeBtn.onclick = function() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
+    document.getElementById('map').classList.remove('map-with-panel');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        map.invalidateSize();
+    }, 300);
     document.getElementById('popup-video').pause();
     document.getElementById('popup-audio').pause();
 }
