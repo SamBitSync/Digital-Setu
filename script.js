@@ -364,9 +364,28 @@ const houseData = [
         lat: 27.725362, 
         lng: 85.224747,
         title: "The IT Professional's Home",
-        video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        youtubeId: "dQw4w9WgXcQ", // Example YouTube video ID - replace with actual interviews
         audio: "audio/family1_testimony.mp3",
         digitalAccess: "high",
+        profile: {
+            headshot: "https://via.placeholder.com/120x120/3b82f6/ffffff?text=R.S.",
+            role: "Software Engineer & Family Head",
+            description: "A tech professional who works remotely while managing a digitally connected household. Despite having advanced digital access, his family faces challenges of screen time management and maintaining human connections."
+        },
+        photos: [
+            {
+                image: "https://via.placeholder.com/400x200/f1f5f9/64748b?text=Home+Office+Setup",
+                quote: "\"My home office has better internet than most companies, but my children spend more time with screens than with us.\""
+            },
+            {
+                image: "https://via.placeholder.com/400x200/f1f5f9/64748b?text=Family+Tech+Time",
+                quote: "\"Everyone in the family has their own device, yet we struggle to find time to talk to each other.\""
+            },
+            {
+                image: "https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Learning",
+                quote: "\"Online education is convenient but we worry about the social skills our children are missing.\""
+            }
+        ],
         stats: {
             internetSpeed: "100 Mbps Fiber",
             devices: "5 smartphones, 3 laptops, 2 tablets",
@@ -556,6 +575,72 @@ const houseData = [
             testimonial: "Every weekend relatives visit to video call family abroad, print documents, or get help with government forms online. We're like a one-family internet cafe.",
             resident: "Ramesh Tamang, Joint Family Head"
         }
+    },
+    {
+        id: 10,
+        lat: 27.717359398869263,
+        lng: 85.33453670762191,
+        title: "ALIN Foundation Building",
+        digitalAccess: "foundation",
+        isFoundation: true,
+        foundation: {
+            name: "All In Foundation",
+            mission: "ALIN is a social impact company that works in various sectors to address the unjust walls of power and privilege in Nepal and beyond.",
+            description: "All In Solutions Fellowship is an interdisciplinary fellowship that focuses on innovative solutions to Nepal's (or global) complex problems.",
+            logo: "ALIN_logo.jpg",
+            // teamPhotos: [
+            //     {
+            //         name: "Research Fellow 1",
+            //         role: "Digital Divide Researcher",
+            //         photo: "https://via.placeholder.com/150x150/3b82f6/ffffff?text=RF1",
+            //         bio: "Focuses on rural-urban digital transition patterns"
+            //     },
+            //     {
+            //         name: "Research Fellow 2", 
+            //         role: "Community Technology Coordinator",
+            //         photo: "https://via.placeholder.com/150x150/10b981/ffffff?text=RF2",
+            //         bio: "Specializes in community-based digital literacy programs"
+            //     },
+            //     {
+            //         name: "Research Fellow 3",
+            //         role: "Data Storytelling Specialist", 
+            //         photo: "https://via.placeholder.com/150x150/f59e0b/ffffff?text=RF3",
+            //         bio: "Creates multimedia narratives from research findings"
+            //     }
+            // ],
+            faq: [
+                {
+                    question: "What is the All In Fellowship?",
+                    answer: "The All In Fellowship supports early-career researchers investigating digital equity challenges in Nepal. Fellows conduct community-based research to understand how digital technologies impact daily life across different demographics and geographic areas."
+                },
+                {
+                    question: "How was this storymap project created?",
+                    answer: "This interactive storymap was developed through extensive fieldwork in Bhimdhunga, Nagarjun Municipality. Fellows conducted household interviews, collected multimedia testimonials, and mapped the geographic distribution of digital access to create this comprehensive view of the local digital divide."
+                },
+                {
+                    question: "What other projects has this fellowship cohort created?",
+                    answer: "This cohort has produced research on digital payment adoption in rural markets, online education accessibility during COVID-19, and intergenerational technology transfer within families. Each project combines quantitative data with personal stories to reveal the human impact of digital divides."
+                },
+                {
+                    question: "How can communities use this research?",
+                    answer: "This research provides evidence for policy makers, community organizations, and technology providers to design more inclusive digital services. The stories and data help identify specific barriers and successful adaptation strategies that can inform broader digital equity initiatives."
+                }
+            ],
+            fellowshipProjects: [
+                {
+                    title: "Mankiri",
+                    description: "A campaign aiming to promote the visibility and foster solidarity and open discussion on mental health of peri and post menopausal women",
+                    status: "Completed",
+                    link: "#team-mankiri"
+                },
+                {
+                    title: "Shreejanshil",
+                    description: "A documentary journey into the daily struggles, hopes and change in the Dom community",
+                    status: "Completed",
+                    link: "#team-shreejanshil"
+                }
+            ]
+        }
     }
 ];
 
@@ -655,28 +740,37 @@ const areaData = [
 
 // Custom house icons based on digital access level
 const getLocationIcon = (accessLevel) => {
-    let color, className;
+    let color, className, iconHtml;
     
     switch(accessLevel) {
         case 'high':
             color = '#22c55e'; // Green for good connectivity
             className = 'house-marker high-access';
+            iconHtml = `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`;
             break;
         case 'medium':
             color = '#fbbf24'; // Yellow for limited access
             className = 'house-marker medium-access';
+            iconHtml = `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`;
             break;
         case 'low':
             color = '#ef4444'; // Red for poor connectivity/high digital divide
             className = 'house-marker low-access';
+            iconHtml = `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`;
+            break;
+        case 'foundation':
+            color = '#dc2626'; // Red for foundation
+            className = 'foundation-marker';
+            iconHtml = `<i class="fa-solid fa-location-dot fa-beat" style="color: ${color}; font-size: 28px;"></i>`;
             break;
         default:
             color = '#6b7280'; // Gray for unknown
             className = 'house-marker';
+            iconHtml = `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`;
     }
     
     return L.divIcon({
-        html: `<i class="fa-solid fa-house fa-beat" style="color: ${color}; font-size: 24px;"></i>`,
+        html: iconHtml,
         iconSize: [30, 30],
         className: className,
         iconAnchor: [15, 25]
@@ -687,10 +781,26 @@ const getLocationIcon = (accessLevel) => {
 
 // Store markers but don't add them immediately
 let houseMarkers = [];
+let foundationLabel = null;
+let foundationHouse = null;
+
 houseData.forEach(house => {
     const marker = L.marker([house.lat, house.lng], { icon: getLocationIcon(house.digitalAccess) })
         .on('click', () => openPopup(house));
     houseMarkers.push(marker);
+    
+    // Create label for foundation marker
+    if (house.isFoundation) {
+        foundationHouse = house; // Store reference to foundation house data
+        foundationLabel = L.marker([house.lat - 0.001, house.lng], {
+            icon: L.divIcon({
+                html: '<div class="foundation-label">All In Foundation</div>',
+                className: 'foundation-label-container',
+                iconSize: [140, 28],
+                iconAnchor: [70, 14]
+            })
+        }).on('click', () => openPopup(foundationHouse));
+    }
 });
 
 // Community area circles (oval overlays with center + radius)
@@ -732,7 +842,7 @@ function createAreaBoundaries() {
     }).addTo(map);
     
     // Ward Office: purple theme, 50m radius (reduced)
-    wardOfficeCircle = L.circle([27.730474, 85.234039], {
+    wardOfficeCircle = L.circle([27.732760, 85.233694], {
         color: '#7c3aed',
         weight: 3,
         opacity: 0,
@@ -814,7 +924,7 @@ function createAreaLabels() {
     areaLabels.push(majuwaLabel);
     
     // Ward Office label (positioned slightly above the building icon)
-    const wardLabel = L.marker([27.730474, 85.234059], {
+    const wardLabel = L.marker([27.732760, 85.233714], {
         icon: L.divIcon({
             html: '<div class="area-text-label ward-label">Ward Office</div>',
             className: 'area-label-container',
@@ -827,7 +937,7 @@ function createAreaLabels() {
 
 // Create government building marker for Ward Office
 function createWardOfficeMarker() {
-    wardOfficeMarker = L.marker([27.730474, 85.234039], {
+    wardOfficeMarker = L.marker([27.732760, 85.233694], {
         icon: L.divIcon({
             html: `
                 <div class="government-building-icon">
@@ -1076,6 +1186,13 @@ async function startVideoSequence() {
                     }
                 }, index * 200);
             });
+            
+            // Add foundation label if it exists
+            if (foundationLabel) {
+                setTimeout(() => {
+                    foundationLabel.addTo(map);
+                }, houseMarkers.length * 200 + 200);
+            }
         }, 500);
     }
 }
@@ -1116,9 +1233,10 @@ const closeBtn = document.querySelector('.close');
 
 // Function to open Shop popup
 function openShopPopup() {
+    // Hide navbar
+    hideNavbar();
+    
     document.getElementById('popup-title').textContent = 'Local Shop - Community Commerce Hub';
-    document.getElementById('popup-video').src = '';
-    document.getElementById('popup-audio').src = '';
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Neighborhood Shop';
@@ -1129,11 +1247,31 @@ function openShopPopup() {
     accessBadge.textContent = 'COMMERCE';
     accessBadge.className = 'badge commerce-access';
     
-    // Update content with shop information
-    document.getElementById('resident-quote').textContent = '"Digital payments have changed our business, but we still need to serve customers who prefer cash transactions."';
-    document.getElementById('resident-name').textContent = '— Shop Owner';
-    document.getElementById('resident-testimonial').textContent = 'Local shops serve as important digital transition points in the community. They introduce customers to digital payment systems while maintaining traditional cash services. Shop owners often help customers navigate digital payment apps and mobile banking.';
-    document.getElementById('reality-text').textContent = 'Shops experience the digital divide directly through customer payment preferences. While digital payments increase efficiency and reduce cash handling risks, they can exclude customers uncomfortable with technology.';
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/ea580c/ffffff?text=🏪';
+    document.getElementById('resident-name').textContent = 'Shop Owner';
+    document.getElementById('resident-role').textContent = 'Local Business Owner';
+    document.getElementById('resident-description').textContent = 'Local shops serve as important digital transition points in the community. They introduce customers to digital payment systems while maintaining traditional cash services.';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Payment+System';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Customer+Service';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Local+Commerce';
+    
+    document.getElementById('quote-1').textContent = '"Digital payments have changed our business, but we still need to serve customers who prefer cash transactions."';
+    document.getElementById('quote-2').textContent = '"Some elderly customers struggle with mobile banking apps."';
+    document.getElementById('quote-3').textContent = '"We help bridge the gap between traditional and digital commerce."';
+    
+    // Update YouTube video (placeholder)
+    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = '';
     
     // Update statistics with shop data
     document.getElementById('internet-speed').textContent = '30 Mbps business connection';
@@ -1152,9 +1290,10 @@ function openShopPopup() {
 
 // Function to open Street Interview popup
 function openStreetInterviewPopup(location) {
+    // Hide navbar
+    hideNavbar();
+    
     document.getElementById('popup-title').textContent = `${location.name} - Street Interview`;
-    document.getElementById('popup-video').src = '';
-    document.getElementById('popup-audio').src = '';
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Public Space Interview';
@@ -1165,11 +1304,31 @@ function openStreetInterviewPopup(location) {
     accessBadge.textContent = 'INTERVIEW';
     accessBadge.className = 'badge interview-access';
     
-    // Update content with street interview information
-    document.getElementById('resident-quote').textContent = '"Street interviews reveal the everyday challenges people face with digital services in public spaces."';
-    document.getElementById('resident-name').textContent = '— Community Members';
-    document.getElementById('resident-testimonial').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community. These interviews provide unfiltered perspectives on digital divide realities.';
-    document.getElementById('reality-text').textContent = 'Public space interviews often reveal different digital behaviors than household interviews, showing how people adapt to connectivity challenges while away from home wifi and reliable power sources.';
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/6366f1/ffffff?text=🎤';
+    document.getElementById('resident-name').textContent = 'Community Members';
+    document.getElementById('resident-role').textContent = 'Street Interview Participants';
+    document.getElementById('resident-description').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community.';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Street+Interviews';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Mobile+Usage';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Public+Spaces';
+    
+    document.getElementById('quote-1').textContent = '"Street interviews reveal the everyday challenges people face with digital services in public spaces."';
+    document.getElementById('quote-2').textContent = '"Mobile data is expensive but necessary for staying connected while away from home."';
+    document.getElementById('quote-3').textContent = '"Public wifi is unreliable, so we depend on our phone data plans."';
+    
+    // Update YouTube video (placeholder)
+    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = '';
     
     // Update statistics with interview data
     document.getElementById('internet-speed').textContent = 'Mobile data dependent';
@@ -1188,9 +1347,10 @@ function openStreetInterviewPopup(location) {
 
 // Function to open Khajaghar popup
 function openKhajagharPopup(location) {
+    // Hide navbar
+    hideNavbar();
+    
     document.getElementById('popup-title').textContent = `${location.name} - Community Tea Shop`;
-    document.getElementById('popup-video').src = '';
-    document.getElementById('popup-audio').src = '';
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Traditional Tea Shop (Khajaghar)';
@@ -1201,11 +1361,31 @@ function openKhajagharPopup(location) {
     accessBadge.textContent = 'SOCIAL HUB';
     accessBadge.className = 'badge social-access';
     
-    // Update content with khajaghar information
-    document.getElementById('resident-quote').textContent = '"The khajaghar is where people come to discuss everything - from local news to digital services. It\'s our informal information center."';
-    document.getElementById('resident-name').textContent = '— Local Tea Shop Owner';
-    document.getElementById('resident-testimonial').textContent = 'Traditional khajaghar serve as important social spaces where community members share information about digital services, help each other with online forms, and discuss the challenges of adapting to digital systems. They often become informal digital literacy centers.';
-    document.getElementById('reality-text').textContent = 'While khajaghar don\'t typically have formal internet access, they play a crucial role in the digital divide story as spaces where people share knowledge about digital services and help each other navigate online systems.';
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/dc2626/ffffff?text=☕';
+    document.getElementById('resident-name').textContent = 'Tea Shop Owner';
+    document.getElementById('resident-role').textContent = 'Community Hub Keeper';
+    document.getElementById('resident-description').textContent = 'Traditional khajaghar serve as important social spaces where community members share information about digital services, help each other with online forms, and discuss the challenges of adapting to digital systems.';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Tea+Shop+Gathering';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Community+Discussions';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Help';
+    
+    document.getElementById('quote-1').textContent = '"The khajaghar is where people come to discuss everything - from local news to digital services."';
+    document.getElementById('quote-2').textContent = '"Customers often help each other with smartphone apps over tea."';
+    document.getElementById('quote-3').textContent = '"We share knowledge about online forms and digital payments here."';
+    
+    // Update YouTube video (placeholder)
+    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = '';
     
     // Update statistics with khajaghar data
     document.getElementById('internet-speed').textContent = 'Personal mobile data only';
@@ -1224,9 +1404,10 @@ function openKhajagharPopup(location) {
 
 // Function to open School popup
 function openSchoolPopup() {
+    // Hide navbar
+    hideNavbar();
+    
     document.getElementById('popup-title').textContent = 'Local School - Digital Education Hub';
-    document.getElementById('popup-video').src = '';
-    document.getElementById('popup-audio').src = '';
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Educational Institution';
@@ -1237,11 +1418,31 @@ function openSchoolPopup() {
     accessBadge.textContent = 'EDUCATION';
     accessBadge.className = 'badge education-access';
     
-    // Update content with school information
-    document.getElementById('resident-quote').textContent = '"Technology has transformed how our students learn, but the digital divide affects which students can fully participate."';
-    document.getElementById('resident-name').textContent = '— School Administration';
-    document.getElementById('resident-testimonial').textContent = 'The school serves as a digital bridge in the community, providing computer labs and internet access for students. However, homework requiring internet access creates challenges for students from households with limited connectivity.';
-    document.getElementById('reality-text').textContent = 'While the school has good digital infrastructure, students\' varying levels of home internet access create educational inequalities. Online learning during COVID-19 highlighted these disparities in digital access among families.';
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/3b82f6/ffffff?text=🎓';
+    document.getElementById('resident-name').textContent = 'School Administration';
+    document.getElementById('resident-role').textContent = 'Educational Leaders';
+    document.getElementById('resident-description').textContent = 'The school serves as a digital bridge in the community, providing computer labs and internet access for students. However, homework requiring internet access creates challenges for students from households with limited connectivity.';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Computer+Lab';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Classroom';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Student+Learning';
+    
+    document.getElementById('quote-1').textContent = '"Technology has transformed how our students learn, but the digital divide affects which students can fully participate."';
+    document.getElementById('quote-2').textContent = '"Students with home internet access have clear advantages in digital assignments."';
+    document.getElementById('quote-3').textContent = '"We try to provide equal access through our computer lab, but time is limited."';
+    
+    // Update YouTube video (placeholder)
+    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = '';
     
     // Update statistics with school data
     document.getElementById('internet-speed').textContent = 'High-speed institutional connection';
@@ -1260,9 +1461,10 @@ function openSchoolPopup() {
 
 // Function to open Ward Office popup
 function openWardOfficePopup() {
+    // Hide navbar
+    hideNavbar();
+    
     document.getElementById('popup-title').textContent = 'Nagarjun Municipality Ward 8 Office';
-    document.getElementById('popup-video').src = '';
-    document.getElementById('popup-audio').src = '';
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Ward Office - Government Building';
@@ -1273,11 +1475,31 @@ function openWardOfficePopup() {
     accessBadge.textContent = 'GOVERNMENT';
     accessBadge.className = 'badge government-access';
     
-    // Update content with government office information
-    document.getElementById('resident-quote').textContent = '"The Ward Office serves as the local administrative hub connecting residents with digital government services."';
-    document.getElementById('resident-name').textContent = '— Ward Office Administration';
-    document.getElementById('resident-testimonial').textContent = 'The Ward Office facilitates digital service delivery including online forms, digital payments for municipal services, and e-governance initiatives. It serves as a bridge between traditional governance and digital transformation.';
-    document.getElementById('reality-text').textContent = 'While the office promotes digital services, many residents still prefer in-person visits for government transactions, highlighting the ongoing digital divide in public service delivery.';
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/7c3aed/ffffff?text=🏛️';
+    document.getElementById('resident-name').textContent = 'Ward Office Administration';
+    document.getElementById('resident-role').textContent = 'Government Officials';
+    document.getElementById('resident-description').textContent = 'The Ward Office facilitates digital service delivery including online forms, digital payments for municipal services, and e-governance initiatives. It serves as a bridge between traditional governance and digital transformation.';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Government+Office';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Services';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Public+Access';
+    
+    document.getElementById('quote-1').textContent = '"The Ward Office serves as the local administrative hub connecting residents with digital government services."';
+    document.getElementById('quote-2').textContent = '"We encourage online applications, but many residents still prefer in-person visits."';
+    document.getElementById('quote-3').textContent = '"Digital literacy training helps residents access government services independently."';
+    
+    // Update YouTube video (placeholder)
+    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = '';
     
     // Update statistics with government office data
     document.getElementById('internet-speed').textContent = 'High-speed fiber connection';
@@ -1294,11 +1516,20 @@ function openWardOfficePopup() {
     }, 300);
 }
 
+// Function to hide/show navbar
+function hideNavbar() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.add('hidden');
+}
+
+function showNavbar() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.remove('hidden');
+}
+
 // Function to open popup with digital divide story
 function openPopup(house) {
     document.getElementById('popup-title').textContent = house.title;
-    document.getElementById('popup-video').src = house.video || '';
-    document.getElementById('popup-audio').src = house.audio || '';
     
     // Update location information
     document.getElementById('location-name').textContent = house.locationName || '';
@@ -1309,23 +1540,133 @@ function openPopup(house) {
     accessBadge.textContent = house.digitalAccess.toUpperCase();
     accessBadge.className = `badge ${house.digitalAccess}-access`;
     
-    // Update story content - handle empty fields gracefully
-    document.getElementById('resident-quote').textContent = house.story.quote || '[Interview content to be added]';
-    document.getElementById('resident-name').textContent = house.story.resident ? `— ${house.story.resident}` : '';
-    document.getElementById('resident-testimonial').textContent = house.story.testimonial || '[Interview content to be added]';
-    document.getElementById('reality-text').textContent = house.story.reality || '[Analysis to be added based on interview data]';
+    // Hide navbar when panel opens
+    hideNavbar();
     
-    // Update digital statistics - handle TBD values
+    // Check if this is a foundation house
+    if (house.isFoundation) {
+        openFoundationPopup(house);
+        return;
+    }
+    
+    // Show resident content, hide foundation content
+    document.getElementById('resident-content').style.display = 'block';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update profile section
+    document.getElementById('resident-headshot').src = house.profile?.headshot || 'https://via.placeholder.com/120x120/e2e8f0/64748b?text=Photo';
+    document.getElementById('resident-name').textContent = house.story.resident || 'Resident Name';
+    document.getElementById('resident-role').textContent = house.profile?.role || 'Community Member';
+    document.getElementById('resident-description').textContent = house.profile?.description || house.story.testimonial || '[Profile description to be added]';
+    
+    // Update photo collage
+    document.getElementById('photo-1').src = house.photos?.[0]?.image || 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Daily+Life+Photo';
+    document.getElementById('photo-2').src = house.photos?.[1]?.image || 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Technology+Photo';
+    document.getElementById('photo-3').src = house.photos?.[2]?.image || 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Community+Photo';
+    
+    document.getElementById('quote-1').textContent = house.photos?.[0]?.quote || house.story.quote || '"Living between tradition and technology"';
+    document.getElementById('quote-2').textContent = house.photos?.[1]?.quote || '"Digital tools change how we work and learn"';
+    document.getElementById('quote-3').textContent = house.photos?.[2]?.quote || '"Our community helps each other adapt"';
+    
+    // Update YouTube video
+    const youtubeId = house.youtubeId || 'dQw4w9WgXcQ'; // Default placeholder
+    document.getElementById('youtube-video').src = `https://www.youtube.com/embed/${youtubeId}`;
+    
+    // Update audio section
+    document.getElementById('popup-audio').src = house.audio || '';
+    
+    // Update digital statistics
     document.getElementById('internet-speed').textContent = house.stats.internetSpeed || 'TBD';
     document.getElementById('devices').textContent = house.stats.devices || 'TBD';
     document.getElementById('monthly-cost').textContent = house.stats.monthlyDataCost || 'TBD';
     document.getElementById('digital-skills').textContent = house.stats.digitalSkills || 'TBD';
     document.getElementById('online-services').textContent = house.stats.onlineServices || 'TBD';
     
-    // Add context information if available
-    if (house.context) {
-        console.log('Location context:', house.context);
-    }
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Function to handle foundation-specific popup content
+function openFoundationPopup(house) {
+    const foundation = house.foundation;
+    
+    // Hide resident content, show foundation content
+    document.getElementById('resident-content').style.display = 'none';
+    document.getElementById('foundation-content').style.display = 'block';
+    document.getElementById('resident-stats').style.display = 'none';
+    
+    // Update foundation header
+    document.getElementById('foundation-logo').src = foundation.logo;
+    document.getElementById('foundation-name').textContent = foundation.name;
+    document.getElementById('foundation-mission').textContent = foundation.mission;
+    document.getElementById('foundation-description').textContent = foundation.description;
+    
+    // Show single team photo
+    const teamGrid = document.getElementById('team-grid');
+    teamGrid.innerHTML = '';
+    const teamPhotoDiv = document.createElement('div');
+    teamPhotoDiv.className = 'team-photo-container';
+    teamPhotoDiv.innerHTML = `
+        <img src="photos/team_members.jpg" alt="Fellowship Team" class="team-group-photo">
+        <p class="team-caption">All In Foundation Fellowship Research Team</p>
+    `;
+    teamGrid.appendChild(teamPhotoDiv);
+    
+    // Populate FAQ list
+    const faqList = document.getElementById('faq-list');
+    faqList.innerHTML = '';
+    foundation.faq.forEach(item => {
+        const faqDiv = document.createElement('div');
+        faqDiv.className = 'faq-item';
+        faqDiv.innerHTML = `
+            <div class="faq-question">
+                <h4>${item.question}</h4>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>${item.answer}</p>
+            </div>
+        `;
+        
+        // Add click handler for FAQ toggle
+        const questionDiv = faqDiv.querySelector('.faq-question');
+        const answerDiv = faqDiv.querySelector('.faq-answer');
+        const toggle = faqDiv.querySelector('.faq-toggle');
+        
+        questionDiv.addEventListener('click', () => {
+            if (answerDiv.style.display === 'block') {
+                answerDiv.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                answerDiv.style.display = 'block';
+                toggle.textContent = '−';
+            }
+        });
+        
+        faqList.appendChild(faqDiv);
+    });
+    
+    // Populate projects grid
+    const projectsGrid = document.getElementById('projects-grid');
+    projectsGrid.innerHTML = '';
+    foundation.fellowshipProjects.forEach(project => {
+        const projectDiv = document.createElement('div');
+        projectDiv.className = 'project-item';
+        projectDiv.innerHTML = `
+            <h4 class="project-title">${project.title}</h4>
+            <p class="project-description">${project.description}</p>
+            <div class="project-footer">
+                <span class="project-status">${project.status}</span>
+                <a href="${project.link}" class="project-link">Learn More →</a>
+            </div>
+        `;
+        projectsGrid.appendChild(projectDiv);
+    });
     
     modal.style.display = 'block';
     modal.classList.add('show');
@@ -1343,15 +1684,350 @@ closeBtn.onclick = function() {
         modal.style.display = 'none';
         map.invalidateSize();
     }, 300);
-    document.getElementById('popup-video').pause();
+    // Stop YouTube video by clearing the src
+    document.getElementById('youtube-video').src = '';
     document.getElementById('popup-audio').pause();
 }
 
 // Close modal when clicking outside
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = 'none';
-        document.getElementById('popup-video').pause();
+        modal.classList.remove('show');
+        document.getElementById('map').classList.remove('map-with-panel');
+        
+        // Show navbar again
+        showNavbar();
+        
+        // Hide custom content
+        const customContent = document.getElementById('custom-content');
+        if (customContent) {
+            customContent.style.display = 'none';
+        }
+        
+        // Show access badge again
+        document.querySelector('.access-indicator').style.display = 'flex';
+        
+        // Clear active nav button
+        clearActiveNavButton();
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            map.invalidateSize();
+        }, 300);
+        document.getElementById('youtube-video').src = '';
         document.getElementById('popup-audio').pause();
     }
 }
+
+// Navigation bar functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ button - opens ALIN Foundation panel
+    document.getElementById('nav-faq').addEventListener('click', function() {
+        if (foundationHouse) {
+            // Move map to show ALIN foundation building
+            map.setView([foundationHouse.lat, foundationHouse.lng], 16);
+            // Open the foundation panel after a short delay for smooth transition
+            setTimeout(() => {
+                openPopup(foundationHouse);
+                setActiveNavButton('nav-faq');
+            }, 300);
+        }
+    });
+
+    // About button - opens about panel
+    document.getElementById('nav-about').addEventListener('click', function() {
+        openAboutPanel();
+        setActiveNavButton('nav-about');
+    });
+
+    // Stories button - shows stories overview
+    document.getElementById('nav-stories').addEventListener('click', function() {
+        openStoriesPanel();
+        setActiveNavButton('nav-stories');
+    });
+
+    // Statistics button - shows aggregated data
+    document.getElementById('nav-statistics').addEventListener('click', function() {
+        openStatisticsPanel();
+        setActiveNavButton('nav-statistics');
+    });
+
+    // Map Legend button - shows legend
+    document.getElementById('nav-legend').addEventListener('click', function() {
+        openLegendPanel();
+        setActiveNavButton('nav-legend');
+    });
+
+    // Reset View button - resets map view
+    document.getElementById('nav-reset').addEventListener('click', function() {
+        resetMapView();
+        clearActiveNavButton();
+    });
+});
+
+// Helper function to set active navigation button
+function setActiveNavButton(buttonId) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked button
+    document.getElementById(buttonId).classList.add('active');
+}
+
+// Helper function to clear active navigation button
+function clearActiveNavButton() {
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+}
+
+// Reset map view function
+function resetMapView() {
+    map.setView([27.733, 85.240], 15);
+    // Close any open modals
+    if (modal.classList.contains('show')) {
+        closeBtn.onclick();
+    }
+}
+
+// About panel function
+function openAboutPanel() {
+    // Create about content
+    const aboutContent = {
+        title: "About This Project",
+        isCustomPanel: true,
+        content: {
+            header: {
+                title: "Digital Divide Research in Bhimdhunga",
+                subtitle: "Understanding lived experiences behind statistics"
+            },
+            sections: [
+                {
+                    title: "Project Overview",
+                    content: "This interactive storymap explores the digital divide in Bhimdhunga, Nagarjun Municipality Ward 8. Through household interviews and multimedia testimonials, we reveal the human stories behind digital access statistics."
+                },
+                {
+                    title: "Methodology", 
+                    content: "Our research team conducted extensive fieldwork including household interviews, geographic mapping, and multimedia documentation to create a comprehensive view of digital access challenges and adaptations in this community."
+                },
+                {
+                    title: "Key Themes",
+                    content: "The project examines intergenerational technology transfer, urban-rural digital bridges, educational technology gaps, and community-based digital support networks."
+                }
+            ]
+        }
+    };
+    
+    openCustomPanel(aboutContent);
+}
+
+// Stories overview panel
+function openStoriesPanel() {
+    const storiesContent = {
+        title: "Household Digital Stories",
+        isCustomPanel: true,
+        content: {
+            header: {
+                title: "9 Household Stories",
+                subtitle: "Click on any house marker to explore individual stories"
+            },
+            houseList: houseData.filter(house => !house.isFoundation)
+        }
+    };
+    
+    openCustomPanel(storiesContent);
+}
+
+// Statistics panel
+function openStatisticsPanel() {
+    // Calculate aggregated statistics
+    const houses = houseData.filter(house => !house.isFoundation);
+    const highAccess = houses.filter(house => house.digitalAccess === 'high').length;
+    const mediumAccess = houses.filter(house => house.digitalAccess === 'medium').length;
+    const lowAccess = houses.filter(house => house.digitalAccess === 'low').length;
+    
+    const statsContent = {
+        title: "Digital Access Statistics",
+        isCustomPanel: true,
+        content: {
+            header: {
+                title: "Aggregated Community Data",
+                subtitle: "Statistical overview of digital access in Bhimdhunga"
+            },
+            stats: {
+                highAccess: highAccess,
+                mediumAccess: mediumAccess,
+                lowAccess: lowAccess,
+                total: houses.length
+            }
+        }
+    };
+    
+    openCustomPanel(statsContent);
+}
+
+// Legend panel
+function openLegendPanel() {
+    const legendContent = {
+        title: "Map Legend",
+        isCustomPanel: true,
+        content: {
+            header: {
+                title: "Map Symbols & Colors",
+                subtitle: "Understanding the map interface"
+            },
+            legend: [
+                { icon: "fa-house", color: "#22c55e", label: "High Digital Access", description: "Households with reliable internet and digital skills" },
+                { icon: "fa-house", color: "#fbbf24", label: "Medium Digital Access", description: "Households with some digital access but facing barriers" },
+                { icon: "fa-house", color: "#ef4444", label: "Low Digital Access", description: "Households with limited or no digital access" },
+                { icon: "fa-location-dot", color: "#dc2626", label: "All In Foundation", description: "Research organization headquarters" },
+                { icon: "fa-building", color: "#7c3aed", label: "Ward Office", description: "Government administrative center" },
+                { icon: "fa-graduation-cap", color: "#3b82f6", label: "School", description: "Educational institution" },
+                { icon: "fa-mug-hot", color: "#dc2626", label: "Khajaghar", description: "Traditional tea shops and community gathering places" },
+                { icon: "fa-shop", color: "#ea580c", label: "Local Shop", description: "Commercial establishments" },
+                { icon: "fa-comments", color: "#6366f1", label: "Street Interviews", description: "Public space interview locations" }
+            ]
+        }
+    };
+    
+    openCustomPanel(legendContent);
+}
+
+// Generic function to open custom panels
+function openCustomPanel(content) {
+    // Hide navbar
+    hideNavbar();
+    
+    // Hide resident and foundation content
+    document.getElementById('resident-content').style.display = 'none';
+    document.getElementById('foundation-content').style.display = 'none';
+    document.getElementById('resident-stats').style.display = 'none';
+    
+    // Update modal title and basic info
+    document.getElementById('popup-title').textContent = content.title;
+    document.getElementById('location-name').textContent = content.content.header?.subtitle || '';
+    document.getElementById('interview-count').textContent = '';
+    
+    // Hide access badge for custom panels
+    document.querySelector('.access-indicator').style.display = 'none';
+    
+    // Create and show custom content
+    let customContent = document.getElementById('custom-content');
+    if (!customContent) {
+        customContent = document.createElement('div');
+        customContent.id = 'custom-content';
+        customContent.className = 'custom-content';
+        document.querySelector('.popup-body').appendChild(customContent);
+    }
+    
+    customContent.style.display = 'block';
+    
+    // Generate content based on type
+    if (content.content.sections) {
+        // About panel
+        customContent.innerHTML = `
+            <div class="custom-header">
+                <h3>${content.content.header.title}</h3>
+                <p class="custom-subtitle">${content.content.header.subtitle}</p>
+            </div>
+            ${content.content.sections.map(section => `
+                <div class="custom-section">
+                    <h4>${section.title}</h4>
+                    <p>${section.content}</p>
+                </div>
+            `).join('')}
+        `;
+    } else if (content.content.houseList) {
+        // Stories panel
+        customContent.innerHTML = `
+            <div class="custom-header">
+                <h3>${content.content.header.title}</h3>
+                <p class="custom-subtitle">${content.content.header.subtitle}</p>
+            </div>
+            <div class="stories-grid">
+                ${content.content.houseList.map(house => `
+                    <div class="story-card" onclick="openPopup(houseData.find(h => h.id === ${house.id}))">
+                        <div class="story-access-badge ${house.digitalAccess}">${house.digitalAccess.toUpperCase()}</div>
+                        <h4>${house.title}</h4>
+                        <p>${house.story?.quote || 'Click to read their story'}</p>
+                        <span class="story-resident">${house.story?.resident || 'Community Member'}</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    } else if (content.content.stats) {
+        // Statistics panel
+        const stats = content.content.stats;
+        customContent.innerHTML = `
+            <div class="custom-header">
+                <h3>${content.content.header.title}</h3>
+                <p class="custom-subtitle">${content.content.header.subtitle}</p>
+            </div>
+            <div class="stats-overview">
+                <div class="stat-card-large high">
+                    <div class="stat-number">${stats.highAccess}</div>
+                    <div class="stat-label">High Access Households</div>
+                    <div class="stat-percentage">${Math.round((stats.highAccess/stats.total)*100)}%</div>
+                </div>
+                <div class="stat-card-large medium">
+                    <div class="stat-number">${stats.mediumAccess}</div>
+                    <div class="stat-label">Medium Access Households</div>
+                    <div class="stat-percentage">${Math.round((stats.mediumAccess/stats.total)*100)}%</div>
+                </div>
+                <div class="stat-card-large low">
+                    <div class="stat-number">${stats.lowAccess}</div>
+                    <div class="stat-label">Low Access Households</div>
+                    <div class="stat-percentage">${Math.round((stats.lowAccess/stats.total)*100)}%</div>
+                </div>
+            </div>
+        `;
+    } else if (content.content.legend) {
+        // Legend panel
+        customContent.innerHTML = `
+            <div class="custom-header">
+                <h3>${content.content.header.title}</h3>
+                <p class="custom-subtitle">${content.content.header.subtitle}</p>
+            </div>
+            <div class="legend-list">
+                ${content.content.legend.map(item => `
+                    <div class="legend-item">
+                        <div class="legend-icon">
+                            <i class="fa-solid ${item.icon}" style="color: ${item.color}; font-size: 1.2rem;"></i>
+                        </div>
+                        <div class="legend-text">
+                            <h4>${item.label}</h4>
+                            <p>${item.description}</p>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
+    // Show modal
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
+// Update close functionality to handle custom panels
+const originalCloseHandler = closeBtn.onclick;
+closeBtn.onclick = function() {
+    // Hide custom content
+    const customContent = document.getElementById('custom-content');
+    if (customContent) {
+        customContent.style.display = 'none';
+    }
+    
+    // Show access badge again
+    document.querySelector('.access-indicator').style.display = 'flex';
+    
+    // Show navbar again
+    showNavbar();
+    
+    // Clear active nav button
+    clearActiveNavButton();
+    
+    // Call original close handler
+    originalCloseHandler.call(this);
+};

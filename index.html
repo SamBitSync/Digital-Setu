@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-text">Bhimdhunga Digital Stories</span>
+            </div>
+            <div class="navbar-buttons">
+                <button id="nav-faq" class="nav-btn">FAQ</button>
+                <button id="nav-about" class="nav-btn">About</button>
+                <button id="nav-stories" class="nav-btn">Stories</button>
+                <button id="nav-statistics" class="nav-btn">Statistics</button>
+                <button id="nav-legend" class="nav-btn">Map Legend</button>
+                <button id="nav-reset" class="nav-btn">Reset View</button>
+            </div>
+        </div>
+    </nav>
+    
     <div id="map"></div>
     
     <!-- ALIN Foundation Splash Screen -->
@@ -116,41 +133,110 @@
                 </div>
             </div>
             <div class="popup-body">
-                <div class="media-section">
-                    <div class="video-container">
-                        <video id="popup-video" controls>
-                            <source src="" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <!-- Resident Content (hidden for foundation) -->
+                <div id="resident-content" class="resident-content">
+                    <!-- Profile Section -->
+                    <div class="profile-section">
+                        <div class="headshot-container">
+                            <img id="resident-headshot" src="" alt="Resident Photo" class="headshot-image">
+                        </div>
+                        <div class="profile-info">
+                            <h3 id="resident-name" class="resident-name">-</h3>
+                            <p id="resident-role" class="resident-role">-</p>
+                            <p id="resident-description" class="resident-description">-</p>
+                        </div>
                     </div>
-                    <div class="audio-container">
-                        <h4>Listen to their voice</h4>
+                    
+                    <!-- Photo Collage Section -->
+                    <div class="photo-collage-section">
+                        <h3>📸 Life in the Digital Divide</h3>
+                        <div class="photo-collage-grid">
+                            <div class="collage-item">
+                                <img id="photo-1" src="" alt="Daily life photo">
+                                <div class="photo-quote">
+                                    <p id="quote-1">-</p>
+                                </div>
+                            </div>
+                            <div class="collage-item">
+                                <img id="photo-2" src="" alt="Technology use photo">
+                                <div class="photo-quote">
+                                    <p id="quote-2">-</p>
+                                </div>
+                            </div>
+                            <div class="collage-item">
+                                <img id="photo-3" src="" alt="Community photo">
+                                <div class="photo-quote">
+                                    <p id="quote-3">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Section -->
+                    <div class="video-section">
+                        <h3>🎥 Their Story</h3>
+                        <div class="youtube-container">
+                            <iframe id="youtube-video" 
+                                    width="100%" 
+                                    height="315" 
+                                    src="" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Section -->
+                    <div class="audio-section">
+                        <h3>🎙️ Listen to their voice</h3>
                         <audio id="popup-audio" controls>
                             <source src="" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                 </div>
-                
-                <div class="story-section">
-                    <div class="voice-panel">
-                        <h3>🎙️ In Their Own Words</h3>
-                        <blockquote id="resident-quote">-</blockquote>
-                        <p class="resident-name" id="resident-name">-</p>
-                        
-                        <div class="testimonial">
-                            <h4>Personal Experience:</h4>
-                            <p id="resident-testimonial">-</p>
+
+                <!-- Foundation-specific content sections (hidden by default) -->
+                <div id="foundation-content" class="foundation-content" style="display: none;">
+                    <!-- Foundation About Section -->
+                    <div class="foundation-about-section">
+                        <div class="foundation-header">
+                            <img id="foundation-logo" src="" alt="Foundation Logo" class="foundation-logo">
+                            <div class="foundation-info">
+                                <h3 id="foundation-name">Foundation Name</h3>
+                                <p id="foundation-mission" class="foundation-mission">Foundation mission statement</p>
+                                <p id="foundation-description" class="foundation-description">Foundation description</p>
+                            </div>
                         </div>
-                        
-                        <div class="reality-check">
-                            <h4>Behind the Statistics:</h4>
-                            <p id="reality-text">-</p>
+                    </div>
+
+                    <!-- Team Photos Section -->
+                    <div class="team-section">
+                        <h3>🎯 Research Fellowship Team</h3>
+                        <div class="team-grid" id="team-grid">
+                            <!-- Team members will be dynamically inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="faq-section">
+                        <h3>❓ Frequently Asked Questions</h3>
+                        <div class="faq-list" id="faq-list">
+                            <!-- FAQ items will be dynamically inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Fellowship Projects Section -->
+                    <div class="projects-section">
+                        <h3>🔬 Other 2025 Fellowship Projects</h3>
+                        <div class="projects-grid" id="projects-grid">
+                            <!-- Projects will be dynamically inserted here -->
                         </div>
                     </div>
                 </div>
 
-                <div class="stats-vs-reality">
+                <div class="stats-vs-reality" id="resident-stats">
                     <div class="stats-panel">
                         <h3>📊 Official Digital Statistics</h3>
                         <div class="stats-grid">
