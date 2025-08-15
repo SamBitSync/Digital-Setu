@@ -22,3 +22,7 @@ venv/
 .env
 *.key
 CLAUDE.md
+
+#files
+transcript/
+interviews/

@@ -2458,3 +2458,572 @@ body {
         font-size: 18px;
     }
 }
+
+/* ==========================================
+   MODE SELECTOR DROPDOWN STYLES
+   ========================================== */
+
+.mode-selector-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.mode-btn {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%) !important;
+    border: 2px solid #8b5cf6 !important;
+    min-width: 180px;
+}
+
+.mode-btn:hover {
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 50%, #a855f7 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+.mode-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 2px solid #8b5cf6;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 3000;
+    margin-top: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar:not(.hidden) .mode-selector-dropdown:hover .mode-dropdown-content {
+    display: block;
+}
+
+.mode-option {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.mode-option:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    transform: translateX(5px);
+    color: white;
+}
+
+.mode-option.active {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+}
+
+.mode-option i {
+    margin-right: 8px;
+    width: 16px;
+}
+
+/* ==========================================
+   AUTO-PROGRESSION PANEL STYLES
+   ========================================== */
+
+.auto-progression-panel {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: 380px;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 2px solid #7c3aed;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
+    z-index: 1500;
+    backdrop-filter: blur(15px);
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.progression-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #475569;
+}
+
+.current-story-info {
+    flex: 1;
+}
+
+.story-counter {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.current-story-info h3 {
+    color: #e2e8f0;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.current-story-info p {
+    color: #a855f7;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.progression-timer {
+    margin-left: 20px;
+}
+
+.timer-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #7c3aed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #312e81 0%, #5b21b6 100%);
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.timer-circle span {
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.progression-controls {
+    display: flex;
+    gap: 8px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #475569;
+}
+
+.progression-btn {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #64748b;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.progression-btn:hover {
+    background: linear-gradient(135deg, #64748b 0%, #78716c 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.progression-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.progression-btn.primary {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-color: #8b5cf6;
+}
+
+.progression-btn.primary:hover {
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+}
+
+.progression-btn.secondary {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    border-color: #f87171;
+}
+
+.progression-btn.secondary:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+}
+
+.progression-btn.paused {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    border-color: #34d399;
+}
+
+.progression-progress {
+    padding: 15px 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #475569;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Mobile responsiveness for auto-progression panel */
+@media (max-width: 768px) {
+    .auto-progression-panel {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: calc(100vw - 20px);
+    }
+    
+    .progression-info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .progression-timer {
+        margin-left: 0;
+    }
+    
+    .progression-controls {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .progression-btn {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+}
+
+/* ==========================================
+   THEMATIC BRIDGE OVERLAY STYLES
+   ========================================== */
+
+.bridge-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.bridge-container {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 2px solid #7c3aed;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.3);
+    animation: bridgeSlideIn 0.8s ease-out;
+}
+
+@keyframes bridgeSlideIn {
+    from {
+        transform: scale(0.8) translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.bridge-content {
+    color: #e2e8f0;
+}
+
+.bridge-icon {
+    margin-bottom: 20px;
+}
+
+.bridge-icon i {
+    font-size: 48px;
+    color: #a855f7;
+    animation: bridgePulse 2s infinite;
+}
+
+@keyframes bridgePulse {
+    0%, 100% { 
+        transform: scale(1);
+        color: #a855f7;
+    }
+    50% { 
+        transform: scale(1.1);
+        color: #c084fc;
+    }
+}
+
+.bridge-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bridge-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+.bridge-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bridge-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #475569;
+    border-radius: 3px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.bridge-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+    border-radius: 3px;
+    transition: width 0.1s linear;
+    position: relative;
+}
+
+.bridge-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    animation: bridgeShimmer 1.5s infinite;
+}
+
+@keyframes bridgeShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.bridge-progress span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a855f7;
+    min-width: 40px;
+}
+
+/* Mobile responsiveness for bridge overlay */
+@media (max-width: 768px) {
+    .bridge-container {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+    
+    .bridge-content h3 {
+        font-size: 24px;
+    }
+    
+    .bridge-content p {
+        font-size: 16px;
+    }
+    
+    .bridge-icon i {
+        font-size: 40px;
+    }
+}
+
+/* ==========================================
+   ACTIVE MARKER HIGHLIGHTING SYSTEM
+   ========================================== */
+
+/* Active marker glow effect */
+.marker-active {
+    animation: markerGlow 2s infinite !important;
+    z-index: 1000 !important;
+    filter: drop-shadow(0 0 20px #7c3aed) !important;
+}
+
+@keyframes markerGlow {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 15px #7c3aed) brightness(1);
+    }
+    50% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 30px #a855f7) brightness(1.3);
+    }
+}
+
+/* Active house marker specific styling */
+.leaflet-marker-icon.marker-active {
+    animation: houseGlow 2s infinite !important;
+}
+
+@keyframes houseGlow {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 15px #7c3aed) drop-shadow(0 0 25px rgba(124, 58, 237, 0.5));
+    }
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 30px #a855f7) drop-shadow(0 0 40px rgba(168, 85, 247, 0.8));
+    }
+}
+
+/* Active khajaghar marker styling */
+.khajaghar-marker.marker-active .marker-content {
+    animation: khajagharPulse 2s infinite !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    border: 3px solid #c084fc !important;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6), 0 0 40px rgba(168, 85, 247, 0.4) !important;
+}
+
+@keyframes khajagharPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(124, 58, 237, 0.8), 0 0 50px rgba(168, 85, 247, 0.6);
+    }
+}
+
+/* Active school marker styling */
+.school-marker.marker-active .school-icon {
+    animation: schoolGlow 2s infinite !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    border: 3px solid #c084fc !important;
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.7) !important;
+}
+
+@keyframes schoolGlow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 35px rgba(168, 85, 247, 0.8);
+    }
+}
+
+/* Active street interview marker styling */
+.street-interview-marker.marker-active .marker-content {
+    animation: interviewHighlight 2s infinite !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
+    border: 3px solid #c084fc !important;
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.7) !important;
+}
+
+@keyframes interviewHighlight {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+    }
+    25% {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
+    }
+    75% {
+        transform: scale(1.05) rotate(-2deg);
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+    }
+}
+
+/* Active area circle emphasis */
+.area-circle-active {
+    animation: areaGlow 3s infinite !important;
+}
+
+@keyframes areaGlow {
+    0%, 100% {
+        stroke-width: 3;
+        stroke-opacity: 0.8;
+        fill-opacity: 0.2;
+    }
+    50% {
+        stroke-width: 5;
+        stroke-opacity: 1;
+        fill-opacity: 0.3;
+    }
+}
+
+/* Dim non-active markers during guided mode */
+.guided-mode-active .leaflet-marker-icon:not(.marker-active),
+.guided-mode-active .marker-content:not(.marker-active) {
+    opacity: 0.4 !important;
+    filter: grayscale(0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Restore markers when not in guided mode */
+.leaflet-marker-icon,
+.marker-content {
+    transition: all 0.3s ease;
+}

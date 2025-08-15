@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar hidden">
         <div class="navbar-container">
             <div class="navbar-brand">
                 <span class="brand-text">Bhimdhunga Digital Stories</span>
@@ -22,9 +22,80 @@
                 <button id="nav-statistics" class="nav-btn">Statistics</button>
                 <button id="nav-legend" class="nav-btn">Map Legend</button>
                 <button id="nav-reset" class="nav-btn">Reset View</button>
+                <!-- Story Mode Selector -->
+                <div class="mode-selector-dropdown">
+                    <button id="mode-selector-btn" class="nav-btn mode-btn">
+                        <i class="fas fa-route"></i> Manual Explore
+                    </button>
+                    <div class="mode-dropdown-content">
+                        <button data-mode="manual" class="mode-option active">
+                            <i class="fas fa-hand-pointer"></i> Manual Explore
+                        </button>
+                        <button data-mode="age-journey" class="mode-option">
+                            <i class="fas fa-clock"></i> Age-Based Journey
+                        </button>
+                        <button data-mode="efficacy-spectrum" class="mode-option">
+                            <i class="fas fa-chart-line"></i> Self-Efficacy Spectrum
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
+    
+    <!-- Auto-progression Control Panel -->
+    <div id="auto-progression-panel" class="auto-progression-panel" style="display: none;">
+        <div class="progression-info">
+            <div class="current-story-info">
+                <span class="story-counter">Story <span id="current-story-num">1</span> of <span id="total-stories">4</span></span>
+                <h3 id="current-story-title">Loading...</h3>
+                <p id="current-story-theme">Digital Divide Journey</p>
+            </div>
+            <div class="progression-timer">
+                <div class="timer-circle">
+                    <span id="timer-countdown">15</span>
+                </div>
+            </div>
+        </div>
+        <div class="progression-controls">
+            <button id="prev-story-btn" class="progression-btn">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button id="pause-progression-btn" class="progression-btn primary">
+                <i class="fas fa-pause"></i> Pause
+            </button>
+            <button id="next-story-btn" class="progression-btn">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+            <button id="exit-progression-btn" class="progression-btn secondary">
+                <i class="fas fa-times"></i> Exit Journey
+            </button>
+        </div>
+        <div class="progression-progress">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Thematic Bridge Overlay -->
+    <div id="thematic-bridge-overlay" class="bridge-overlay" style="display: none;">
+        <div class="bridge-container">
+            <div class="bridge-content">
+                <div class="bridge-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3 id="bridge-title">Transitioning...</h3>
+                <p id="bridge-text">Moving between digital divide perspectives...</p>
+                <div class="bridge-progress">
+                    <div class="bridge-progress-bar">
+                        <div id="bridge-progress-fill" class="bridge-progress-fill"></div>
+                    </div>
+                    <span id="bridge-timer">3</span>s
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div id="map"></div>
     
@@ -172,28 +243,49 @@
                         </div>
                     </div>
                     
-                    <!-- Video Section -->
+                    <!-- Video Section 1 -->
                     <div class="video-section">
-                        <h3>🎥 Their Story</h3>
+                        <h3 id="video-1-heading">🎥 Video 1</h3>
                         <div class="youtube-container">
                             <iframe id="youtube-video" 
                                     width="100%" 
                                     height="315" 
                                     src="" 
                                     frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allow="autoplay; encrypted-media" 
                                     allowfullscreen>
                             </iframe>
                         </div>
                     </div>
                     
-                    <!-- Audio Section -->
-                    <div class="audio-section">
-                        <h3>🎙️ Listen to their voice</h3>
-                        <audio id="popup-audio" controls>
-                            <source src="" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
+                    <!-- Video Section 2 (School and Khajaghar 2) -->
+                    <div id="video-2-section" class="video-section" style="display: none;">
+                        <h3 id="video-2-heading">🎥 Video 2</h3>
+                        <div class="youtube-container">
+                            <iframe id="second-video" 
+                                    width="100%" 
+                                    height="315" 
+                                    src="" 
+                                    frameborder="0" 
+                                    allow="autoplay; encrypted-media" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Section 3 (Khajaghar 2 only) -->
+                    <div id="video-3-section" class="video-section" style="display: none;">
+                        <h3 id="video-3-heading">🎥 Video 3</h3>
+                        <div class="youtube-container">
+                            <iframe id="third-video" 
+                                    width="100%" 
+                                    height="315" 
+                                    src="" 
+                                    frameborder="0" 
+                                    allow="autoplay; encrypted-media" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
