@@ -22,23 +22,6 @@
                 <button id="nav-statistics" class="nav-btn">Statistics</button>
                 <button id="nav-legend" class="nav-btn">Map Legend</button>
                 <button id="nav-reset" class="nav-btn">Reset View</button>
-                <!-- Story Mode Selector -->
-                <div class="mode-selector-dropdown">
-                    <button id="mode-selector-btn" class="nav-btn mode-btn">
-                        <i class="fas fa-route"></i> Manual Explore
-                    </button>
-                    <div class="mode-dropdown-content">
-                        <button data-mode="manual" class="mode-option active">
-                            <i class="fas fa-hand-pointer"></i> Manual Explore
-                        </button>
-                        <button data-mode="age-journey" class="mode-option">
-                            <i class="fas fa-clock"></i> Age-Based Journey
-                        </button>
-                        <button data-mode="efficacy-spectrum" class="mode-option">
-                            <i class="fas fa-chart-line"></i> Self-Efficacy Spectrum
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
@@ -98,6 +81,128 @@
     </div>
     
     <div id="map"></div>
+    
+    <!-- Story Mode Character Boxes Overlay -->
+    <div id="story-character-boxes" class="character-boxes-overlay" style="display: none;">
+        <div class="character-boxes-container">
+            <div class="character-boxes-header">
+                <h3>Age Journey: Digital Divide Stories</h3>
+                <p>Discover how age influences digital participation</p>
+            </div>
+            <div class="character-boxes-grid">
+                <div id="character-box-maili" class="character-box locked" data-character="maili">
+                    <div class="character-photo">
+                        <img src="interviews/street interview/street interview 3/Maili Tamang.JPG" alt="Maili Tamang">
+                        <div class="lock-overlay">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4>Maili Tamang</h4>
+                        <p>58-year-old widow</p>
+                        <div class="character-status">
+                            <span class="status-text">Locked</span>
+                            <div class="timer-display" style="display: none;">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">70s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="character-box-sunita" class="character-box locked" data-character="sunita">
+                    <div class="character-photo">
+                        <img src="interviews/khajaghar/khajaghar 1/Sunita Tamang.JPG" alt="Sunita Tamang">
+                        <div class="lock-overlay">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4>Sunita Tamang</h4>
+                        <p>45 year old shop owner</p>
+                        <div class="character-status">
+                            <span class="status-text">Locked</span>
+                            <div class="timer-display" style="display: none;">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">60s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="character-box-aman" class="character-box locked" data-character="aman">
+                    <div class="character-photo">
+                        <img src="photos/headshots/Aman Tamang.png" alt="Aman Tamang">
+                        <div class="lock-overlay">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4>Aman Tamang</h4>
+                        <p>18-year-old Digital Native</p>
+                        <div class="character-status">
+                            <span class="status-text">Locked</span>
+                            <div class="timer-display" style="display: none;">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">35s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-progress">
+                <div class="progress-bar">
+                    <div id="story-progress-fill" class="progress-fill"></div>
+                </div>
+                <p class="progress-text">Progress: <span id="progress-count">0</span>/3 stories discovered</p>
+            </div>
+            <button id="exit-story-mode" class="exit-story-btn">
+                <i class="fas fa-times"></i> Exit Story Mode
+            </button>
+        </div>
+    </div>
+    
+    <!-- Area Hint Overlay -->
+    <div id="area-hint-overlay" class="area-hint-overlay" style="display: none;">
+        <div class="hint-container">
+            <div class="hint-content">
+                <h3 id="hint-title">Explore Majuwa Area</h3>
+                <p id="hint-text">Look for Sunita's khajaghar (tea shop) in the Majuwa area. The map will guide you with area highlighting.</p>
+                <button id="hint-understood" class="hint-btn">Got it!</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Story Completion Overlay -->
+    <div id="story-completion-overlay" class="completion-overlay" style="display: none;">
+        <div class="completion-container">
+            <div class="completion-content">
+                <div class="completion-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Age Journey Complete!</h3>
+                <p>You've met three community members whose stories reveal how age influences digital participation. Their experiences show that the digital divide isn't just about access—it's about choice, fear, trust, and life circumstances.</p>
+                <div class="completion-summary">
+                    <div class="summary-item">
+                        <span class="age">58</span>
+                        <span class="name">Maili</span>
+                        <span class="approach">Content without technology</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="age">45</span>
+                        <span class="name">Sunita</span>
+                        <span class="approach">Selective digital learning</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="age">18</span>
+                        <span class="name">Aman</span>
+                        <span class="approach">Digital native integration</span>
+                    </div>
+                </div>
+                <button id="completion-understood" class="completion-btn">Continue Exploring</button>
+            </div>
+        </div>
+    </div>
     
     <!-- ALIN Foundation Splash Screen -->
     <div id="splash-screen" class="splash-overlay">
@@ -181,7 +286,7 @@
     <!-- Cinematic Video Overlay -->
     <div id="cinematic-video-overlay" class="video-overlay">
         <video id="cinematic-video" autoplay muted>
-            <source src="video/intro/Bhimdhunga intro.mp4" type="video/mp4">
+            <source src="video/intro/Bhimdhunga_intro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-controls">
@@ -199,14 +304,27 @@
                     <p id="interview-count" class="interview-detail">-</p>
                 </div>
                 <div class="access-indicator">
-                    <span id="access-level">Digital Access: </span>
                     <span id="access-badge" class="badge">-</span>
                 </div>
             </div>
             <div class="popup-body">
                 <!-- Resident Content (hidden for foundation) -->
                 <div id="resident-content" class="resident-content">
-                    <!-- Profile Section -->
+                    <!-- 🎥 SHOWCASE VIDEO (TOP PRIORITY) -->
+                    <div class="showcase-video-section">
+                        <h3 id="showcase-video-heading">🎥 Showcase Video</h3>
+                        <div class="showcase-video-container">
+                            <video id="showcase-video" 
+                                   controls 
+                                   autoplay 
+                                   style="width: 100%; height: 350px; border-radius: 8px; background: #000;">
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 👤 PROFILE SECTION (HEADSHOT + INFO) -->
                     <div class="profile-section">
                         <div class="headshot-container">
                             <img id="resident-headshot" src="" alt="Resident Photo" class="headshot-image">
@@ -218,32 +336,41 @@
                         </div>
                     </div>
                     
-                    <!-- Photo Collage Section -->
-                    <div class="photo-collage-section">
-                        <h3>📸 Life in the Digital Divide</h3>
-                        <div class="photo-collage-grid">
-                            <div class="collage-item">
-                                <img id="photo-1" src="" alt="Daily life photo">
-                                <div class="photo-quote">
-                                    <p id="quote-1">-</p>
+                    <!-- 💬 KEY QUOTES -->
+                    <div class="quotes-section">
+                        <h3>💬 Key Perspectives</h3>
+                        <div class="quotes-grid">
+                            <div class="quote-item">
+                                <div class="quote-icon">🏠</div>
+                                <div class="quote-content">
+                                    <p id="quote-1" class="quote-text">-</p>
+                                    <span class="quote-theme">Traditional Life</span>
                                 </div>
+                                <!-- Hidden photo elements for JS compatibility -->
+                                <img id="photo-1" style="display: none;" src="" alt="">
                             </div>
-                            <div class="collage-item">
-                                <img id="photo-2" src="" alt="Technology use photo">
-                                <div class="photo-quote">
-                                    <p id="quote-2">-</p>
+                            <div class="quote-item">
+                                <div class="quote-icon">📱</div>
+                                <div class="quote-content">
+                                    <p id="quote-2" class="quote-text">-</p>
+                                    <span class="quote-theme">Technology Views</span>
                                 </div>
+                                <!-- Hidden photo elements for JS compatibility -->
+                                <img id="photo-2" style="display: none;" src="" alt="">
                             </div>
-                            <div class="collage-item">
-                                <img id="photo-3" src="" alt="Community photo">
-                                <div class="photo-quote">
-                                    <p id="quote-3">-</p>
+                            <div class="quote-item">
+                                <div class="quote-icon">👶</div>
+                                <div class="quote-content">
+                                    <p id="quote-3" class="quote-text">-</p>
+                                    <span class="quote-theme">Children & Education</span>
                                 </div>
+                                <!-- Hidden photo elements for JS compatibility -->
+                                <img id="photo-3" style="display: none;" src="" alt="">
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Video Section 1 -->
+                    <!-- 🎬 OTHER VIDEOS (if any) -->
                     <div class="video-section">
                         <h3 id="video-1-heading">🎥 Video 1</h3>
                         <div class="youtube-container">
@@ -318,10 +445,10 @@
                             <!-- FAQ items will be dynamically inserted here -->
                         </div>
                     </div>
-
+ 
                     <!-- Fellowship Projects Section -->
                     <div class="projects-section">
-                        <h3>🔬 Other 2025 Fellowship Projects</h3>
+                        <h3>🔬 Other ALIN 2025 Fellowship Projects</h3>
                         <div class="projects-grid" id="projects-grid">
                             <!-- Projects will be dynamically inserted here -->
                         </div>

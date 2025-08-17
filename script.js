@@ -372,10 +372,10 @@ const houseData = [
         id: 1,
         lat: 27.725362, 
         lng: 85.224747,
-        title: "The IT Professional's Home",
+        title: "Tech-Resistant Household",
         youtubeId: "dQw4w9WgXcQ", // Example YouTube video ID - replace with actual interviews
         audio: "audio/family1_testimony.mp3",
-        digitalAccess: "high",
+        digitalAccess: "low",
         ageCategory: "digital_native",
         selfEfficacy: "high_confidence",
         ageJourneyOrder: 4,
@@ -410,14 +410,14 @@ const houseData = [
             quote: "\"Everyday argument. We scold them but still they don't respond properly... Classic tech is worst\" - Internet Provider Issues",
             reality: "Despite having high-speed connectivity, the family experiences the social costs of digital saturation and infrastructure reliability issues that affect daily life.",
             testimonial: "Connection cost NPR 17,000, 7-8 years ago. Speed varies - 350mbps in some homes, 50-80mbps in others. But the real cost is how technology changed our family dynamics.",
-            resident: "Sachin & Family, Digital Divide Experience"
+            resident: "Sudiksha Tamang"
         }
     },
     {
         id: 2,
         lat: 27.738000,
         lng: 85.238667,
-        title: "Connected Family Home",
+        title: "Hill farming household",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
         audio: "audio/family2_testimony.mp3",
         digitalAccess: "high",
@@ -432,22 +432,21 @@ const houseData = [
             quote: "\"Our children can do homework online, but when internet fails, they struggle with offline alternatives.\"",
             reality: "High-speed internet enables digital learning, but creates dependency. Power outages and connectivity issues significantly impact daily routines.",
             testimonial: "We're digitally connected but realize how dependent we've become. During the last internet outage, even simple tasks became difficult.",
-            resident: "Maya Shrestha, Teacher"
+            resident: "Pratima Tamang, Farmer"
         }
     },
     {
         id: 3,
         lat: 27.738500,
         lng: 85.237750,
-        title: "Multi-generational Digital Divide",
+        title: "Agricultural Knowledge Seeker Household",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-        audio: "audio/family3_voices.mp3",
-        digitalAccess: "medium",
+        digitalAccess: "high",
         ageCategory: "late_adopter",
         selfEfficacy: "low_persistence",
         ageJourneyOrder: 3,
         efficacyJourneyOrder: 2,
-        participant: "Principal", // Reference to actual interview participant
+        participant: "Ram Raj Lama", // Reference to actual interview participant
         stats: {
             internetSpeed: "25 Mbps",
             devices: "5 smartphones, 1 laptop",
@@ -459,36 +458,56 @@ const houseData = [
             quote: "\"My grandchildren help me with digital payments, but I worry about being dependent on them.\"",
             reality: "Three generations under one roof experience different levels of digital comfort, creating both support networks and dependencies.",
             testimonial: "The young ones are always on phones helping us older people with apps and forms. It's good but also makes us feel helpless sometimes.",
-            resident: "Bishnu Maharjan, Retired Government Officer"
+            resident: "Ram Raj Lama"
         }
     },
     {
         id: 4,
         lat: 27.739389,
         lng: 85.236333,
-        title: "Small Business Digital Transition",
+        title: "Farming Crew Household",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-        audio: "audio/business_family.mp3",
-        digitalAccess: "high",
+        audio: "audio/farming_family.mp3",
+        digitalAccess: "medium",
+        participant: "Dhan Bahadur Tamang", // Reference to actual interview participant
+        profile: {
+            headshot: "photos/headshots/Dhanbahadur Tamang.JPG",
+            role: "40-year-old Farmer",
+            description: "Dhan Bahadur Tamang, father and practical phone user. Uses smartphone mainly for calls (2-4 daily) and leisure browsing. Been using phones 8-10 years, WiFi for 6-7 years. Handles family's online banking while others don't."
+        },
         stats: {
-            internetSpeed: "75 Mbps",
-            devices: "3 smartphones, 2 laptops, POS system",
-            monthlyDataCost: "NPR 2,200",
-            digitalSkills: "Business-focused",
-            onlineServices: "Digital payments, inventory, social marketing"
+            internetSpeed: "Unknown (Supernet provider - \"It works normally\")",
+            devices: "Multiple smartphones (family)",
+            monthlyDataCost: "Not specified",
+            digitalSkills: "Basic use - sticks to familiar functions",
+            onlineServices: "eSewa, YouTube (news), Facebook, TikTok (leisure)"
         },
         story: {
-            quote: "\"Digital payments increased our customers, but we lost some elderly regulars who prefer cash only.\"",
-            reality: "Business digitization brings efficiency and new customers while potentially excluding those less comfortable with technology.",
-            testimonial: "Our business grew with digital tools, but we see how it creates barriers for some community members who struggle with technology.",
-            resident: "Raju Tamang, Shop Owner"
-        }
+            quote: "\"I just use the things that I already know. New things... I don't know. I haven't studied. I don't know how to write, I just watch.\"",
+            reality: "Practical digital users who stick to familiar functions, representing steady but limited technology adoption patterns in farming communities.",
+            testimonial: "Mobile phone has become the go-to thing for leisure time. We charge it when working, use it while eating breakfast, lunch, before sleeping - about 1 hour total.",
+            resident: "Dhan Bahadur Tamang, Farmer"
+        },
+        photos: [
+            {
+                image: "placeholder1.jpg",
+                quote: "\"I just use the things that I already know. New things... I don't know. I haven't studied. I don't know how to write, I just watch.\""
+            },
+            {
+                image: "placeholder2.jpg", 
+                quote: "\"I watch only Nepali news that I find trustworthy - the ones about what's happening around the world, fights and wars. I watch all the news channels on YouTube.\""
+            },
+            {
+                image: "placeholder3.jpg",
+                quote: "\"Mobile phone has become the go-to thing for leisure time. We charge it when working, use it while eating breakfast, lunch, before sleeping - about 1 hour total.\""
+            }
+        ]
     },
     {
         id: 5,
         lat: 27.731611,
         lng: 85.236083,
-        title: "Rural-Urban Digital Bridge",
+        title: "Cross-Border Family Household",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
         audio: "audio/rural_urban_family.mp3",
         digitalAccess: "medium",
@@ -503,17 +522,17 @@ const houseData = [
             quote: "\"We moved here from the village for better internet, but still help relatives back home with digital services.\"",
             reality: "Families serve as digital bridges between rural areas and urban connectivity, supporting extended networks while managing their own digital adaptation.",
             testimonial: "Every week relatives call asking us to help them with online forms or digital payments. We're like the tech support for our whole extended family.",
-            resident: "Kamala Gurung, Homemaker"
+            resident: "Mishri Tamang"
         }
     },
     {
         id: 6,
         lat: 27.729194,
         lng: 85.234389,
-        title: "Elderly Couple's Adaptation Journey",
+        title: "Newcomer's perspective of community",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
         audio: "audio/elderly_adaptation.mp3",
-        digitalAccess: "low",
+        digitalAccess: "high",
         ageCategory: "elderly",
         selfEfficacy: "complete_avoidance",
         ageJourneyOrder: 1,
@@ -530,7 +549,7 @@ const houseData = [
             quote: "\"Our grandchildren taught us WhatsApp, but online banking still scares us.\"",
             reality: "Senior citizens face the steepest learning curve in digital adoption, often relying on family members for digital tasks while trying to maintain independence.",
             testimonial: "We want to learn but worry about making mistakes with money online. The buttons are small and the language is confusing.",
-            resident: "Devi & Hari Pradhan, Retired Farmers"
+            resident: "Nirisuchika Tamang, cloth shopowner"
         }
     },
     {
@@ -559,44 +578,64 @@ const houseData = [
         id: 8,
         lat: 27.726464,
         lng: 85.224558,
-        title: "Student Family Struggles",
+        title: "Extended Family Home",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-        audio: "audio/student_family.mp3",
-        digitalAccess: "medium",
+        audio: "audio/extended_family.mp3",
+        digitalAccess: "high",
+        participant: "Sikha Limbu", // Reference to actual interview participant
+        profile: {
+            headshot: "interviews/houses/high access/Extended family home/Sikha Limbu.JPG",
+            role: "26-year-old Agriculture & Homemaker",
+            description: "26-year-old married woman from Majhuwa, agriculture and homemaker. Lives in large extended family (15 members). Uses phone 6-7 hours daily and is excited to learn new technology, but faces technical limitations."
+        },
         stats: {
-            internetSpeed: "15 Mbps (inconsistent)",
-            devices: "3 smartphones, 1 shared laptop",
-            monthlyDataCost: "NPR 1,000",
-            digitalSkills: "Students advanced, parents basic",
-            onlineServices: "Education, social media, limited banking"
+            internetSpeed: "Not specified (uses Classic-Tech provider)",
+            devices: "9 smartphones (household total)",
+            monthlyDataCost: "Not specified",
+            digitalSkills: "Medium-High - enthusiastic learner, agricultural research",
+            onlineServices: "YouTube (farming research - godachitra/passion fruit), Facebook (shopping)"
         },
         story: {
-            quote: "\"During online classes, we have to choose which child gets to use the laptop for homework.\"",
-            reality: "Educational digitization reveals household resource constraints, where sharing devices becomes a daily challenge affecting children's academic performance.",
-            testimonial: "When both kids have online assignments, one has to wait. The internet slows down when everyone is using it, and classes get interrupted.",
-            resident: "Sita Maharjan, Mother of Two Students"
-        }
+            quote: "\"I'm excited to learn new technology, but when I face obstacles I repeat it for a bit, then if I can't figure it out, I just leave it. Payment apps are important but they don't work on my phone - we tried a lot but couldn't get them working.\"",
+            reality: "Technology enthusiasm meets technical limitations in large households where 15 family members navigate varying digital comfort levels and infrastructure challenges.",
+            testimonial: "We taught Papa how to pick up calls and he learned a little bit, but Mummy doesn't have interest and we didn't teach her. My husband uses mobile banking but I don't. Women mostly watch TikTok, men watch bike and vehicle content.",
+            resident: "Sikha Limbu, Agriculture & Homemaker"
+        },
+        photos: [
+            {
+                image: "placeholder1.jpg",
+                quote: "\"I ordered jewelry worth Rs. 2000 and got scammed - didn't receive the complete product. After that my trust level decreased in online shopping... but after seeing new stuff, I still want to order.\""
+            },
+            {
+                image: "placeholder2.jpg", 
+                quote: "\"We taught Papa how to pick up calls and he learned a little bit, but Mummy doesn't have interest and we didn't teach her.\""
+            },
+            {
+                image: "placeholder3.jpg",
+                quote: "\"When we grow new things, we use internet. Recently we're growing godachitra (passion fruit) and use YouTube for farming information.\""
+            }
+        ]
     },
     {
         id: 9,
         lat: 27.726005,
         lng: 85.224614,
-        title: "Extended Family Digital Hub",
+        title: "Pragmatic Driver Household",
         video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
         audio: "audio/extended_family.mp3",
-        digitalAccess: "high",
+        digitalAccess: "low",
         stats: {
-            internetSpeed: "60 Mbps fiber",
-            devices: "8 smartphones, 3 laptops, 2 tablets, smart appliances",
-            monthlyDataCost: "NPR 2,500",
-            digitalSkills: "Mixed across generations",
-            onlineServices: "Comprehensive digital services"
+            internetSpeed: "N/A",
+            devices: "4 phones",
+            monthlyDataCost: "Mobile data",
+            digitalSkills: "Basic",
+            onlineServices: "eSewa"
         },
         story: {
             quote: "\"Our house became the family tech support center - relatives come here for internet and digital help.\"",
             reality: "Well-connected households often become informal community digital service centers, supporting extended networks while managing their own high usage demands.",
             testimonial: "Every weekend relatives visit to video call family abroad, print documents, or get help with government forms online. We're like a one-family internet cafe.",
-            resident: "Ramesh Tamang, Joint Family Head"
+            resident: "Tej Tamang, Local route driver"
         }
     },
     {
@@ -633,20 +672,20 @@ const houseData = [
             // ],
             faq: [
                 {
-                    question: "What is the All In Fellowship?",
-                    answer: "The All In Fellowship supports early-career researchers investigating digital equity challenges in Nepal. Fellows conduct community-based research to understand how digital technologies impact daily life across different demographics and geographic areas."
+                    question: "Who are we?",
+                    answer: "We are a group of emerging professionals — a future constitutional lawyer, a public health practitioner in training, a aspiring cognitive scientist, and an economist in the making. Together, we aim to serve as a bridge(SETU) between digital literacy and lived experiences."
                 },
                 {
-                    question: "How was this storymap project created?",
-                    answer: "This interactive storymap was developed through extensive fieldwork in Bhimdhunga, Nagarjun Municipality. Fellows conducted household interviews, collected multimedia testimonials, and mapped the geographic distribution of digital access to create this comprehensive view of the local digital divide."
+                    question: "What is this research about?",
+                    answer: "We are conducting a qualitative study to understand the lived experirence of digital divide in Bhimdhunga, Ward No. 8."
                 },
                 {
-                    question: "What other projects has this fellowship cohort created?",
-                    answer: "This cohort has produced research on digital payment adoption in rural markets, online education accessibility during COVID-19, and intergenerational technology transfer within families. Each project combines quantitative data with personal stories to reveal the human impact of digital divides."
+                    question: "How are the research findings made available?",
+                    answer: "Through this interactive platform you can either wander freely between houses to discover individual stories, or follow guided journeys that reveal how digital adoption varies across generations and circumstances. A comprehensive written report with detailed analysis is also available [here]."
                 },
                 {
-                    question: "How can communities use this research?",
-                    answer: "This research provides evidence for policy makers, community organizations, and technology providers to design more inclusive digital services. The stories and data help identify specific barriers and successful adaptation strategies that can inform broader digital equity initiatives."
+                    question: "Why focus on lived experiences?",
+                    answer: "To highlight how people personally experience and navigate digital access, not just the numbers."
                 }
             ],
             fellowshipProjects: [
@@ -654,13 +693,13 @@ const houseData = [
                     title: "Mankiri",
                     description: "A campaign aiming to promote the visibility and foster solidarity and open discussion on mental health of peri and post menopausal women",
                     status: "Completed",
-                    link: "#team-mankiri"
+                    link: "https://www.instagram.com/mankiriprojectnepal/"
                 },
                 {
                     title: "Shreejanshil",
                     description: "A documentary journey into the daily struggles, hopes and change in the Dom community",
                     status: "Completed",
-                    link: "#team-shreejanshil"
+                    link: "https://www.instagram.com/shreejanshil/"
                 }
             ]
         }
@@ -811,6 +850,17 @@ houseData.forEach(house => {
     const marker = L.marker([house.lat, house.lng], { icon: getLocationIcon(house.digitalAccess) })
         .on('click', () => openPopup(house));
     houseMarkers.push(marker);
+    
+    // Add hover interactions for manual exploration
+    marker.on('mouseover', function(e) {
+        if (house.story?.resident) {
+            showHoverPreview(house.story.resident, e.originalEvent);
+        }
+    });
+    
+    marker.on('mouseout', function() {
+        hideHoverPreview();
+    });
     
     // Store reference for highlighting system (only non-foundation houses)
     if (!house.isFoundation) {
@@ -1003,6 +1053,15 @@ function createSchoolMarker() {
         })
     }).on('click', () => openSchoolPopup()).addTo(map);
     
+    // Add hover interactions for manual exploration
+    schoolMarker.on('mouseover', function(e) {
+        showHoverPreviewWithAge("Principal", "52", e.originalEvent);
+    });
+    
+    schoolMarker.on('mouseout', function() {
+        hideHoverPreview();
+    });
+    
     // Store reference for highlighting system
     markerReferences.school = schoolMarker;
 }
@@ -1014,12 +1073,16 @@ function createKhajagharMarkers() {
         {
             lat: 27.724592,
             lng: 85.224491,
-            name: "Khajaghar 1"
+            name: "Majuwa Khajaghar",
+            participant: "Sunita Tamang",
+            age: "45"
         },
         {
             lat: 27.739199,
             lng: 85.236208,
-            name: "Khajaghar 2"
+            name: "Thaple Khajaghar",
+            participant: "Aman Tamang",
+            age: "17"
         }
     ];
     
@@ -1032,6 +1095,17 @@ function createKhajagharMarkers() {
                 iconAnchor: [12.5, 20]
             })
         }).on('click', () => openKhajagharPopup(location)).addTo(map);
+        
+        // Add hover interactions for manual exploration
+        khajagharMarker.on('mouseover', function(e) {
+            if (location.participant) {
+                showHoverPreviewWithAge(location.participant, location.age, e.originalEvent);
+            }
+        });
+        
+        khajagharMarker.on('mouseout', function() {
+            hideHoverPreview();
+        });
         
         khajagharMarkers.push(khajagharMarker);
         
@@ -1048,20 +1122,26 @@ function createStreetInterviewMarkers() {
         {
             lat: 27.731906,
             lng: 85.236138,
-            name: "Street Interview 1",
-            interviewType: "pedestrian"
+            name: "Street Interview ",
+            interviewType: "cliff farmer",
+            participant: "Samjhana Lama",
+            age: "28"
         },
         {
             lat: 27.737444,
             lng: 85.233972,
             name: "Street Interview 2", 
-            interviewType: "community"
+            interviewType: "student",
+            participant: "Bijaya Tamang",
+            age: "17"
         },
         {
             lat: 27.726670,
             lng: 85.224680,
             name: "Street Interview 3",
-            interviewType: "neighborhood"
+            interviewType: "neighborhood",
+            participant: "Maili Tamang",
+            age: "58"
         }
     ];
     
@@ -1074,6 +1154,17 @@ function createStreetInterviewMarkers() {
                 iconAnchor: [11, 18]
             })
         }).on('click', () => openStreetInterviewPopup(location)).addTo(map);
+        
+        // Add hover interactions for manual exploration
+        interviewMarker.on('mouseover', function(e) {
+            if (location.participant) {
+                showHoverPreviewWithAge(location.participant, location.age, e.originalEvent);
+            }
+        });
+        
+        interviewMarker.on('mouseout', function() {
+            hideHoverPreview();
+        });
         
         streetInterviewMarkers.push(interviewMarker);
         
@@ -1136,13 +1227,35 @@ async function startVideoSequence() {
         videoOverlay.style.display = 'flex';
         videoOverlay.classList.add('video-fade-in');
         
-        // Play the video
+        // Play the video with progressive fallback system
         cinematicVideo.currentTime = 0;
-        cinematicVideo.play().catch(e => {
-            console.warn('Video autoplay failed:', e);
-            // If autoplay fails, skip directly to map
-            skipToMap();
-        });
+        cinematicVideo.muted = false; // Try with audio first
+        
+        const playPromise = cinematicVideo.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                console.log('Cinematic video started playing with audio');
+                // Video is playing successfully with audio
+            }).catch(e => {
+                console.warn('Autoplay with audio failed, trying muted:', e);
+                
+                // Try muted autoplay
+                cinematicVideo.muted = true;
+                cinematicVideo.play().then(() => {
+                    console.log('Cinematic video started playing muted');
+                    // Show unmute button
+                    showUnmuteButton(cinematicVideo, videoOverlay);
+                }).catch(e2 => {
+                    console.warn('Muted autoplay also failed:', e2);
+                    // Show manual play button
+                    showManualPlayButton(cinematicVideo, videoOverlay);
+                });
+            });
+        } else {
+            // Fallback for older browsers
+            showManualPlayButton(cinematicVideo, videoOverlay);
+        }
         
         // Skip button functionality
         skipButton.onclick = skipToMap;
@@ -1287,51 +1400,60 @@ function openShopPopup() {
     // Hide navbar
     hideNavbar();
     
-    document.getElementById('popup-title').textContent = 'Local Shop - Community Commerce Hub';
+    document.getElementById('popup-title').textContent = 'Kirna Shop';
     
     // Update location information  
-    document.getElementById('location-name').textContent = 'Neighborhood Shop';
-    document.getElementById('interview-count').textContent = 'Commercial Digital Services';
+    document.getElementById('location-name').textContent = 'Barsha Pokharel';
+    document.getElementById('interview-count').textContent = 'Grocery Shop Owner';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
-    accessBadge.textContent = 'COMMERCE';
-    accessBadge.className = 'badge commerce-access';
+    accessBadge.textContent = 'MEDIUM ACCESS';
+    accessBadge.className = 'badge medium-access';
     
     // Show resident content, hide foundation content
     document.getElementById('resident-content').style.display = 'block';
     document.getElementById('foundation-content').style.display = 'none';
     document.getElementById('resident-stats').style.display = 'block';
     
+    // 🎥 SHOWCASE VIDEO: Barsha's banking video
+    document.querySelector('.showcase-video-section').style.display = 'block';
+    document.getElementById('showcase-video-heading').textContent = '🎥 On Not Using Online Banking and Wallets';
+    
+    const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+    showcaseVideoContainer.innerHTML = `
+        <iframe src="https://drive.google.com/file/d/1UulOKF5g4sKxMJ_uZwK0Jw23OnyiO2gn/preview" 
+                width="100%" height="350" frameborder="0" allow="autoplay">
+        </iframe>
+    `;
+
     // Update profile section
-    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/ea580c/ffffff?text=🏪';
-    document.getElementById('resident-name').textContent = 'Shop Owner';
-    document.getElementById('resident-role').textContent = 'Local Business Owner';
-    document.getElementById('resident-description').textContent = 'Local shops serve as important digital transition points in the community. They introduce customers to digital payment systems while maintaining traditional cash services.';
+    document.getElementById('resident-headshot').src = 'interviews/Local shop/Barsha_Pokharel.png';
+    document.getElementById('resident-name').textContent = 'Barsha Pokharel';
+    document.getElementById('resident-role').textContent = 'Grocery Shop Owner (33 years old)';
+    document.getElementById('resident-description').textContent = '33-year-old grocery shop owner near Buspark. Lives with extended family including mother-in-law, father-in-law, 10-year-old son, and sister-in-law. Uses phone all day in shop - mainly TikTok and business videos.';
     
-    // Update photo collage
-    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Payment+System';
-    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Customer+Service';
-    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Local+Commerce';
+    // Update quotes with Barsha's real perspectives
+    document.getElementById('quote-1').textContent = '"I use phone whole day in the shop. I feel bored when it doesn\'t work because I have to do time pass here and if it doesn\'t work, I feel so bored."';
+    document.getElementById('quote-2').textContent = '"In this generation children are so difficult to handle. There is a fear - if we refuse to give them phones, they might take negative decisions. Various incidents happened due to refusing phones, they do suicide. That\'s why we\'re scared and have to act softly."';
+    document.getElementById('quote-3').textContent = '"It takes time for 10, 20 rupees to collect online, but if we have cash, we can buy things easily. That\'s why I don\'t use online payments."';
     
-    document.getElementById('quote-1').textContent = '"Digital payments have changed our business, but we still need to serve customers who prefer cash transactions."';
-    document.getElementById('quote-2').textContent = '"Some elderly customers struggle with mobile banking apps."';
-    document.getElementById('quote-3').textContent = '"We help bridge the gap between traditional and digital commerce."';
+    // Hide photo elements for cleaner quote-only design
+    document.getElementById('photo-1').style.display = 'none';
+    document.getElementById('photo-2').style.display = 'none';
+    document.getElementById('photo-3').style.display = 'none';
     
-    // Update first video
-    document.getElementById('video-1-heading').textContent = '🎥 Shop Operations';
-    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    // Show second video section with Barsha's concerns video
+    document.getElementById('video-2-section').style.display = 'block';
+    document.getElementById('video-2-heading').textContent = '🎥 Concerns on Mobile Use by Children';
+    document.getElementById('second-video').src = 'https://drive.google.com/file/d/1G-L2Tvvz0UHGadU9MQisKoBd9kAJNpgH/preview';
     
-    // Hide second and third video sections (not needed for shop)
-    document.getElementById('video-2-section').style.display = 'none';
+    // Hide first and third video sections (showcase video covers the first one)
+    document.querySelector('.video-section').style.display = 'none';
     document.getElementById('video-3-section').style.display = 'none';
     
-    // Update statistics with shop data
-    document.getElementById('internet-speed').textContent = '30 Mbps business connection';
-    document.getElementById('devices').textContent = 'POS system, business smartphone, calculator';
-    document.getElementById('monthly-cost').textContent = 'NPR 1,500 (business plan)';
-    document.getElementById('digital-skills').textContent = 'Payment systems, inventory apps';
-    document.getElementById('online-services').textContent = 'Digital payments, mobile banking, suppliers';
+    // Hide statistics section for Kirna Shop
+    document.getElementById('resident-stats').style.display = 'none';
     
     modal.style.display = 'block';
     modal.classList.add('show');
@@ -1346,7 +1468,14 @@ function openStreetInterviewPopup(location) {
     // Hide navbar
     hideNavbar();
     
-    document.getElementById('popup-title').textContent = `${location.name} - Street Interview`;
+    // Update title - special cases for specific participants
+    if (location.name === 'Street Interview 3') {
+        document.getElementById('popup-title').textContent = 'Street Interview - Maili Tamang';
+    } else if (location.name === 'Street Interview 2') {
+        document.getElementById('popup-title').textContent = 'Street Interview - Bijay Tamang';
+    } else {
+        document.getElementById('popup-title').textContent = `${location.name} - Street Interview`;
+    }
     
     // Update location information  
     document.getElementById('location-name').textContent = 'Public Space Interview';
@@ -1362,34 +1491,90 @@ function openStreetInterviewPopup(location) {
     document.getElementById('foundation-content').style.display = 'none';
     document.getElementById('resident-stats').style.display = 'block';
     
-    // Update profile section - check if this is Maili Tamang (Street Interview 3)
+    // Update profile section - check for specific participants
     if (location.name === 'Street Interview 3') {
-        document.getElementById('resident-headshot').src = '/home/rimal/test-project/interviews/street interview/street interview 3/Maili Tamang.JPG';
+        document.getElementById('resident-headshot').src = 'interviews/street interview/street interview 3/Maili Tamang.JPG';
         document.getElementById('resident-name').textContent = 'Maili Tamang';
-        document.getElementById('resident-role').textContent = 'Elderly Community Member (Complete Digital Avoidance)';
-        document.getElementById('resident-description').textContent = 'Traditional homemaker representing complete digital non-participation. Her perspective on mobile phones reveals generational concerns about technology adoption and cultural values.';
+        document.getElementById('resident-role').textContent = '58-year-old widow from Majhuwa';
+        document.getElementById('resident-description').textContent = 'Lives contentedly without smartphones - believes she\'s past the age for learning new technology but is at peace with traditional methods.';
+    } else if (location.name === 'Street Interview 2') {
+        document.getElementById('resident-headshot').src = 'photos/headshots/Bijay_tamang.png';
+        document.getElementById('resident-name').textContent = 'Bijay Tamang';
+        document.getElementById('resident-role').textContent = '17-year-old college student';
+        document.getElementById('resident-description').textContent = '17-year-old college student living with parents and younger sister (9-10). Only he and father regularly use mobile phones. Area has decent wifi coverage with about 50% of homes connected. Experienced online scam losing 8-11k rupees buying FreeFire gaming account.';
     } else {
         document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/6366f1/ffffff?text=🎤';
-        document.getElementById('resident-name').textContent = 'Community Members';
+        document.getElementById('resident-name').textContent = 'Samjhana Lama';
         document.getElementById('resident-role').textContent = 'Street Interview Participants';
         document.getElementById('resident-description').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community.';
     }
     
     // Update photo collage
-    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Street+Interviews';
-    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Mobile+Usage';
-    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Public+Spaces';
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Traditional+Life+in+Majhuwa';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Generational+Perspectives';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Community+Values';
     
     // Update quotes and video based on location
     if (location.name === 'Street Interview 3') {
-        document.getElementById('quote-1').textContent = '"I don\'t need these machines. My hands and voice have served me well for 70 years."';
-        document.getElementById('quote-2').textContent = '"When neighbors need help with technology, they ask their children, not me. I stick to what I know."';
-        document.getElementById('quote-3').textContent = '"My grandchildren live in their phones. I worry they\'re forgetting how to live in the real world."';
+        document.getElementById('quote-1').textContent = '"I\'ve gotten old. Half of my life has already passed. What\'s the use for me now? I\'m at peace without it."';
+        document.getElementById('quote-2').textContent = '"We had nothing like this in our time. Now even small kids have mobile phones. I don\'t even know how to say \'hello\' on one."';
+        document.getElementById('quote-3').textContent = '"Mobile phones will ruin children. We shouldn\'t give them until age 20-22. There\'s nothing greater than education."';
         
-        // Maili's actual video
-        document.getElementById('video-1-heading').textContent = '🎥 Perception of Mobile Phones - Maili Tamang';
-        document.getElementById('youtube-video').src = 'https://drive.google.com/file/d/1TtkMt7IbRgbdaof_zOenLbqyy5MuRDcg/preview';
+        // 🎥 SHOWCASE VIDEO: Only for Maili Tamang - Put her video in the showcase section
+        document.querySelector('.showcase-video-section').style.display = 'block';
+        document.getElementById('showcase-video-heading').textContent = '🎥 Perception of Mobile Phones';
+        
+        // Create iframe in the showcase video container
+        const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+        showcaseVideoContainer.innerHTML = `
+            <iframe src="https://drive.google.com/file/d/1TtkMt7IbRgbdaof_zOenLbqyy5MuRDcg/preview" 
+                    width="100%" 
+                    height="350" 
+                    frameborder="0" 
+                    allow="autoplay"
+                    style="border-radius: 8px;">
+            </iframe>
+        `;
+        
+        // Hide the old video section completely
+        document.querySelector('.video-section').style.display = 'none';
+    } else if (location.name === 'Street Interview 2') {
+        document.getElementById('quote-1').textContent = '"I wake up and go to college, when I return back I use mobile for little bit and play some online games... I play Mobile Legends"';
+        document.getElementById('quote-2').textContent = '"I am doubtful actually. I actually got scammed. Since then, I don\'t do it... I bought the ID but the seller changed the passcode"';
+        document.getElementById('quote-3').textContent = '"It\'s not like that.. they sometimes use the mobile phone... [Sister] just watches TikToks... [Father] didn\'t agree to learn [online banking]"';
+        
+        // Update quote themes for Bijay's content
+        document.querySelector('.quote-item:nth-child(1) .quote-theme').textContent = 'Gaming & Digital Life';
+        document.querySelector('.quote-item:nth-child(2) .quote-theme').textContent = 'Trust & Online Safety';
+        document.querySelector('.quote-item:nth-child(3) .quote-theme').textContent = 'Family Digital Divide';
+        
+        // Update quote icons to match Bijay's themes
+        document.querySelector('.quote-item:nth-child(1) .quote-icon').textContent = '🎮';
+        document.querySelector('.quote-item:nth-child(2) .quote-icon').textContent = '🔒';
+        document.querySelector('.quote-item:nth-child(3) .quote-icon').textContent = '👨‍👩‍👧‍👦';
+        
+        // 🎥 SHOWCASE VIDEO: Bijay's Mobile Gaming Scam Story
+        document.querySelector('.showcase-video-section').style.display = 'block';
+        document.getElementById('showcase-video-heading').textContent = '🎥 Mobile Gaming Scam Story';
+        
+        // Create iframe in the showcase video container
+        const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+        showcaseVideoContainer.innerHTML = `
+            <iframe src="https://drive.google.com/file/d/1m1Q8CPlbzHUyv51OKcLx2JLEASR1u1hQ/preview" 
+                    width="100%" 
+                    height="350" 
+                    frameborder="0" 
+                    allow="autoplay"
+                    style="border-radius: 8px;">
+            </iframe>
+        `;
+        
+        // Hide the old video section completely
+        document.querySelector('.video-section').style.display = 'none';
     } else {
+        // For other interviews - hide showcase video section
+        document.querySelector('.showcase-video-section').style.display = 'none';
+        
         document.getElementById('quote-1').textContent = '"Street interviews reveal the everyday challenges people face with digital services in public spaces."';
         document.getElementById('quote-2').textContent = '"Mobile data is expensive but necessary for staying connected while away from home."';
         document.getElementById('quote-3').textContent = '"Public wifi is unreliable, so we depend on our phone data plans."';
@@ -1402,12 +1587,26 @@ function openStreetInterviewPopup(location) {
     document.getElementById('video-2-section').style.display = 'none';
     document.getElementById('video-3-section').style.display = 'none';
     
-    // Update statistics with interview data
-    document.getElementById('internet-speed').textContent = 'Mobile data dependent';
-    document.getElementById('devices').textContent = 'Personal smartphones';
-    document.getElementById('monthly-cost').textContent = 'Variable data plans';
-    document.getElementById('digital-skills').textContent = 'Practical mobile skills';
-    document.getElementById('online-services').textContent = 'On-the-go digital needs';
+    // Update statistics with interview data - special cases for participants
+    if (location.name === 'Street Interview 3') {
+        document.getElementById('internet-speed').textContent = 'N/A';
+        document.getElementById('devices').textContent = 'none';
+        document.getElementById('monthly-cost').textContent = 'N/A';
+        document.getElementById('digital-skills').textContent = 'none';
+        document.getElementById('online-services').textContent = 'none';
+    } else if (location.name === 'Street Interview 2') {
+        document.getElementById('internet-speed').textContent = 'Works properly for gaming (occasional ping issues)';
+        document.getElementById('devices').textContent = 'Mobile phone (has damaged 2 from gaming anger)';
+        document.getElementById('monthly-cost').textContent = 'Not specified';
+        document.getElementById('digital-skills').textContent = 'Medium-Advanced (online banking, social media, gaming)';
+        document.getElementById('online-services').textContent = 'Mobile Legends gaming, Instagram and Facebook, eSewa digital banking, TikTok (family sharing)';
+    } else {
+        document.getElementById('internet-speed').textContent = 'Mobile data dependent';
+        document.getElementById('devices').textContent = 'Personal smartphones';
+        document.getElementById('monthly-cost').textContent = 'Variable data plans';
+        document.getElementById('digital-skills').textContent = 'Practical mobile skills';
+        document.getElementById('online-services').textContent = 'On-the-go digital needs';
+    }
     
     modal.style.display = 'block';
     modal.classList.add('show');
@@ -1415,6 +1614,9 @@ function openStreetInterviewPopup(location) {
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+    
+    // Check if story mode is active and start viewing timer
+    checkAndStartStoryModeViewing(location);
 }
 
 // Function to open Khajaghar popup
@@ -1422,16 +1624,16 @@ function openKhajagharPopup(location) {
     // Hide navbar
     hideNavbar();
     
-    document.getElementById('popup-title').textContent = `${location.name} - Community Tea Shop`;
+    document.getElementById('popup-title').textContent = location.name;
     
     // Update location information  
-    document.getElementById('location-name').textContent = 'Traditional Tea Shop (Khajaghar)';
-    document.getElementById('interview-count').textContent = 'Community Gathering Place';
+    document.getElementById('location-name').textContent = 'Sunita Tamang';
+    document.getElementById('interview-count').textContent = 'Shop Owner & selectively digital';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
-    accessBadge.textContent = 'SOCIAL HUB';
-    accessBadge.className = 'badge social-access';
+    accessBadge.textContent = 'HIGH ACCESS';
+    accessBadge.className = 'badge high-access';
     
     // Show resident content, hide foundation content
     document.getElementById('resident-content').style.display = 'block';
@@ -1453,52 +1655,99 @@ function openKhajagharPopup(location) {
     document.getElementById('quote-2').textContent = '"Customers often help each other with smartphone apps over tea."';
     document.getElementById('quote-3').textContent = '"We share knowledge about online forms and digital payments here."';
     
-    // Check if this is Khajaghar 2 (with 3 videos) or Khajaghar 1 (with 1 video)
-    if (location.name === "Khajaghar 2") {
-        // Khajaghar 2 - Aman Tamang (17, digital native) - Show all 3 videos with Google Drive links
+    // Check if this is Thaple Khajaghar (formerly Khajaghar 2) or Majuwa Khajaghar
+    if (location.name === "Khajaghar 2" || location.name === "Thaple Khajaghar") {
+        // Thaple Khajaghar - Aman Tamang (Grade 12 Hotel Management student)
+        document.getElementById('resident-headshot').src = 'photos/headshots/Aman Tamang.png';
         document.getElementById('resident-name').textContent = 'Aman Tamang';
-        document.getElementById('resident-role').textContent = '17-year-old Digital Native';
-        document.getElementById('resident-description').textContent = 'Young community member who represents the digital native generation, helping bridge the gap between traditional community spaces and modern digital connectivity.';
+        document.getElementById('resident-role').textContent = 'Grade 12 Hotel Management Student';
+        document.getElementById('resident-description').textContent = 'Grade 12 Hotel Management student living with parents and sister. Family runs shop/restaurant business with eSewa payments. Heavy daily phone user starting 4:45am, extensive gaming during college breaks and after school.';
         
-        // Update quotes for Aman's perspective
-        document.getElementById('quote-1').textContent = '"I help older people at the khajaghar with their phones and online forms. They know so much about life, I know about technology."';
-        document.getElementById('quote-2').textContent = '"My friends and I use this place differently than our parents - we come here to share WiFi and help the community with digital stuff."';
-        document.getElementById('quote-3').textContent = '"The khajaghar is changing. Now people bring their phones and ask for help with apps, not just tea."';
-        document.getElementById('video-1-heading').textContent = '🎥 Tea Shop Stories - Part 1';
-        document.getElementById('youtube-video').src = 'https://drive.google.com/file/d/1JKIY2IFiJJuLgO3dgnPX0r7kZfSR9HZs/preview';
+        // Update quotes from Aman's real content
+        document.getElementById('quote-1').textContent = '"I give a lot of my time to phone... In lunch break, we don\'t actually eat lunch but play mobile phones... if battery is low, I play it while charging"';
+        document.getElementById('quote-2').textContent = '"I think we learn more from smartboard... They show videos. They show exercise from youtube... We can find books there as well. We don\'t have to carry one"';
+        document.getElementById('quote-3').textContent = '"I have 3 facebook id... One for school like school groups, one for friends and one for personal... It\'s only me. I don\'t think they have lots of ids"';
         
+        // Update quote themes for Aman's content
+        document.querySelector('.quote-item:nth-child(1) .quote-theme').textContent = 'Intensive Gaming Lifestyle';
+        document.querySelector('.quote-item:nth-child(2) .quote-theme').textContent = 'Educational Technology';
+        document.querySelector('.quote-item:nth-child(3) .quote-theme').textContent = 'Digital Identity Management';
+        
+        // Update quote icons to match Aman's themes
+        document.querySelector('.quote-item:nth-child(1) .quote-icon').textContent = '🎮';
+        document.querySelector('.quote-item:nth-child(2) .quote-icon').textContent = '📱';
+        document.querySelector('.quote-item:nth-child(3) .quote-icon').textContent = '🔄';
+        
+        // 🎥 SHOWCASE VIDEO: Aman's Value of Internet in daily life
+        document.querySelector('.showcase-video-section').style.display = 'block';
+        document.getElementById('showcase-video-heading').textContent = '🎥 Value of Internet in Daily Life';
+        
+        // Create iframe in the showcase video container
+        const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+        showcaseVideoContainer.innerHTML = `
+            <iframe src="https://drive.google.com/file/d/1hLANscn_QwqB7kikdPvgiBnBowQRBiYf/preview" 
+                    width="100%" 
+                    height="350" 
+                    frameborder="0" 
+                    allow="autoplay"
+                    style="border-radius: 8px;">
+            </iframe>
+        `;
+        
+        // Show second video section
         document.getElementById('video-2-section').style.display = 'block';
-        document.getElementById('video-2-heading').textContent = '🎥 Tea Shop Stories - Part 2';
-        document.getElementById('second-video').src = 'https://drive.google.com/file/d/1hLANscn_QwqB7kikdPvgiBnBowQRBiYf/preview';
+        document.getElementById('video-2-heading').textContent = '🎥 Use of Internet in Learning';
+        document.getElementById('second-video').src = 'https://drive.google.com/file/d/1AtMPVtt5veyhsd_PKRIl9ruxG7pzGo7n/preview';
         
-        document.getElementById('video-3-section').style.display = 'block';
-        document.getElementById('video-3-heading').textContent = '🎥 Tea Shop Stories - Part 3';
-        document.getElementById('third-video').src = 'https://drive.google.com/file/d/1AtMPVtt5veyhsd_PKRIl9ruxG7pzGo7n/preview';
+        // Hide first and third video sections (showcase video covers the main content)
+        document.querySelector('.video-section').style.display = 'none';
+        document.getElementById('video-3-section').style.display = 'none';
     } else {
-        // Khajaghar 1 - Sunita Tamang (Cultural Learning Enthusiast)
+        // Majuwa Khajaghar - Sunita Tamang (Shop Owner & Lifelong Learner)
         document.getElementById('resident-name').textContent = 'Sunita Tamang';
-        document.getElementById('resident-role').textContent = 'Cultural Learning Enthusiast (Middle-age)';
-        document.getElementById('resident-description').textContent = 'Middle-aged community member who uses technology selectively for cultural preservation, particularly learning Tibetan language online while maintaining traditional social connections.';
+        document.getElementById('resident-role').textContent = 'Shop Owner & Lifelong Learner';
+        document.getElementById('resident-description').textContent = 'Shop owner, studied till 4-5th grade. Lives with extended family including young grandson. Uses phone 1-2 hours daily for leisure - watches TikTok and Facebook but doesn\'t create content.';
         
-        // Update quotes for Sunita's perspective
-        document.getElementById('quote-1').textContent = '"I use YouTube to learn Tibetan because preserving our culture is important."';
-        document.getElementById('quote-2').textContent = '"I only use technology for things that matter to me. Not everything needs to be digital."';
-        document.getElementById('quote-3').textContent = '"Technology helps me connect with our heritage, but I still prefer face-to-face conversations."';
+        // 🎥 SHOWCASE VIDEO: Sunita's Google Drive link
+        document.querySelector('.showcase-video-section').style.display = 'block';
+        document.getElementById('showcase-video-heading').textContent = '🎥 Digital Learning at Any Age';
         
-        document.getElementById('video-1-heading').textContent = '🎥 Cultural Learning & Selective Technology Use';
-        document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+        const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+        showcaseVideoContainer.innerHTML = `
+            <iframe src="https://drive.google.com/file/d/1Gb3JR_vFlNlu2d8mmnU9gd9kr89JoK8C/preview" 
+                    width="100%" height="350" frameborder="0" allow="autoplay">
+            </iframe>
+        `;
+
+        // Update headshot
+        document.getElementById('resident-headshot').src = 'interviews/khajaghar/khajaghar 1/Sunita Tamang.JPG';
         
-        // Hide second and third video sections for Khajaghar 1
+        // Update quotes from Sunita's real content
+        document.getElementById('quote-1').textContent = '"I don\'t know how to use much... When I can\'t figure something out, I just leave it. But I try to learn as I go."';
+        document.getElementById('quote-2').textContent = '"They play FreeFire a lot... I fear my grandson will fall into that company too. But what can we do - that\'s how the world is these days."';
+        document.getElementById('quote-3').textContent = '"Despite my age, I like to learn as it\'ll help me one day. People my age don\'t usually do this, but I joined Tibetan classes because we use it in all our rituals."';
+        
+        // Hide all video sections for Majuwa Khajaghar (only showcase video at top)
+        document.querySelector('.video-section').style.display = 'none';
         document.getElementById('video-2-section').style.display = 'none';
         document.getElementById('video-3-section').style.display = 'none';
     }
     
-    // Update statistics with khajaghar data
-    document.getElementById('internet-speed').textContent = 'Personal mobile data only';
-    document.getElementById('devices').textContent = 'Customer smartphones, radio';
-    document.getElementById('monthly-cost').textContent = 'Varies by customer';
-    document.getElementById('digital-skills').textContent = 'Community knowledge sharing';
-    document.getElementById('online-services').textContent = 'Informal digital help center';
+    // Update statistics - use Aman's real data for Thaple Khajaghar, Sunita's for Majuwa
+    if (location.name === "Khajaghar 2" || location.name === "Thaple Khajaghar") {
+        document.getElementById('internet-speed').textContent = 'Works properly (wifi for business), NTC mobile data reliable, Ncell only works on hills';
+        document.getElementById('devices').textContent = 'Smartphone (not gaming-specific but used heavily for games)';
+        document.getElementById('monthly-cost').textContent = 'Not specified (business wifi)';
+        document.getElementById('digital-skills').textContent = 'Medium-Advanced (gaming, social media, educational apps, eSewa, multiple accounts)';
+        document.getElementById('online-services').textContent = 'FreeFire gaming and top-ups, YouTube educational content, Facebook (3 accounts), TikTok, Instagram, Snapchat, eSewa business payments';
+    } else {
+        // Sunita Tamang's statistics
+        document.getElementById('internet-speed').textContent = '350 Mbps';
+        document.getElementById('devices').textContent = 'Personal smartphone, family smartphones';
+        document.getElementById('monthly-cost').textContent = 'N/A';
+        document.getElementById('digital-skills').textContent = 'Basic use';
+        document.getElementById('online-services').textContent = 'WhatsApp (Tibetan language classes), Tiktok and Facebook';
+    }
     
     modal.style.display = 'block';
     modal.classList.add('show');
@@ -1506,6 +1755,9 @@ function openKhajagharPopup(location) {
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+    
+    // Check if story mode is active and start viewing timer
+    checkAndStartStoryModeViewing(location);
 }
 
 // Function to open School popup
@@ -1513,51 +1765,67 @@ function openSchoolPopup() {
     // Hide navbar
     hideNavbar();
     
-    document.getElementById('popup-title').textContent = 'Local School - Digital Education Hub';
+    document.getElementById('popup-title').textContent = 'Majuwa Adharbhut Vidyalaya';
     
     // Update location information  
-    document.getElementById('location-name').textContent = 'Educational Institution';
-    document.getElementById('interview-count').textContent = 'Digital Learning Center';
+    document.getElementById('location-name').textContent = 'Shyam Krishna Bhattarai';
+    document.getElementById('interview-count').textContent = 'School Principal';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
-    accessBadge.textContent = 'EDUCATION';
-    accessBadge.className = 'badge education-access';
+    accessBadge.textContent = 'MEDIUM ACCESS';
+    accessBadge.className = 'badge medium-access';
     
     // Show resident content, hide foundation content
     document.getElementById('resident-content').style.display = 'block';
     document.getElementById('foundation-content').style.display = 'none';
     document.getElementById('resident-stats').style.display = 'block';
     
+    // 🎥 SHOWCASE VIDEO: Principal's Analysis video
+    document.querySelector('.showcase-video-section').style.display = 'block';
+    document.getElementById('showcase-video-heading').textContent = '🎥 Analysis of Technology Use in Majuwa';
+    
+    const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+    showcaseVideoContainer.innerHTML = `
+        <iframe src="https://drive.google.com/file/d/1zT7sWLhgh04hFKervNl-XXM05D327a62/preview" 
+                width="100%" height="350" frameborder="0" allow="autoplay">
+        </iframe>
+    `;
+
     // Update profile section
-    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/3b82f6/ffffff?text=🎓';
-    document.getElementById('resident-name').textContent = 'Principal';
-    document.getElementById('resident-role').textContent = 'Late Digital Adopter (Learned at 40)';
-    document.getElementById('resident-description').textContent = 'School principal who learned technology at age 40, representing the late adopter category. Now leads digital education initiatives while understanding the challenges of adult digital learning.';
+    document.getElementById('resident-headshot').src = 'interviews/principal/Shyam Krishna Bhattarai (HT).png';
+    document.getElementById('resident-name').textContent = 'Shyam Krishna Bhattarai';
+    document.getElementById('resident-role').textContent = 'School Principal';
+    document.getElementById('resident-description').textContent = 'School principal who first experienced mobile phones at age 40. Represents late digital adopters who learned technology out of necessity and now advocates for gradual, patient digital learning approaches.';
     
-    // Update photo collage
-    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Computer+Lab';
-    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Classroom';
-    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Student+Learning';
+    // Update quotes with principal's perspectives (text only)
+    document.getElementById('quote-1').textContent = '"My first exposure to mobile phone was at 40, and I felt that fear too. I still do not use a calculator. I prefer pen and paper. For me, it feels faster and more natural"';
+    document.getElementById('quote-2').textContent = '"When you are a kid, you don\'t care if your mobile phone breaks. As you get older, you begin to fear what might happen if it breaks. It is like learning to ride a bicycle. A child is open to trying, but at 25, you are more afraid."';
+    document.getElementById('quote-3').textContent = '"Technology should serve education, not replace the fundamentals of learning. We must find balance."';
     
-    document.getElementById('quote-1').textContent = '"I learned computers at 40 when I became principal. If I can learn, anyone can - but it takes patience."';
-    document.getElementById('quote-2').textContent = '"I understand why parents are scared of technology. I was too. But I had to learn to help our students."';
-    document.getElementById('quote-3').textContent = '"Now I teach other teachers who are afraid of technology. We learn together, slowly but surely."';
+    // Hide photo elements for cleaner quote-only design
+    document.getElementById('photo-1').style.display = 'none';
+    document.getElementById('photo-2').style.display = 'none';
+    document.getElementById('photo-3').style.display = 'none';
     
-    // Update first Google Drive video
-    document.getElementById('video-1-heading').textContent = '🎥 School Tour';
-    document.getElementById('youtube-video').src = 'https://drive.google.com/file/d/1zT7sWLhgh04hFKervNl-XXM05D327a62/preview';
-    
-    // Show second video section (only for school)
+    // Show second video section with Government's role video
     document.getElementById('video-2-section').style.display = 'block';
-    document.getElementById('video-2-heading').textContent = '🎥 Classroom Activities';
+    document.getElementById('video-2-heading').textContent = '🎥 On Government\'s Role on Increasing Digital Literacy';
     document.getElementById('second-video').src = 'https://drive.google.com/file/d/1SdOqhntIZ9mNKYQdcfT3A7TbUyR-UOeE/preview';
     
-    // Hide third video section (not needed for school)
+    // Hide first and third video sections (showcase video covers the first one)
+    document.querySelector('.video-section').style.display = 'none';
     document.getElementById('video-3-section').style.display = 'none';
     
-    // Hide statistics section for school
-    document.getElementById('resident-stats').style.display = 'none';
+    // Show statistics section for principal
+    document.getElementById('resident-stats').style.display = 'block';
+    
+    // Update statistics with principal's data
+    document.getElementById('internet-speed').textContent = 'School WiFi + Personal mobile data';
+    document.getElementById('devices').textContent = 'School computers, personal smartphone';
+    document.getElementById('monthly-cost').textContent = 'Institutional internet';
+    document.getElementById('digital-skills').textContent = 'Late adopter, cautious learner';
+    document.getElementById('online-services').textContent = 'Educational tools, basic communication';
     
     modal.style.display = 'block';
     modal.classList.add('show');
@@ -1575,40 +1843,63 @@ function openWardOfficePopup() {
     document.getElementById('popup-title').textContent = 'Nagarjun Municipality Ward 8 Office';
     
     // Update location information  
-    document.getElementById('location-name').textContent = 'Ward Office - Government Building';
-    document.getElementById('interview-count').textContent = 'Administrative Center';
+    document.getElementById('location-name').textContent = 'Suraj Kumar Pokharel';
+    document.getElementById('interview-count').textContent = 'Ward Chairperson';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
-    accessBadge.textContent = 'GOVERNMENT';
-    accessBadge.className = 'badge government-access';
+    accessBadge.textContent = 'HIGH ACCESS';
+    accessBadge.className = 'badge high-access';
     
     // Show resident content, hide foundation content
     document.getElementById('resident-content').style.display = 'block';
     document.getElementById('foundation-content').style.display = 'none';
     document.getElementById('resident-stats').style.display = 'block';
     
+    // 🎥 SHOWCASE VIDEO: Ward Introduction
+    document.querySelector('.showcase-video-section').style.display = 'block';
+    document.getElementById('showcase-video-heading').textContent = '🎥 Introduction of Ward';
+    
+    const showcaseVideoContainer = document.querySelector('.showcase-video-container');
+    showcaseVideoContainer.innerHTML = `
+        <iframe src="https://drive.google.com/file/d/1W7D1_DSX2qeqQhcivB9I0jnAbOaIsMxt/preview" 
+                width="100%" height="350" frameborder="0" allow="autoplay">
+        </iframe>
+    `;
+
     // Update profile section
-    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/7c3aed/ffffff?text=🏛️';
-    document.getElementById('resident-name').textContent = 'Ward Office Administration';
-    document.getElementById('resident-role').textContent = 'Government Officials';
-    document.getElementById('resident-description').textContent = 'The Ward Office facilitates digital service delivery including online forms, digital payments for municipal services, and e-governance initiatives. It serves as a bridge between traditional governance and digital transformation.';
+    document.getElementById('resident-headshot').src = 'interviews/ward office/ward_chait.jpg';
+    document.getElementById('resident-name').textContent = 'Suraj Kumar Pokharel';
+    document.getElementById('resident-role').textContent = 'Ward Chairperson';
+    document.getElementById('resident-description').textContent = 'Ward Chairperson of Bhimdhunga, Ward 8 of Nagarjun Municipality - 13km west of central Kathmandu. Leads governance of a peri-urban transition zone with three distinct communities: Majhuwa, Thaple, and Bus Park area.';
     
-    // Update photo collage
-    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Government+Office';
-    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Digital+Services';
-    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Public+Access';
+    // Update quotes with ward/community perspectives and fix quote themes
+    document.getElementById('quote-1').textContent = '"Bhimdhunga represents the peri-urban transition zone - caught between traditional rural life and urban connectivity, creating unique digital adoption patterns."';
+    document.getElementById('quote-2').textContent = '"Digital engagement varies dramatically by generation - from elderly non-users to youth heavily involved in mobile gaming, creating age-based digital divides within the same households."';
+    document.getElementById('quote-3').textContent = '"Most residents rely on semi-subsistence farming with few formal employment opportunities, influencing their approach to digital technology adoption."';
     
-    document.getElementById('quote-1').textContent = '"The Ward Office serves as the local administrative hub connecting residents with digital government services."';
-    document.getElementById('quote-2').textContent = '"We encourage online applications, but many residents still prefer in-person visits."';
-    document.getElementById('quote-3').textContent = '"Digital literacy training helps residents access government services independently."';
+    // Update quote themes to match content
+    document.querySelector('.quote-item:nth-child(1) .quote-theme').textContent = 'Geographic Context';
+    document.querySelector('.quote-item:nth-child(2) .quote-theme').textContent = 'Generational Gaps';
+    document.querySelector('.quote-item:nth-child(3) .quote-theme').textContent = 'Lifestyle & Economics';
     
-    // Update first video
-    document.getElementById('video-1-heading').textContent = '🎥 Ward Office Services';
-    document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    // Update quote icons to match themes
+    document.querySelector('.quote-item:nth-child(1) .quote-icon').textContent = '🗺️';
+    document.querySelector('.quote-item:nth-child(2) .quote-icon').textContent = '👨‍👩‍👧‍👦';
+    document.querySelector('.quote-item:nth-child(3) .quote-icon').textContent = '🌾';
     
-    // Hide second and third video sections (not needed for ward office)
-    document.getElementById('video-2-section').style.display = 'none';
+    // Hide photo elements for cleaner quote-only design
+    document.getElementById('photo-1').style.display = 'none';
+    document.getElementById('photo-2').style.display = 'none';
+    document.getElementById('photo-3').style.display = 'none';
+    
+    // Show second video section with Q&A
+    document.getElementById('video-2-section').style.display = 'block';
+    document.getElementById('video-2-heading').textContent = '🎥 Q&A with Ward Chairperson';
+    document.getElementById('second-video').src = 'https://drive.google.com/file/d/1Xaoxp4RjZSGPrWdDEGH2kR3u2YQEW5C6/preview';
+    
+    // Hide first and third video sections (showcase video covers the first one)
+    document.querySelector('.video-section').style.display = 'none';
     document.getElementById('video-3-section').style.display = 'none';
     
     // Hide statistics section for ward office
@@ -1643,7 +1934,8 @@ function openPopup(house) {
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
-    accessBadge.textContent = house.digitalAccess.toUpperCase();
+    const accessLevel = house.digitalAccess;
+    accessBadge.textContent = `${accessLevel.charAt(0).toUpperCase() + accessLevel.slice(1)} access`;
     accessBadge.className = `badge ${house.digitalAccess}-access`;
     
     // Hide navbar when panel opens
@@ -1675,14 +1967,47 @@ function openPopup(house) {
     document.getElementById('quote-2').textContent = house.photos?.[1]?.quote || '"Digital tools change how we work and learn"';
     document.getElementById('quote-3').textContent = house.photos?.[2]?.quote || '"Our community helps each other adapt"';
     
-    // Update first video
-    document.getElementById('video-1-heading').textContent = '🎥 Their Story';
-    const youtubeId = house.youtubeId || 'dQw4w9WgXcQ'; // Default placeholder
-    document.getElementById('youtube-video').src = `https://www.youtube.com/embed/${youtubeId}`;
+    // Update quote themes and icons for specific households
+    if (house.title === "Extended Family Home") {
+        // Update quote themes to match Sikha's content
+        document.querySelector('.quote-item:nth-child(1) .quote-theme').textContent = 'Online Shopping & Trust';
+        document.querySelector('.quote-item:nth-child(2) .quote-theme').textContent = 'Family Digital Teaching';
+        document.querySelector('.quote-item:nth-child(3) .quote-theme').textContent = 'Digital Agriculture';
+        
+        // Update quote icons to match themes
+        document.querySelector('.quote-item:nth-child(1) .quote-icon').textContent = '🛒';
+        document.querySelector('.quote-item:nth-child(2) .quote-icon').textContent = '👨‍👩‍👧‍👦';
+        document.querySelector('.quote-item:nth-child(3) .quote-icon').textContent = '🌱';
+    } else if (house.title === "Farming Crew Household") {
+        // Update quote themes to match Dhan Bahadur's content
+        document.querySelector('.quote-item:nth-child(1) .quote-theme').textContent = 'Learning Approach';
+        document.querySelector('.quote-item:nth-child(2) .quote-theme').textContent = 'News & Information';
+        document.querySelector('.quote-item:nth-child(3) .quote-theme').textContent = 'Daily Usage Pattern';
+        
+        // Update quote icons to match themes
+        document.querySelector('.quote-item:nth-child(1) .quote-icon').textContent = '📚';
+        document.querySelector('.quote-item:nth-child(2) .quote-icon').textContent = '📺';
+        document.querySelector('.quote-item:nth-child(3) .quote-icon').textContent = '⏰';
+    }
     
-    // Hide second and third video sections for household stories
-    document.getElementById('video-2-section').style.display = 'none';
-    document.getElementById('video-3-section').style.display = 'none';
+    // Handle video sections - hide for Extended Family Home and Farming Crew Household
+    if (house.title === "Extended Family Home" || house.title === "Farming Crew Household") {
+        // Hide all video sections for Extended Family Home
+        document.querySelector('.video-section').style.display = 'none';
+        document.getElementById('video-2-section').style.display = 'none';
+        document.getElementById('video-3-section').style.display = 'none';
+        // Also hide showcase video section
+        document.querySelector('.showcase-video-section').style.display = 'none';
+    } else {
+        // Show video for other houses
+        document.getElementById('video-1-heading').textContent = '🎥 Their Story';
+        const youtubeId = house.youtubeId || 'dQw4w9WgXcQ'; // Default placeholder
+        document.getElementById('youtube-video').src = `https://www.youtube.com/embed/${youtubeId}`;
+        
+        // Hide second and third video sections for household stories
+        document.getElementById('video-2-section').style.display = 'none';
+        document.getElementById('video-3-section').style.display = 'none';
+    }
     
     // Update digital statistics
     document.getElementById('internet-speed').textContent = house.stats.internetSpeed || 'TBD';
@@ -1872,9 +2197,8 @@ document.addEventListener('DOMContentLoaded', function() {
         clearActiveNavButton();
     });
     
-    // Initialize mode selector and progression controls (delay to avoid splash screen conflicts)
+    // Initialize progression controls (delay to avoid splash screen conflicts)
     setTimeout(() => {
-        initializeModeSelector();
         initializeProgressionControls();
     }, 100);
 });
@@ -1915,15 +2239,19 @@ function openAboutPanel() {
             sections: [
                 {
                     title: "Project Overview",
-                    content: "This interactive storymap explores the digital divide in Bhimdhunga, Nagarjun Municipality Ward 8. Through household interviews and multimedia testimonials, we reveal the human stories behind digital access statistics."
+                    content: "This interactive story map explores the digital divide across three communities in Bhimdhunga: Majhuwa, Thaple, and the Buspark area, located in Nagarjun Municipality Ward 8. Rather than presenting statistics alone, we showcase lived experiences of digital access through household interviews and video testimonials, revealing the human emotions and practical challenges behind the numbers."
+                },
+                {
+                    title: "Research Objectives",
+                    content: "• Document lived experiences of digital self-efficacy and educational access barriers among Bhimdhunga residents<br><br>• Capture community perspectives on digital engagement challenges to inform evidence-based digital inclusion policies in rural Nepal<br><br>• Bridge academic research and public understanding through an interactive platform that makes digital divide realities accessible to diverse audiences"
                 },
                 {
                     title: "Methodology", 
-                    content: "Our research team conducted extensive fieldwork including household interviews, geographic mapping, and multimedia documentation to create a comprehensive view of digital access challenges and adaptations in this community."
+                    content: "Our team carried out four days of fieldwork (July 26, 29, 30, and 31, 2025) with 19 participants from various strata, following household interviews, spatial documentation of participant locations. This approach gathers community perspectives on digital engagement, education, and self-efficacy, as well as evidence-based suggestions for future digital inclusion policies in rural Nepal. The findings are presented through an interactive media platform that combines story maps, video testimonials, and immersive narratives to make digital divide realities more accessible to a wider audience."
                 },
                 {
                     title: "Key Themes",
-                    content: "The project examines intergenerational technology transfer, urban-rural digital bridges, educational technology gaps, and community-based digital support networks."
+                    content: "The research reveals critical patterns around <b>generational digital divides</b> (from elderly complete non-users to youth absorbed in mobile gaming), <b>urban-rural connectivity tensions </b>(proximity to Kathmandu yet persistent access barriers), <b>educational technology gaps</b> (online learning challenges during COVID-19), and <b>economic barriers to digital participation</b> (cost concerns and trust issues with digital financial services)."
                 }
             ]
         }
@@ -1935,13 +2263,14 @@ function openAboutPanel() {
 // Stories overview panel
 function openStoriesPanel() {
     const storiesContent = {
-        title: "Household Digital Stories",
+        title: "Digital Stories & Journey Modes",
         isCustomPanel: true,
         content: {
             header: {
-                title: "9 Household Stories",
-                subtitle: "Click on any house marker to explore individual stories"
+                title: "Explore Digital Divide Stories",
+                subtitle: "Choose how you want to experience the stories"
             },
+            storyModes: true,
             houseList: houseData.filter(house => !house.isFoundation)
         }
     };
@@ -2050,22 +2379,94 @@ function openCustomPanel(content) {
         `;
     } else if (content.content.houseList) {
         // Stories panel
-        customContent.innerHTML = `
-            <div class="custom-header">
-                <h3>${content.content.header.title}</h3>
-                <p class="custom-subtitle">${content.content.header.subtitle}</p>
-            </div>
-            <div class="stories-grid">
-                ${content.content.houseList.map(house => `
-                    <div class="story-card" onclick="openPopup(houseData.find(h => h.id === ${house.id}))">
-                        <div class="story-access-badge ${house.digitalAccess}">${house.digitalAccess.toUpperCase()}</div>
-                        <h4>${house.title}</h4>
-                        <p>${house.story?.quote || 'Click to read their story'}</p>
-                        <span class="story-resident">${house.story?.resident || 'Community Member'}</span>
+        if (content.content.storyModes) {
+            // Show story modes with quotes only
+            customContent.innerHTML = `
+                <div class="custom-header">
+                    <h3>${content.content.header.title}</h3>
+                    <p class="custom-subtitle">${content.content.header.subtitle}</p>
+                </div>
+                
+                <!-- Story Journey Modes -->
+                <div class="story-modes-section">
+                    <h4>🎯 Guided Story Journeys</h4>
+                    <p class="modes-intro">Experience the digital divide through thematic lenses</p>
+                    
+                    <div class="story-mode-cards">
+                        <div class="story-mode-card age-journey" onclick="startAgeBasedJourney()">
+                            <div class="mode-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="mode-content">
+                                <h3>🕰️ Age-Based Journey</h3>
+                                <div class="mode-description">
+                                    <p>Experience how digital adoption varies across generations, from elderly complete non-users to digital natives.</p>
+                                </div>
+                                <button class="mode-start-btn">Start Journey</button>
+                            </div>
+                        </div>
+                        
+                        <div class="story-mode-card efficacy-journey">
+                            <div class="mode-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="mode-content">
+                                <h3>🎯 Self-Efficacy Journey</h3>
+                                <div class="mode-description">
+                                    <p>Explore how people's beliefs about their digital abilities shape their technology use and adaptation.</p>
+                                </div>
+                                <div class="work-in-progress">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Work in Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="story-mode-card covid-journey">
+                            <div class="mode-icon">
+                                <i class="fas fa-virus"></i>
+                            </div>
+                            <div class="mode-content">
+                                <h3>🦠 Covid Disruption</h3>
+                                <div class="mode-description">
+                                    <p>Discover how the pandemic accelerated digital adoption and revealed new forms of digital inequality.</p>
+                                </div>
+                                <div class="work-in-progress">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Work in Progress</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                `).join('')}
-            </div>
-        `;
+                </div>
+                
+                <!-- Manual Exploration Note -->
+                <div class="manual-note-section">
+                    <div class="manual-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>For manual exploration, simply click on any house marker directly on the map to read individual stories at your own pace.</p>
+                    </div>
+                </div>
+            `;
+        } else {
+            // Original stories grid layout
+            customContent.innerHTML = `
+                <div class="custom-header">
+                    <h3>${content.content.header.title}</h3>
+                    <p class="custom-subtitle">${content.content.header.subtitle}</p>
+                </div>
+                <div class="stories-grid">
+                    ${content.content.houseList.map(house => `
+                        <div class="story-card" onclick="openPopup(houseData.find(h => h.id === ${house.id}))">
+                            <div class="story-access-badge ${house.digitalAccess}">${house.digitalAccess.charAt(0).toUpperCase() + house.digitalAccess.slice(1)} access</div>
+                            <h4>${house.title}</h4>
+                            <p>${house.story?.quote || 'Click to read their story'}</p>
+                            <span class="story-resident">${house.story?.resident || 'Community Member'}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
     } else if (content.content.stats) {
         // Statistics panel
         const stats = content.content.stats;
@@ -2167,27 +2568,31 @@ const journeyModes = {
             { 
                 type: 'street_interview', 
                 name: 'Street Interview 3', 
-                participant: 'Maili Tamang', 
+                participant: 'Maili Tamang',
+                videoFile: 'Maili_Tamang.mp4',
                 ageGroup: 'Elderly (Complete Non-user)',
                 bridge: "We begin with complete digital avoidance - a choice to remain disconnected from technologies that feel foreign and threatening..."
             },
             { 
                 type: 'khajaghar', 
-                name: 'Khajaghar 1', 
-                participant: 'Sunita Tamang', 
+                name: 'Majuwa Khajaghar', 
+                participant: 'Sunita Tamang',
+                videoFile: 'Sunita_Tamang.mp4',
                 ageGroup: 'Middle-age (Learning Tibetan Online)',
                 bridge: "Moving to selective adoption - technology becomes useful when it serves cultural values and personal meaning..."
             },
             { 
                 type: 'school', 
-                participant: 'Principal', 
+                participant: 'Principal',
+                videoFile: 'Principal.mp4',
                 ageGroup: 'Late Adopter (Learned at 40)',
                 bridge: "Professional necessity drives learning - adult acquisition of digital skills through workplace requirements..."
             },
             { 
                 type: 'khajaghar', 
-                name: 'Khajaghar 2', 
-                participant: 'Aman Tamang', 
+                name: 'Thaple Khajaghar', 
+                participant: 'Aman Tamang',
+                videoFile: 'Aman_Tamang.mp4',
                 ageGroup: 'Digital Native (17 years old)',
                 bridge: "Finally, we meet those for whom technology is natural - digital natives who bridge traditional and digital worlds..."
             }
@@ -2214,14 +2619,14 @@ const journeyModes = {
             },
             { 
                 type: 'khajaghar', 
-                name: 'Khajaghar 1', 
+                name: 'Majuwa Khajaghar', 
                 participant: 'Sunita Tamang', 
                 efficacy: 'Selective Confidence',
                 bridge: "Developing selective confidence - success in specific digital domains like cultural learning builds targeted expertise..."
             },
             { 
                 type: 'khajaghar', 
-                name: 'Khajaghar 2', 
+                name: 'Thaple Khajaghar', 
                 participant: 'Aman Tamang', 
                 efficacy: 'High Confidence',
                 bridge: "Reaching high confidence - digital native integration where technology becomes a natural extension of capability..."
@@ -2230,35 +2635,7 @@ const journeyModes = {
     }
 };
 
-// Mode selector initialization - merged with main DOMContentLoaded
-
-function initializeModeSelector() {
-    const modeBtn = document.getElementById('mode-selector-btn');
-    const modeOptions = document.querySelectorAll('.mode-option');
-    
-    // Check if elements exist before adding event listeners
-    if (!modeBtn || modeOptions.length === 0) {
-        console.warn('Mode selector elements not found');
-        return;
-    }
-    
-    // Handle mode selection
-    modeOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            const selectedMode = this.dataset.mode;
-            switchMode(selectedMode);
-            
-            // Update active state
-            modeOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Update button text
-            const icon = this.querySelector('i').className;
-            const text = this.textContent.trim();
-            modeBtn.innerHTML = `<i class="${icon}"></i> ${text}`;
-        });
-    });
-}
+// Mode switching functionality (now triggered from Stories panel)
 
 function switchMode(mode) {
     if (progressionActive) {
@@ -2275,24 +2652,179 @@ function switchMode(mode) {
 }
 
 function startGuidedJourney(mode) {
+    console.log('startGuidedJourney called with mode:', mode);
     const journey = journeyModes[mode];
-    if (!journey) return;
+    console.log('Found journey:', journey);
     
+    if (!journey) {
+        console.error('No journey found for mode:', mode);
+        return;
+    }
+    
+    console.log('Setting up journey progression...');
+    currentMode = mode; // Fix: Set the current mode!
     currentStoryIndex = 0;
     progressionActive = true;
     isPaused = false;
     
+    console.log('Showing progression panel...');
     showProgressionPanel(journey);
+    console.log('Going to story 0...');
     goToStory(0);
 }
 
+// New journey launcher functions for the Stories panel
+function startAgeBasedJourney() {
+    console.log('Starting Progressive Discovery Age Journey');
+    // Close the stories panel modal first
+    const modal = document.getElementById('popup-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        document.getElementById('map').classList.remove('map-with-panel');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            map.invalidateSize();
+        }, 300);
+    }
+    
+    // Initialize progressive discovery story mode
+    setTimeout(() => {
+        initializeProgressiveStoryMode();
+    }, 500);
+}
+
+// Function to play the Age intro video
+function playAgeIntroVideo() {
+    console.log('playAgeIntroVideo called');
+    const videoOverlay = document.getElementById('cinematic-video-overlay');
+    const cinematicVideo = document.getElementById('cinematic-video');
+    const skipButton = document.getElementById('skip-video');
+    
+    if (!videoOverlay || !cinematicVideo || !skipButton) {
+        console.error('Video elements not found');
+        return;
+    }
+    
+    // Update video source
+    cinematicVideo.src = 'video/intro/Age intro.mp4';
+    console.log('Video source set to:', cinematicVideo.src);
+    
+    // Show video overlay
+    videoOverlay.style.display = 'flex';
+    videoOverlay.classList.add('video-fade-in');
+    
+    // Try to play with audio (modern browsers may block this)
+    cinematicVideo.currentTime = 0;
+    cinematicVideo.muted = false;
+    
+    const playPromise = cinematicVideo.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            console.log('Video started playing with audio');
+            // Video is playing successfully
+        }).catch(e => {
+            console.warn('Autoplay with audio failed, trying muted:', e);
+            
+            // Try muted autoplay
+            cinematicVideo.muted = true;
+            cinematicVideo.play().then(() => {
+                console.log('Video started playing muted');
+                // Show unmute button
+                showUnmuteButton(cinematicVideo, videoOverlay);
+            }).catch(e2 => {
+                console.warn('Muted autoplay also failed:', e2);
+                // Show manual play button
+                showManualPlayButton(cinematicVideo, videoOverlay);
+            });
+        });
+    } else {
+        // Fallback for older browsers
+        showManualPlayButton(cinematicVideo, videoOverlay);
+    }
+    
+    // Skip button functionality
+    skipButton.onclick = skipToAgeJourney;
+    
+    // When video ends, start the journey
+    cinematicVideo.onended = skipToAgeJourney;
+    
+    function skipToAgeJourney() {
+        console.log('skipToAgeJourney called');
+        videoOverlay.classList.add('video-fade-out');
+        cinematicVideo.pause();
+        cinematicVideo.muted = true; // Restore muted state for other videos
+        
+        // Remove any video control buttons
+        removeVideoButtons(videoOverlay);
+        
+        setTimeout(() => {
+            videoOverlay.style.display = 'none';
+            videoOverlay.classList.remove('video-fade-in', 'video-fade-out');
+            
+            // CRITICAL: Close the Stories panel completely before starting guided journey
+            const modal = document.getElementById('popup-modal');
+            if (modal) {
+                console.log('Closing Stories panel before guided journey');
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+                document.getElementById('map').classList.remove('map-with-panel');
+                
+                // Clear any existing modal content
+                clearModalContent();
+                
+                // Ensure map is properly sized
+                map.invalidateSize();
+            }
+            
+            console.log('About to start guided journey with age-journey mode');
+            
+            // CORRECT APPROACH: Use existing Street Interview 3 popup (with video-first redesign)
+            console.log('Opening existing Street Interview 3 popup for Maili Tamang');
+            openStreetInterviewPopup({name: 'Street Interview 3'});
+        }, 500);
+    }
+}
+
+function startSelfEfficacyJourney() {
+    console.log('Starting Self-Efficacy Journey');
+    // Close the stories panel modal first
+    const modal = document.getElementById('popup-modal');
+    const closeButton = document.querySelector('.close');
+    if (modal && closeButton) {
+        modal.classList.remove('show');
+        document.getElementById('map').classList.remove('map-with-panel');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            map.invalidateSize();
+        }, 300);
+    }
+    // Start the self-efficacy journey mode
+    setTimeout(() => {
+        startGuidedJourney('efficacy-spectrum');
+    }, 500);
+}
+
 function showProgressionPanel(journey) {
+    console.log('showProgressionPanel called with journey:', journey);
     const panel = document.getElementById('auto-progression-panel');
+    console.log('Found panel element:', panel);
+    
+    if (!panel) {
+        console.error('auto-progression-panel element not found!');
+        return;
+    }
+    
     panel.style.display = 'block';
+    console.log('Panel display set to block');
     
-    document.getElementById('total-stories').textContent = journey.locations.length;
-    document.getElementById('current-story-theme').textContent = journey.theme;
+    const totalStoriesEl = document.getElementById('total-stories');
+    const currentThemeEl = document.getElementById('current-story-theme');
     
+    if (totalStoriesEl) totalStoriesEl.textContent = journey.locations.length;
+    if (currentThemeEl) currentThemeEl.textContent = journey.theme;
+    
+    console.log('About to call updateProgressDisplay');
     updateProgressDisplay();
 }
 
@@ -2329,15 +2861,11 @@ function proceedToStory(index) {
     
     updateProgressDisplay();
     
-    // Highlight the active marker before animation
-    highlightActiveMarker(location);
-    
-    animateToLocation(location);
-    
-    // Start countdown timer
-    if (!isPaused) {
-        startCountdownTimer();
-    }
+    // Animate to location first, then play participant video
+    animateToLocation(location, () => {
+        // After arriving at location, play the participant video
+        playParticipantVideo(location);
+    });
 }
 
 function showThematicBridge(location, callback) {
@@ -2370,7 +2898,7 @@ function showThematicBridge(location, callback) {
     }, 1000);
 }
 
-function animateToLocation(location) {
+function animateToLocation(location, callback) {
     let coords, openFunction;
     
     switch (location.type) {
@@ -2391,12 +2919,12 @@ function animateToLocation(location) {
             }
             break;
         case 'khajaghar':
-            if (location.name === 'Khajaghar 1') {
+            if (location.name === 'Majuwa Khajaghar') {
                 coords = [27.724592, 85.224491];
-                openFunction = () => openKhajagharPopup({name: 'Khajaghar 1', lat: 27.724592, lng: 85.224491});
-            } else if (location.name === 'Khajaghar 2') {
+                openFunction = () => openKhajagharPopup({name: 'Majuwa Khajaghar', lat: 27.724592, lng: 85.224491});
+            } else if (location.name === 'Thaple Khajaghar') {
                 coords = [27.739199, 85.236208];
-                openFunction = () => openKhajagharPopup({name: 'Khajaghar 2', lat: 27.739199, lng: 85.236208});
+                openFunction = () => openKhajagharPopup({name: 'Thaple Khajaghar', lat: 27.739199, lng: 85.236208});
             }
             break;
     }
@@ -2408,9 +2936,425 @@ function animateToLocation(location) {
         });
         
         setTimeout(() => {
-            openFunction();
+            // Call callback if provided, otherwise use original openFunction
+            if (callback) {
+                callback();
+            } else {
+                openFunction();
+            }
         }, 2500);
     }
+}
+
+// Helper function to show unmute button when video plays muted
+function showUnmuteButton(video, overlay) {
+    // Remove any existing buttons
+    removeVideoButtons(overlay);
+    
+    const unmuteButton = document.createElement('button');
+    unmuteButton.innerHTML = '<i class="fas fa-volume-up"></i> Click to Enable Audio';
+    unmuteButton.className = 'video-control-button';
+    unmuteButton.style.cssText = `
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.8);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        z-index: 10;
+        backdrop-filter: blur(5px);
+    `;
+    
+    unmuteButton.onclick = () => {
+        video.muted = false;
+        unmuteButton.remove();
+        console.log('Video unmuted');
+    };
+    
+    overlay.appendChild(unmuteButton);
+}
+
+// Helper function to show manual play button when autoplay fails
+function showManualPlayButton(video, overlay) {
+    // Remove any existing buttons
+    removeVideoButtons(overlay);
+    
+    const playButton = document.createElement('button');
+    playButton.innerHTML = '<i class="fas fa-play"></i> Click to Play Video';
+    playButton.className = 'video-control-button';
+    playButton.style.cssText = `
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.9);
+        color: white;
+        border: 3px solid white;
+        padding: 20px 30px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    `;
+    
+    playButton.onmouseover = () => {
+        playButton.style.background = 'rgba(255,255,255,0.2)';
+        playButton.style.transform = 'translate(-50%, -50%) scale(1.05)';
+    };
+    
+    playButton.onmouseout = () => {
+        playButton.style.background = 'rgba(0,0,0,0.9)';
+        playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+    };
+    
+    playButton.onclick = () => {
+        video.muted = false; // Try to play with audio
+        video.play().then(() => {
+            playButton.remove();
+            console.log('Manual play successful with audio');
+        }).catch(e => {
+            console.warn('Manual play with audio failed, trying muted:', e);
+            video.muted = true;
+            video.play().then(() => {
+                playButton.remove();
+                showUnmuteButton(video, overlay);
+                console.log('Manual play successful muted');
+            }).catch(e2 => {
+                console.error('Manual play completely failed:', e2);
+                playButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Video Error';
+            });
+        });
+    };
+    
+    overlay.appendChild(playButton);
+}
+
+// Helper function to remove existing video control buttons
+function removeVideoButtons(overlay) {
+    const existingButtons = overlay.querySelectorAll('.video-control-button');
+    existingButtons.forEach(button => button.remove());
+}
+
+// Function to play participant-specific video during guided journey using side panel
+function playParticipantVideo(location) {
+    console.log('Playing video for participant:', location.participant);
+    console.log('Location object:', location);
+    
+    // Construct video path - use explicit videoFile if available, otherwise construct from participant name
+    const videoPath = location.videoFile 
+        ? `video/participants/${location.videoFile}`
+        : `video/participants/${location.participant.replace(/\s+/g, '_')}.mp4`;
+    
+    // Create participant content for side panel
+    const participantContent = {
+        title: `${location.participant}'s Story`,
+        location: location.name || location.type,
+        ageGroup: location.ageGroup || location.efficacy,
+        story: {
+            resident: location.participant,
+            quote: location.bridge || `Watch ${location.participant}'s story about their digital experiences.`
+        },
+        youtubeId: null, // We'll use local video instead
+        localVideo: videoPath,
+        isGuidedJourney: true,
+        participant: location.participant
+    };
+    
+    console.log('Participant content being passed:', participantContent);
+    
+    // Open the side panel with participant content
+    console.log('About to call openGuidedStoryPanel with:', participantContent);
+    openGuidedStoryPanel(participantContent);
+}
+
+// Function to clear modal content to prevent conflicts
+function clearModalContent() {
+    // Clear all text content
+    document.getElementById('popup-title').textContent = '';
+    document.getElementById('location-name').textContent = '';
+    document.getElementById('interview-count').textContent = '';
+    document.getElementById('resident-name').textContent = '';
+    document.getElementById('resident-role').textContent = '';
+    document.getElementById('resident-description').textContent = '';
+    
+    // Clear photo sources and quotes
+    document.getElementById('photo-1').src = '';
+    document.getElementById('photo-2').src = '';
+    document.getElementById('photo-3').src = '';
+    document.getElementById('quote-1').textContent = '';
+    document.getElementById('quote-2').textContent = '';
+    document.getElementById('quote-3').textContent = '';
+    
+    // Clear video content
+    document.getElementById('video-1-heading').textContent = '';
+    document.getElementById('youtube-video').src = '';
+    
+    // Remove any local video elements
+    const existingLocalVideo = document.getElementById('local-video');
+    if (existingLocalVideo) {
+        existingLocalVideo.remove();
+    }
+    
+    // Clear headshot
+    document.getElementById('resident-headshot').src = '';
+    
+    // CRITICAL: Clear custom content section (where Stories content appears)
+    const customContent = document.getElementById('custom-content');
+    if (customContent) {
+        customContent.innerHTML = '';
+        customContent.style.display = 'none';
+    }
+    
+    // Reset video display
+    document.getElementById('youtube-video').style.display = 'block';
+}
+
+// Modified version of openPopup specifically for guided journey stories
+function openGuidedStoryPanel(content) {
+    console.log('Opening guided story panel for:', content.title);
+    console.log('Full content object received:', content);
+    
+    // Ensure modal is properly reset
+    const modal = document.getElementById('popup-modal');
+    
+    // Force close any existing modal state
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+    document.getElementById('map').classList.remove('map-with-panel');
+    
+    // Clear any existing content first to avoid conflicts
+    clearModalContent();
+    
+    // Small delay to ensure clean state, then open
+    setTimeout(() => {
+        // Show the modal panel
+        modal.style.display = 'block';
+        modal.classList.add('show');
+        
+        // Keep map visible on left by adjusting layout
+        document.getElementById('map').classList.add('map-with-panel');
+        
+        // Hide navbar during guided journey
+        hideNavbar();
+        
+        console.log('Modal opened for guided journey');
+        
+        // Populate panel content
+        document.getElementById('popup-title').textContent = content.title;
+        document.getElementById('location-name').textContent = content.location;
+        document.getElementById('interview-count').textContent = content.ageGroup || '';
+        
+        // Show appropriate access indicator
+        const accessIndicator = document.querySelector('.access-indicator');
+        accessIndicator.style.display = 'flex';
+        accessIndicator.className = 'access-indicator guided-journey';
+        // Removed access-level element - now using badge only
+        
+        // CRITICAL: Explicit content section management
+        console.log('Managing content sections visibility...');
+        
+        // Highlight the active marker (Street Interview 3 for Maili Tamang)
+        if (content.story.resident === 'Maili Tamang') {
+            highlightActiveMarker('street_interview_3');
+        }
+        
+        // Hide ALL other content sections first
+        document.getElementById('foundation-content').style.display = 'none';
+        
+        const customContent = document.getElementById('custom-content');
+        if (customContent) {
+            console.log('Hiding custom-content section');
+            customContent.style.display = 'none';
+            customContent.innerHTML = ''; // Clear any existing content
+        }
+        
+        // Show ONLY resident content
+        const residentContent = document.getElementById('resident-content');
+        console.log('Showing resident-content section');
+        residentContent.style.display = 'block';
+        
+        // Set up profile section
+        document.getElementById('resident-name').textContent = content.story.resident;
+        document.getElementById('resident-role').textContent = content.ageGroup || 'Community Member';
+        document.getElementById('resident-description').textContent = content.story.quote;
+        
+        // Set up headshot
+        const headshotPath = getHeadshotPath(content.story.resident);
+        document.getElementById('resident-headshot').src = headshotPath;
+        
+        // Set up photo section with lifestyle photos (not headshots)
+        const photoSection = document.querySelector('.photo-collage-section');
+        photoSection.style.display = 'block';
+        
+        // Generate lifestyle photos for this participant
+        const participant = content.participant || content.story.resident;
+        const lifestylePhotos = [
+            {
+                image: `photos/lifestyle/${participant.replace(/\s+/g, '_')}_1.jpg`,
+                quote: "Daily life and community engagement"
+            },
+            {
+                image: `photos/lifestyle/${participant.replace(/\s+/g, '_')}_2.jpg`, 
+                quote: "Technology use in context"
+            },
+            {
+                image: `photos/lifestyle/${participant.replace(/\s+/g, '_')}_3.jpg`,
+                quote: "Community and family connections"
+            }
+        ];
+        
+        // Update photo grid with lifestyle photos
+        const photoGrid = photoSection.querySelector('.photo-collage-grid');
+        if (photoGrid) {
+            photoGrid.innerHTML = lifestylePhotos.map((photo, index) => `
+                <div class="collage-item">
+                    <img src="${photo.image}" alt="${participant} lifestyle photo ${index + 1}" />
+                    <div class="photo-quote">
+                        <p>${photo.quote}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Set up video section with local video
+        const videoContainer = document.querySelector('.youtube-container');
+        const youtubeVideo = document.getElementById('youtube-video');
+        
+        if (content.localVideo) {
+            // Set video heading based on participant - special case for Maili Tamang
+            if (content.story.resident === 'Maili Tamang') {
+                document.getElementById('video-1-heading').textContent = '🎥 Perception of Mobile Phones - Maili Tamang';
+            } else {
+                document.getElementById('video-1-heading').textContent = `🎥 ${content.story.resident}'s Story`;
+            }
+            
+            // Replace YouTube embed with local video
+            youtubeVideo.style.display = 'none';
+            
+            // Create local video element if it doesn't exist
+            let localVideoElement = document.getElementById('local-video');
+            if (!localVideoElement) {
+                localVideoElement = document.createElement('video');
+                localVideoElement.id = 'local-video';
+                localVideoElement.controls = true;
+                localVideoElement.style.cssText = `
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 8px;
+                    background: #000;
+                `;
+                videoContainer.appendChild(localVideoElement);
+            }
+            
+            localVideoElement.style.display = 'block';
+            localVideoElement.src = content.localVideo;
+            localVideoElement.muted = false;
+            
+            // Auto-play the video
+            localVideoElement.play().catch(e => {
+                console.log('Auto-play failed, user interaction required');
+            });
+            
+            // When video ends, continue to next story
+            localVideoElement.onended = () => {
+                setTimeout(() => {
+                    continueToNextStory();
+                }, 2000); // Small delay before continuing
+            };
+        }
+        
+        // Hide audio and stats sections for guided journey
+        const audioSection = document.getElementById('audio-section');
+        if (audioSection) audioSection.style.display = 'none';
+        
+        const statsSection = document.getElementById('resident-stats');
+        if (statsSection) statsSection.style.display = 'none';
+        
+        // Hide other video sections (video 2 and 3)
+        const video2Section = document.getElementById('video-2-section');
+        if (video2Section) video2Section.style.display = 'none';
+        
+        const video3Section = document.getElementById('video-3-section');
+        if (video3Section) video3Section.style.display = 'none';
+        
+        // Show main video section
+        const videoSection = document.querySelector('.video-section');
+        if (videoSection) videoSection.style.display = 'block';
+    
+        // Add continue button
+        addContinueButton();
+    }, 100); // Close the setTimeout
+}
+
+// Function to continue to next story in guided journey
+function continueToNextStory() {
+    console.log('Continuing to next story in guided journey...');
+    
+    // Note: headshot overlay functionality was removed
+    
+    // Close the current panel
+    const modal = document.getElementById('popup-modal');
+    modal.classList.remove('show');
+    document.getElementById('map').classList.remove('map-with-panel');
+    
+    setTimeout(() => {
+        modal.style.display = 'none';
+        map.invalidateSize();
+        
+        // Move to next story in journey
+        const nextIndex = currentStoryIndex + 1;
+        goToStory(nextIndex);
+    }, 300);
+}
+
+// Add continue button to guided journey panel
+function addContinueButton() {
+    // Remove existing continue button if any
+    const existingButton = document.getElementById('continue-journey-btn');
+    if (existingButton) existingButton.remove();
+    
+    // Create continue button
+    const continueButton = document.createElement('button');
+    continueButton.id = 'continue-journey-btn';
+    continueButton.innerHTML = '<i class="fas fa-arrow-right"></i> Continue Journey';
+    continueButton.style.cssText = `
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        z-index: 2000;
+        transition: all 0.3s ease;
+    `;
+    
+    continueButton.onmouseover = () => {
+        continueButton.style.transform = 'translateY(-2px)';
+        continueButton.style.boxShadow = '0 6px 20px rgba(5, 150, 105, 0.4)';
+    };
+    
+    continueButton.onmouseout = () => {
+        continueButton.style.transform = 'translateY(0)';
+        continueButton.style.boxShadow = '0 4px 15px rgba(5, 150, 105, 0.3)';
+    };
+    
+    continueButton.onclick = continueToNextStory;
+    
+    document.body.appendChild(continueButton);
 }
 
 function updateProgressDisplay() {
@@ -2524,91 +3468,855 @@ function completeJourney() {
 }
 
 // ==========================================
-// MARKER HIGHLIGHTING SYSTEM
+// MARKER HOVER AND CLICK INTERACTION SYSTEM
 // ==========================================
 
-function highlightActiveMarker(location) {
-    // First clear any existing highlights
-    clearAllMarkerHighlights();
+// Create hover preview popup element
+function createHoverPreview() {
+    if (document.getElementById('marker-hover-preview')) return;
     
-    // Add guided mode class to map container
-    document.getElementById('map').classList.add('guided-mode-active');
+    const preview = document.createElement('div');
+    preview.id = 'marker-hover-preview';
+    preview.className = 'marker-hover-preview';
+    preview.innerHTML = `
+        <img class="preview-headshot" src="" alt="Participant photo">
+        <div class="preview-name"></div>
+        <div class="preview-age"></div>
+    `;
+    document.body.appendChild(preview);
+}
+
+// Show hover preview with participant info
+function showHoverPreview(participant, event) {
+    const age = getParticipantAge(participant);
+    showHoverPreviewWithAge(participant, age, event);
+}
+
+// Get correct headshot file path with proper extension
+function getHeadshotPath(participant) {
+    // Map participant names to actual file names
+    const fileMap = {
+        'Maili Tamang': 'Maili Tamang.JPG',
+        'Sunita Tamang': 'Sunita Tamang.JPG',
+        'Principal': 'Shyam Krishna Bhattarai (HT).png',
+        'Shyam Krishna Bhattarai (HT)': 'Shyam Krishna Bhattarai (HT).png',
+        'Aman Tamang': 'Aman Tamang.png',
+        'Tej Lama': 'Tej Lama.JPG',
+        'Sikha Limbu': 'Sikha Limbu.JPG',
+        'Sikha Limbu, Agriculture & Homemaker': 'Sikha Limbu.JPG',
+        'Dhan Bahadur Tamang': 'Dhanbahadur Tamang.JPG',
+        'Dhan Bahadur Tamang, Farmer': 'Dhanbahadur Tamang.JPG',
+        'Ram Raj Lama': 'Ram raj lama.png',
+        'Sudiksha Tamang': 'Sudiksha Tamang.JPG',
+        'Tej Tamang': 'Tej Lama.JPG',
+        'Tej Tamang, Local route driver': 'Tej Lama.JPG',
+        'Pratima Tamang': 'Pratima Tamang.JPG',
+        'Pratima Tamang, Farmer': 'Pratima Tamang.JPG',
+        'Samjhana Lama': 'Samjhana Lama.JPG',
+        'Bijaya Tamang': 'Bijay_tamang.png',
+        'Mishri Tamang': 'default_female_avatar.jpg',
+        'Nirisuchika Tamang, cloth shopowner': 'default_female_avatar.jpg',
+    };
     
-    switch (location.type) {
-        case 'house':
-            highlightHouseMarker(location.id);
-            break;
-        case 'school':
-            highlightSchoolMarker();
-            break;
-        case 'street_interview':
-            highlightStreetInterviewMarker(location.name);
-            break;
-        case 'khajaghar':
-            highlightKhajagharMarker(location.name);
-            break;
+    return `photos/headshots/${fileMap[participant] || participant.replace(/\s+/g, '_') + '.jpg'}`;
+}
+
+// Show hover preview with explicit age
+function showHoverPreviewWithAge(participant, age, event) {
+    const preview = document.getElementById('marker-hover-preview');
+    if (!preview) return;
+    
+    // Get participant data with correct file extension
+    const headshotPath = getHeadshotPath(participant);
+    
+    // Update preview content
+    preview.querySelector('.preview-headshot').src = headshotPath;
+    preview.querySelector('.preview-name').textContent = participant;
+    preview.querySelector('.preview-age').textContent = `Age: ${age}`;
+    
+    // Position near mouse/cursor
+    if (event) {
+        const rect = event.target ? event.target.getBoundingClientRect() : {right: event.clientX, top: event.clientY};
+        preview.style.left = (rect.right || event.clientX) + 10 + 'px';
+        preview.style.top = (rect.top || event.clientY) + 'px';
+    }
+    
+    // Show preview
+    preview.classList.add('show');
+}
+
+// Hide hover preview
+function hideHoverPreview() {
+    const preview = document.getElementById('marker-hover-preview');
+    if (preview) {
+        preview.classList.remove('show');
     }
 }
 
-function highlightHouseMarker(houseId) {
-    // Find the house marker by looking for the house data
-    const house = houseData.find(h => h.id === houseId);
-    if (house) {
-        // House markers are FontAwesome icons, need to find them by coordinates
-        const houseMarkers = markerReferences.houses;
-        houseMarkers.forEach(marker => {
-            if (marker.getLatLng().lat === house.lat && marker.getLatLng().lng === house.lng) {
-                const markerElement = marker.getElement();
-                if (markerElement) {
-                    markerElement.classList.add('marker-active');
-                }
+// Get participant age (you'll need to add this data to journey locations)
+function getParticipantAge(participant) {
+    const ageData = {
+        'Maili Tamang': '58',
+        'Sunita Tamang': '45', 
+        'Principal': '52',
+        'Shyam Krishna Bhattarai (HT)': '52', // Principal's full name
+        'Aman Tamang': '18',
+        'Tej Lama': '34',
+        'Sikha Limbu': '26',
+        'Sikha Limbu, Agriculture & Homemaker': '26',
+        'Dhan Bahadur Tamang': '40',
+        'Dhan Bahadur Tamang, Farmer': '40',
+        'Ram Raj Lama': '42',
+        'Sudiksha Tamang': '28',
+        'Tej Tamang': '34',
+        'Tej Tamang, Local route driver': '34',
+        'Pratima Tamang': '41',
+        'Pratima Tamang, Farmer': '41',
+        'Samjhana Lama': 'Unknown', // Age not provided
+        'Bijaya Tamang': '17',
+        'Mishri Tamang': '52',
+        'Nirisuchika Tamang': '28',
+        'Local Resident': '42',
+        'Community Member': '35'
+    };
+    return ageData[participant] || 'Unknown';
+}
+
+// Function to highlight the active marker during guided journeys
+function highlightActiveMarker(markerId) {
+    // Clear any existing highlights first
+    clearAllMarkerHighlights();
+    
+    // Add highlight based on marker type
+    if (markerId === 'street_interview_3') {
+        // Find Street Interview 3 marker and highlight it
+        const streetInterviewMarkers = document.querySelectorAll('.interview-marker');
+        streetInterviewMarkers.forEach((marker, index) => {
+            if (index === 2) { // Street Interview 3 is index 2
+                marker.style.background = 'rgba(99, 102, 241, 0.3)';
+                marker.style.borderRadius = '50%';
+                marker.style.padding = '8px';
+                marker.style.transform = 'scale(1.2)';
+                marker.style.transition = 'all 0.3s ease';
             }
         });
     }
 }
 
-function highlightSchoolMarker() {
-    if (markerReferences.school) {
-        const markerElement = markerReferences.school.getElement();
-        if (markerElement) {
-            markerElement.classList.add('marker-active');
+// Function to clear all marker highlights
+function clearAllMarkerHighlights() {
+    const allMarkers = document.querySelectorAll('.interview-marker, .khajaghar-marker, .school-marker, .house-marker');
+    allMarkers.forEach(marker => {
+        marker.style.background = '';
+        marker.style.borderRadius = '';
+        marker.style.padding = '';
+        marker.style.transform = '';
+        marker.style.transition = '';
+    });
+}
+
+// SIMPLE VIDEO SEQUENCE SYSTEM
+const ageJourneyVideos = [
+    {
+        name: "Maili Tamang",
+        video: "video/participants/Maili_Tamang.mp4",
+        title: "🎥 Perception of Mobile Phones - Maili Tamang",
+        marker: "street_interview_3"
+    },
+    {
+        name: "Sunita Tamang", 
+        video: "video/participants/Sunita_Tamang.mp4",
+        title: "🎥 Sunita Tamang's Story",
+        marker: "khajaghar_1"
+    },
+    {
+        name: "Principal",
+        video: "video/participants/Principal.mp4", 
+        title: "🎥 Principal's Story",
+        marker: "school"
+    },
+    {
+        name: "Aman Tamang",
+        video: "video/participants/Aman_Tamang.mp4",
+        title: "🎥 Aman Tamang's Story", 
+        marker: "khajaghar_2"
+    }
+];
+
+let currentVideoIndex = 0;
+
+function startAgeVideoSequence() {
+    currentVideoIndex = 0;
+    playVideoAtIndex(0);
+}
+
+function playVideoAtIndex(index) {
+    if (index >= ageJourneyVideos.length) {
+        console.log('Video sequence complete!');
+        return;
+    }
+    
+    const videoData = ageJourneyVideos[index];
+    console.log('Playing video:', videoData.title);
+    
+    // Highlight the corresponding marker
+    highlightActiveMarker(videoData.marker);
+    
+    // Open a simple video panel
+    openSimpleVideoPanel(videoData);
+}
+
+function openSimpleVideoPanel(videoData) {
+    // Get modal and clear it completely
+    const modal = document.getElementById('popup-modal');
+    
+    // Clear everything and start fresh
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-only-panel">
+                <h2>${videoData.title}</h2>
+                <video id="sequence-video" controls autoplay style="width: 100%; height: 400px;">
+                    <source src="${videoData.video}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button id="next-video-btn">Next Video</button>
+                    <button id="skip-sequence-btn">Skip Sequence</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Show modal
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    
+    // Set up video event handlers
+    const video = document.getElementById('sequence-video');
+    const nextBtn = document.getElementById('next-video-btn');
+    const skipBtn = document.getElementById('skip-sequence-btn');
+    const closeBtn = modal.querySelector('.close');
+    
+    // When video ends, show next button
+    video.onended = () => {
+        nextBtn.style.display = 'inline-block';
+    };
+    
+    // Next video button
+    nextBtn.onclick = () => {
+        currentVideoIndex++;
+        playVideoAtIndex(currentVideoIndex);
+    };
+    
+    // Skip sequence button
+    skipBtn.onclick = () => {
+        modal.style.display = 'none';
+        modal.classList.remove('show');
+        document.getElementById('map').classList.remove('map-with-panel');
+        clearAllMarkerHighlights();
+    };
+    
+    // Close button
+    closeBtn.onclick = skipBtn.onclick;
+}
+
+// NEW VIDEO-FIRST PANEL SYSTEM
+function openVideoFirstPanel(participantName) {
+    console.log('Opening video-first panel for:', participantName);
+    
+    // Get participant data
+    const participantData = getParticipantData(participantName);
+    
+    // Open modal with video-first layout
+    const modal = document.getElementById('popup-modal');
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    document.getElementById('map').classList.add('map-with-panel');
+    
+    // Hide navbar
+    hideNavbar();
+    
+    // Clear and setup content sections
+    setupVideoFirstContent(participantData);
+    
+    // Highlight corresponding marker
+    highlightActiveMarker(participantData.marker);
+}
+
+function getParticipantData(participantName) {
+    const participants = {
+        'Maili Tamang': {
+            name: 'Maili Tamang',
+            role: 'Elderly Community Member (Complete Digital Avoidance)',
+            description: 'Traditional homemaker representing complete digital non-participation. Her perspective on mobile phones reveals generational concerns about technology adoption and cultural values.',
+            video: 'video/participants/Maili_Tamang.mp4',
+            videoTitle: '🎥 Perception of Mobile Phones - Maili Tamang',
+            headshot: 'photos/headshots/Maili Tamang.JPG',
+            marker: 'street_interview_3',
+            location: 'Street Interview 3',
+            ageGroup: 'Elderly (Complete Non-user)'
+        },
+        'Sunita Tamang': {
+            name: 'Sunita Tamang',
+            role: 'Middle-age (Learning Tibetan Online)',
+            description: 'Uses technology selectively for cultural preservation and meaningful connections.',
+            video: 'video/participants/Sunita_Tamang.mp4',
+            videoTitle: '🎥 Sunita Tamang\'s Digital Journey',
+            headshot: 'photos/headshots/Sunita Tamang.JPG',
+            marker: 'khajaghar_1',
+            location: 'Majuwa Khajaghar',
+            ageGroup: 'Middle-age (Learning Tibetan Online)'
+        },
+        'Principal': {
+            name: 'Principal',
+            role: 'Late Adopter (Learned at 40)',
+            description: 'Professional necessity drove digital skill acquisition in adulthood.',
+            video: 'video/participants/Principal.mp4',
+            videoTitle: '🎥 Principal\'s Professional Digital Adaptation',
+            headshot: 'photos/headshots/Principal.JPG',
+            marker: 'school',
+            location: 'School',
+            ageGroup: 'Late Adopter (Learned at 40)'
+        },
+        'Aman Tamang': {
+            name: 'Aman Tamang',
+            role: 'Digital Native (17 years old)',
+            description: 'Young digital native bridging traditional and digital worlds.',
+            video: 'video/participants/Aman_Tamang.mp4',
+            videoTitle: '🎥 Aman Tamang\'s Digital Native Perspective',
+            headshot: 'photos/headshots/Aman Tamang.JPG',
+            marker: 'khajaghar_2',
+            location: 'Thaple Khajaghar',
+            ageGroup: 'Digital Native (17 years old)'
+        }
+    };
+    
+    return participants[participantName];
+}
+
+function setupVideoFirstContent(data) {
+    // Clear any existing content
+    clearModalContent();
+    
+    // Show only resident content
+    document.getElementById('foundation-content').style.display = 'none';
+    const customContent = document.getElementById('custom-content');
+    if (customContent) customContent.style.display = 'none';
+    document.getElementById('resident-content').style.display = 'block';
+    
+    // Setup header info
+    document.getElementById('popup-title').textContent = data.name + "'s Story";
+    document.getElementById('location-name').textContent = data.location;
+    document.getElementById('interview-count').textContent = data.ageGroup;
+    
+    // Setup access indicator
+    const accessIndicator = document.querySelector('.access-indicator');
+    accessIndicator.style.display = 'flex';
+    accessIndicator.className = 'access-indicator guided-journey';
+    // Removed access-level element - now using badge only
+    
+    // 🎥 SHOWCASE VIDEO (TOP PRIORITY)
+    document.getElementById('showcase-video-heading').textContent = data.videoTitle;
+    const showcaseVideo = document.getElementById('showcase-video');
+    showcaseVideo.src = data.video;
+    
+    // 👤 PROFILE SECTION
+    document.getElementById('resident-name').textContent = data.name;
+    document.getElementById('resident-role').textContent = data.role;
+    document.getElementById('resident-description').textContent = data.description;
+    document.getElementById('resident-headshot').src = data.headshot;
+    
+    // 📸 LIFESTYLE PHOTOS (placeholder for now)
+    document.getElementById('photo-1').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Daily+Life';
+    document.getElementById('photo-2').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Technology+Use';
+    document.getElementById('photo-3').src = 'https://via.placeholder.com/400x200/f1f5f9/64748b?text=Community';
+    
+    document.getElementById('quote-1').textContent = 'Daily life and community engagement';
+    document.getElementById('quote-2').textContent = 'Technology use in context';
+    document.getElementById('quote-3').textContent = 'Community and family connections';
+    
+    // Hide other video sections for now
+    const video2Section = document.getElementById('video-2-section');
+    if (video2Section) video2Section.style.display = 'none';
+    const video3Section = document.getElementById('video-3-section');
+    if (video3Section) video3Section.style.display = 'none';
+    
+    // Hide audio and stats sections
+    const audioSection = document.getElementById('audio-section');
+    if (audioSection) audioSection.style.display = 'none';
+    const statsSection = document.getElementById('resident-stats');
+    if (statsSection) statsSection.style.display = 'none';
+}
+
+
+// Initialize hover system early
+document.addEventListener('DOMContentLoaded', () => {
+    // Create hover preview element
+    createHoverPreview();
+});
+
+// ========================
+// Progressive Discovery Story Mode
+// ========================
+
+const storyModeState = {
+    isActive: false,
+    currentCharacter: null,
+    completedCharacters: [],
+    viewingTimer: null,
+    requiredViewTimes: {
+        'maili': 70,
+        'sunita': 60,
+        'aman': 35
+    }
+};
+
+function initializeProgressiveStoryMode() {
+    console.log('Initializing Progressive Discovery Story Mode');
+    
+    // Reset state
+    storyModeState.isActive = true;
+    storyModeState.currentCharacter = null;
+    storyModeState.completedCharacters = [];
+    
+    // Hide navbar
+    hideNavbar();
+    
+    // Show character boxes overlay
+    const charBoxesOverlay = document.getElementById('story-character-boxes');
+    charBoxesOverlay.style.display = 'block';
+    setTimeout(() => {
+        charBoxesOverlay.classList.add('visible');
+        // Adjust map layout for story mode
+        document.getElementById('map').classList.add('map-with-story-mode');
+        map.invalidateSize();
+    }, 100);
+    
+    // Play the Age intro video first
+    playAgeIntroVideoForStoryMode();
+    
+    // Setup event handlers
+    setupStoryModeEventHandlers();
+}
+
+function playAgeIntroVideoForStoryMode() {
+    console.log('Playing Age intro video for story mode');
+    const videoOverlay = document.getElementById('cinematic-video-overlay');
+    const cinematicVideo = document.getElementById('cinematic-video');
+    const skipButton = document.getElementById('skip-video');
+    
+    if (!videoOverlay || !cinematicVideo || !skipButton) {
+        console.error('Video elements not found');
+        unlockFirstCharacter(); // Fallback
+        return;
+    }
+    
+    // Update video source
+    cinematicVideo.src = 'video/intro/Age intro.mp4';
+    
+    // Show video overlay
+    videoOverlay.style.display = 'flex';
+    
+    // Try to play with audio (with fallback)
+    cinematicVideo.currentTime = 0;
+    cinematicVideo.muted = false;
+    
+    const playPromise = cinematicVideo.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            console.log('Age intro video started playing');
+        }).catch(e => {
+            console.warn('Autoplay with audio failed, trying muted:', e);
+            cinematicVideo.muted = true;
+            cinematicVideo.play().catch(e2 => {
+                console.error('Video playback failed completely:', e2);
+                unlockFirstCharacter(); // Fallback
+            });
+        });
+    }
+    
+    // When video ends, unlock first character
+    cinematicVideo.onended = () => {
+        console.log('Age intro video ended, unlocking Maili');
+        hideVideoOverlay();
+        unlockFirstCharacter();
+    };
+    
+    // Skip button functionality
+    skipButton.onclick = () => {
+        console.log('Skip button clicked');
+        hideVideoOverlay();
+        unlockFirstCharacter();
+    };
+}
+
+function hideVideoOverlay() {
+    const videoOverlay = document.getElementById('cinematic-video-overlay');
+    if (videoOverlay) {
+        videoOverlay.style.display = 'none';
+    }
+}
+
+function unlockFirstCharacter() {
+    console.log('Unlocking first character: Maili');
+    
+    // Unlock Maili's box
+    const mailiBox = document.getElementById('character-box-maili');
+    mailiBox.classList.remove('locked');
+    mailiBox.classList.add('unlocked');
+    mailiBox.querySelector('.status-text').textContent = 'Click to Meet';
+    
+    // Highlight Maili's house on the map (Street Interview 3)
+    highlightCharacterOnMap('maili');
+    
+    // Update progress
+    updateStoryProgress();
+}
+
+function setupStoryModeEventHandlers() {
+    // Character box click handlers
+    document.getElementById('character-box-maili').addEventListener('click', () => {
+        if (storyModeState.isActive && !storyModeState.completedCharacters.includes('maili')) {
+            startCharacterViewing('maili');
+        }
+    });
+    
+    document.getElementById('character-box-sunita').addEventListener('click', () => {
+        if (storyModeState.isActive && !storyModeState.completedCharacters.includes('sunita')) {
+            // For Sunita, show hint to find her location instead of directly viewing
+            if (!storyModeState.completedCharacters.includes('maili')) {
+                return; // Can't access until Maili is completed
+            }
+            showAreaHint('Majuwa Area', 'Look for Sunita\'s khajaghar (tea shop) in the Majuwa area. The map will guide you with area highlighting.');
+            storyModeState.currentUnlocked = 'sunita';
+            highlightAreaForExploration('sunita');
+        }
+    });
+    
+    document.getElementById('character-box-aman').addEventListener('click', () => {
+        if (storyModeState.isActive && !storyModeState.completedCharacters.includes('aman')) {
+            // For Aman, show hint to find his location instead of directly viewing
+            if (!storyModeState.completedCharacters.includes('sunita')) {
+                return; // Can't access until Sunita is completed
+            }
+            showAreaHint('Thaple Area', 'Look for Aman at the khajaghar (tea shop) in the Thaple area. The map will guide you with area highlighting.');
+            storyModeState.currentUnlocked = 'aman';
+            highlightAreaForExploration('aman');
+        }
+    });
+    
+    // Exit story mode
+    document.getElementById('exit-story-mode').addEventListener('click', exitStoryMode);
+    
+    // Area hint handlers
+    document.getElementById('hint-understood').addEventListener('click', () => {
+        document.getElementById('area-hint-overlay').style.display = 'none';
+        highlightAreaForExploration(storyModeState.currentUnlocked);
+    });
+    
+    // Story completion handler
+    document.getElementById('completion-understood').addEventListener('click', () => {
+        document.getElementById('story-completion-overlay').style.display = 'none';
+        exitStoryMode();
+    });
+}
+
+function startCharacterViewing(character) {
+    console.log('Starting character viewing for:', character);
+    
+    storyModeState.currentCharacter = character;
+    
+    // Update character box to viewing state
+    const charBox = document.getElementById(`character-box-${character}`);
+    charBox.classList.remove('unlocked');
+    charBox.classList.add('viewing');
+    charBox.querySelector('.status-text').textContent = 'Viewing';
+    
+    // Show timer display
+    const timerDisplay = charBox.querySelector('.timer-display');
+    timerDisplay.style.display = 'flex';
+    
+    // Open the appropriate popup based on character
+    openCharacterPopup(character);
+    
+    // Start viewing timer
+    startViewingTimer(character);
+}
+
+
+function startViewingTimer(character) {
+    const requiredTime = storyModeState.requiredViewTimes[character];
+    let timeLeft = requiredTime;
+    
+    const charBox = document.getElementById(`character-box-${character}`);
+    const timerText = charBox.querySelector('.timer-text');
+    
+    // Update timer display
+    timerText.textContent = `${timeLeft}s`;
+    
+    storyModeState.viewingTimer = setInterval(() => {
+        timeLeft--;
+        timerText.textContent = `${timeLeft}s`;
+        
+        if (timeLeft <= 0) {
+            completeCharacterViewing(character);
+        }
+    }, 1000);
+}
+
+function completeCharacterViewing(character) {
+    console.log('Completing character viewing for:', character);
+    
+    // Clear timer
+    if (storyModeState.viewingTimer) {
+        clearInterval(storyModeState.viewingTimer);
+        storyModeState.viewingTimer = null;
+    }
+    
+    // Update character box to completed
+    const charBox = document.getElementById(`character-box-${character}`);
+    charBox.classList.remove('viewing');
+    charBox.classList.add('completed');
+    charBox.querySelector('.status-text').textContent = 'Completed';
+    charBox.querySelector('.timer-display').style.display = 'none';
+    
+    // Add to completed list
+    storyModeState.completedCharacters.push(character);
+    storyModeState.currentCharacter = null;
+    
+    // Update progress
+    updateStoryProgress();
+    
+    // Unlock next character or show completion
+    unlockNextCharacter(character);
+}
+
+function unlockNextCharacter(justCompleted) {
+    if (justCompleted === 'maili') {
+        // Unlock Sunita but don't show location
+        const sunitaBox = document.getElementById('character-box-sunita');
+        sunitaBox.classList.remove('locked');
+        sunitaBox.classList.add('unlocked');
+        sunitaBox.querySelector('.status-text').textContent = 'Find & Meet';
+        
+        storyModeState.currentUnlocked = 'sunita';
+        
+        // Show area hint for Majuwa (but don't highlight yet)
+        setTimeout(() => {
+            showAreaHint('Majuwa Area', 'Look for Sunita\'s khajaghar (tea shop) in the Majuwa area. The map will guide you with area highlighting.');
+        }, 500);
+        
+    } else if (justCompleted === 'sunita') {
+        // Unlock Aman but don't show location
+        const amanBox = document.getElementById('character-box-aman');
+        amanBox.classList.remove('locked');
+        amanBox.classList.add('unlocked');
+        amanBox.querySelector('.status-text').textContent = 'Find & Meet';
+        
+        storyModeState.currentUnlocked = 'aman';
+        
+        // Show area hint for Thaple (but don't highlight yet)
+        setTimeout(() => {
+            showAreaHint('Thaple Area', 'Look for Aman at the khajaghar (tea shop) in the Thaple area. The map will guide you with area highlighting.');
+        }, 500);
+        
+    } else if (justCompleted === 'aman') {
+        // All characters completed - show completion overlay
+        showStoryCompletion();
+    }
+}
+
+function showAreaHint(title, text) {
+    const hintOverlay = document.getElementById('area-hint-overlay');
+    document.getElementById('hint-title').textContent = title;
+    document.getElementById('hint-text').textContent = text;
+    hintOverlay.style.display = 'flex';
+}
+
+function highlightAreaForExploration(character) {
+    // Highlight the appropriate area for the character
+    if (character === 'sunita') {
+        // Highlight Majuwa area (where Sunita's khajaghar is)
+        highlightSpecificArea('Majuwa');
+    } else if (character === 'aman') {
+        // Highlight Thaple area (where Aman's khajaghar is)
+        highlightSpecificArea('Thaple');
+    }
+}
+
+function highlightSpecificArea(areaName) {
+    // Find and highlight the specific area circle
+    const areaData = {
+        'Majuwa': { coords: [27.725122, 85.226066], radius: 250 },
+        'Thaple': { coords: [27.738486, 85.235668], radius: 400 }
+    };
+    
+    if (areaData[areaName]) {
+        const area = areaData[areaName];
+        // Add pulsing highlight to the area
+        const highlightCircle = L.circle(area.coords, {
+            radius: area.radius,
+            color: '#3b82f6',
+            weight: 4,
+            opacity: 0.8,
+            fillColor: '#3b82f6',
+            fillOpacity: 0.2,
+            className: 'exploration-highlight'
+        }).addTo(map);
+        
+        // Animate the highlight
+        let opacity = 0.2;
+        let increasing = true;
+        const pulseInterval = setInterval(() => {
+            if (increasing) {
+                opacity += 0.05;
+                if (opacity >= 0.4) increasing = false;
+            } else {
+                opacity -= 0.05;
+                if (opacity <= 0.1) increasing = true;
+            }
+            highlightCircle.setStyle({ fillOpacity: opacity });
+        }, 100);
+        
+        // Remove highlight after 30 seconds
+        setTimeout(() => {
+            clearInterval(pulseInterval);
+            map.removeLayer(highlightCircle);
+        }, 30000);
+        
+        // Zoom to area
+        map.flyTo(area.coords, 15, { animate: true, duration: 2 });
+    }
+}
+
+function highlightCharacterOnMap(character) {
+    if (character === 'maili') {
+        // Highlight Street Interview 3 marker
+        map.flyTo([27.726670, 85.224680], 16, { animate: true, duration: 2 });
+    }
+}
+
+function updateStoryProgress() {
+    const progressCount = document.getElementById('progress-count');
+    const progressFill = document.getElementById('story-progress-fill');
+    
+    const completed = storyModeState.completedCharacters.length;
+    const total = 3;
+    
+    progressCount.textContent = completed;
+    progressFill.style.width = `${(completed / total) * 100}%`;
+}
+
+function showStoryCompletion() {
+    const completionOverlay = document.getElementById('story-completion-overlay');
+    completionOverlay.style.display = 'flex';
+}
+
+function exitStoryMode() {
+    console.log('Exiting story mode');
+    
+    // Reset state
+    storyModeState.isActive = false;
+    storyModeState.currentCharacter = null;
+    storyModeState.completedCharacters = [];
+    
+    // Clear any timers
+    if (storyModeState.viewingTimer) {
+        clearInterval(storyModeState.viewingTimer);
+        storyModeState.viewingTimer = null;
+    }
+    
+    // Hide character boxes overlay
+    const charBoxesOverlay = document.getElementById('story-character-boxes');
+    charBoxesOverlay.classList.remove('visible');
+    setTimeout(() => {
+        charBoxesOverlay.style.display = 'none';
+        // Remove map layout adjustments
+        document.getElementById('map').classList.remove('map-with-story-mode');
+        map.invalidateSize();
+    }, 400);
+    
+    // Close any open popups
+    const modal = document.getElementById('popup-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        document.getElementById('map').classList.remove('map-with-panel');
+    }
+    
+    // Show navbar
+    showNavbar();
+    
+    // Reset map view
+    map.setView([27.733, 85.240], 14);
+    map.invalidateSize();
+    
+    // Reset character boxes to locked state
+    resetCharacterBoxes();
+}
+
+function resetCharacterBoxes() {
+    const characters = ['maili', 'sunita', 'aman'];
+    characters.forEach(char => {
+        const box = document.getElementById(`character-box-${char}`);
+        box.className = 'character-box locked';
+        box.querySelector('.status-text').textContent = 'Locked';
+        box.querySelector('.timer-display').style.display = 'none';
+    });
+    
+    // Reset progress
+    document.getElementById('progress-count').textContent = '0';
+    document.getElementById('story-progress-fill').style.width = '0%';
+}
+
+function showNavbar() {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        navbar.classList.remove('hidden');
+    }
+}
+
+// Helper function to check if we should start story mode viewing timer
+function checkAndStartStoryModeViewing(location) {
+    if (!storyModeState.isActive) return;
+    
+    let character = null;
+    
+    // Determine which character based on the location
+    if (location && location.name === 'Street Interview 3') {
+        character = 'maili';
+    } else if (location && location.name === 'Majuwa Khajaghar') {
+        character = 'sunita';
+    } else if (location && location.name === 'Thaple Khajaghar') {
+        character = 'aman';
+    }
+    
+    // Start viewing timer if this is an unlocked character
+    if (character && !storyModeState.completedCharacters.includes(character)) {
+        const charBox = document.getElementById(`character-box-${character}`);
+        if (charBox && charBox.classList.contains('unlocked')) {
+            console.log('Starting story mode viewing for:', character);
+            startCharacterViewingFromMap(character);
         }
     }
 }
 
-function highlightStreetInterviewMarker(interviewName) {
-    markerReferences.streetInterviews.forEach(marker => {
-        if (marker.options.title === interviewName) {
-            const markerElement = marker.getElement();
-            if (markerElement) {
-                markerElement.classList.add('marker-active');
-            }
-        }
-    });
-}
-
-function highlightKhajagharMarker(khajagharName) {
-    markerReferences.khajaghar.forEach(marker => {
-        if (marker.options.title === khajagharName) {
-            const markerElement = marker.getElement();
-            if (markerElement) {
-                markerElement.classList.add('marker-active');
-            }
-        }
-    });
-}
-
-function clearAllMarkerHighlights() {
-    // Remove guided mode class from map container
-    document.getElementById('map').classList.remove('guided-mode-active');
+function startCharacterViewingFromMap(character) {
+    storyModeState.currentCharacter = character;
     
-    // Clear all marker-active classes
-    document.querySelectorAll('.marker-active').forEach(element => {
-        element.classList.remove('marker-active');
-    });
+    // Update character box to viewing state
+    const charBox = document.getElementById(`character-box-${character}`);
+    charBox.classList.remove('unlocked');
+    charBox.classList.add('viewing');
+    charBox.querySelector('.status-text').textContent = 'Viewing';
     
-    // Clear area highlights
-    document.querySelectorAll('.area-circle-active').forEach(element => {
-        element.classList.remove('area-circle-active');
-    });
+    // Show timer display
+    const timerDisplay = charBox.querySelector('.timer-display');
+    timerDisplay.style.display = 'flex';
+    
+    // Start viewing timer
+    startViewingTimer(character);
 }
