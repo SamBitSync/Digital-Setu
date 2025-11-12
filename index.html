@@ -6,6 +6,7 @@
     <title>Bhimdhunga, Nagarjun Storymap</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.0/src/lite-yt-embed.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -285,10 +286,12 @@
     
     <!-- Cinematic Video Overlay -->
     <div id="cinematic-video-overlay" class="video-overlay">
-        <video id="cinematic-video" autoplay muted>
-            <source src="video/intro/Bhimdhunga_intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <lite-youtube
+            id="cinematic-video"
+            videoid="BHIMDHUNGA_INTRO_VIDEO_ID"
+            params="autoplay=1&mute=1&rel=0&modestbranding=1"
+            style="background-image: url('https://i.ytimg.com/vi/BHIMDHUNGA_INTRO_VIDEO_ID/maxresdefault.jpg');">
+        </lite-youtube>
         <div class="video-controls">
             <button id="skip-video" class="skip-button">Skip Video</button>
         </div>
@@ -313,14 +316,12 @@
                     <!-- 🎥 SHOWCASE VIDEO (TOP PRIORITY) -->
                     <div class="showcase-video-section">
                         <h3 id="showcase-video-heading">🎥 Showcase Video</h3>
-                        <div class="showcase-video-container">
-                            <video id="showcase-video" 
-                                   controls 
-                                   autoplay 
-                                   style="width: 100%; height: 350px; border-radius: 8px; background: #000;">
-                                <source src="" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                        <div class="showcase-video-container" style="max-width: 100%; margin: 0 auto;">
+                            <lite-youtube
+                                id="showcase-video"
+                                videoid="PLACEHOLDER_VIDEO_ID"
+                                style="width: 100%; border-radius: 8px;">
+                            </lite-youtube>
                         </div>
                     </div>
 
@@ -374,44 +375,35 @@
                     <div class="video-section">
                         <h3 id="video-1-heading">🎥 Video 1</h3>
                         <div class="youtube-container">
-                            <iframe id="youtube-video" 
-                                    width="100%" 
-                                    height="315" 
-                                    src="" 
-                                    frameborder="0" 
-                                    allow="autoplay; encrypted-media" 
-                                    allowfullscreen>
-                            </iframe>
+                            <lite-youtube
+                                id="youtube-video"
+                                videoid=""
+                                style="width: 100%;">
+                            </lite-youtube>
                         </div>
                     </div>
-                    
+
                     <!-- Video Section 2 (School and Khajaghar 2) -->
                     <div id="video-2-section" class="video-section" style="display: none;">
                         <h3 id="video-2-heading">🎥 Video 2</h3>
                         <div class="youtube-container">
-                            <iframe id="second-video" 
-                                    width="100%" 
-                                    height="315" 
-                                    src="" 
-                                    frameborder="0" 
-                                    allow="autoplay; encrypted-media" 
-                                    allowfullscreen>
-                            </iframe>
+                            <lite-youtube
+                                id="second-video"
+                                videoid=""
+                                style="width: 100%;">
+                            </lite-youtube>
                         </div>
                     </div>
-                    
+
                     <!-- Video Section 3 (Khajaghar 2 only) -->
                     <div id="video-3-section" class="video-section" style="display: none;">
                         <h3 id="video-3-heading">🎥 Video 3</h3>
                         <div class="youtube-container">
-                            <iframe id="third-video" 
-                                    width="100%" 
-                                    height="315" 
-                                    src="" 
-                                    frameborder="0" 
-                                    allow="autoplay; encrypted-media" 
-                                    allowfullscreen>
-                            </iframe>
+                            <lite-youtube
+                                id="third-video"
+                                videoid=""
+                                style="width: 100%;">
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -487,6 +479,7 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.0/src/lite-yt-embed.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

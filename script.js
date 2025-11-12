@@ -1,3 +1,67 @@
+// ==========================================
+// YOUTUBE VIDEO ID CONFIGURATION
+// ==========================================
+// Replace these placeholder IDs with your actual YouTube video IDs after uploading
+// To get video ID: Upload to YouTube (unlisted) -> Share -> Copy the ID from the URL
+// Example: https://youtube.com/watch?v=ABC123XYZ -> Video ID is "ABC123XYZ"
+
+const YOUTUBE_VIDEO_IDS = {
+    // INTRO VIDEOS
+    bhimdhunga_intro: 'BHIMDHUNGA_INTRO_VIDEO_ID',  // Main intro video
+    age_intro: 'AGE_INTRO_VIDEO_ID',                 // Age journey intro video
+
+    // PARTICIPANT INTERVIEW VIDEOS (Main showcase videos)
+    maili_tamang: 'MAILI_TAMANG_VIDEO_ID',           // Maili Tamang (58) - Street Interview 3
+    sunita_tamang: 'SUNITA_TAMANG_VIDEO_ID',         // Sunita Tamang (45) - Khajaghar 1
+    principal: 'PRINCIPAL_VIDEO_ID',                 // Principal Shyam Krishna Bhattarai (52)
+    aman_tamang: 'AMAN_TAMANG_VIDEO_ID',             // Aman Tamang (18) - Khajaghar 2
+    tej_lama: 'TEJ_LAMA_VIDEO_ID',                   // Tej Lama - additional participant
+
+    // ADDITIONAL LOCATION VIDEOS
+    // Street Interviews
+    street_interview_1: 'STREET_INTERVIEW_1_VIDEO_ID',
+    street_interview_2: 'STREET_INTERVIEW_2_VIDEO_ID',
+
+    // Khajaghar (Tea Shop) Videos
+    khajaghar_1_video1: 'KHAJAGHAR_1_VIDEO_1_ID',
+    khajaghar_1_video2: 'KHAJAGHAR_1_VIDEO_2_ID',
+    khajaghar_2_video1: 'KHAJAGHAR_2_VIDEO_1_ID',
+    khajaghar_2_video2: 'KHAJAGHAR_2_VIDEO_2_ID',
+    khajaghar_2_video3: 'KHAJAGHAR_2_VIDEO_3_ID',
+
+    // School Videos
+    school_video1: 'SCHOOL_VIDEO_1_ID',
+    school_video2: 'SCHOOL_VIDEO_2_ID',
+
+    // Houses and other locations
+    house_bijaya: 'HOUSE_BIJAYA_VIDEO_ID',
+    house_samjhana: 'HOUSE_SAMJHANA_VIDEO_ID',
+};
+
+// Helper function to set YouTube video ID on lite-youtube element
+function setYouTubeVideo(elementId, videoKey) {
+    const element = document.getElementById(elementId);
+    if (element && YOUTUBE_VIDEO_IDS[videoKey]) {
+        element.setAttribute('videoid', YOUTUBE_VIDEO_IDS[videoKey]);
+        // Also update background image for better loading experience
+        element.style.backgroundImage = `url('https://i.ytimg.com/vi/${YOUTUBE_VIDEO_IDS[videoKey]}/maxresdefault.jpg')`;
+    }
+}
+
+// Helper function to generate lite-youtube HTML
+function generateLiteYouTubeHTML(videoKey, customParams = '') {
+    const videoId = YOUTUBE_VIDEO_IDS[videoKey] || 'PLACEHOLDER_VIDEO_ID';
+    const params = customParams || 'rel=0&modestbranding=1';
+
+    return `
+        <lite-youtube
+            videoid="${videoId}"
+            params="${params}"
+            style="width: 100%; max-width: 100%; border-radius: 8px; background-image: url('https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg');">
+        </lite-youtube>
+    `;
+}
+
 // Initialize map with wide view of Nepal for cinematic zoom-in
 const map = L.map('map').setView([28.1, 84.1], 7);
 
@@ -2705,19 +2769,16 @@ function playAgeIntroVideo() {
         return;
     }
     
-    // Update video source
-    cinematicVideo.src = 'video/intro/Age intro.mp4';
-    console.log('Video source set to:', cinematicVideo.src);
-    
+    // Update video source - using lite-youtube-embed
+    setYouTubeVideo('cinematic-video', 'age_intro');
+
     // Show video overlay
     videoOverlay.style.display = 'flex';
     videoOverlay.classList.add('video-fade-in');
-    
-    // Try to play with audio (modern browsers may block this)
-    cinematicVideo.currentTime = 0;
-    cinematicVideo.muted = false;
-    
-    const playPromise = cinematicVideo.play();
+
+    // Note: lite-youtube-embed handles autoplay automatically via params
+    // No need to call play() - it will show a thumbnail and play on click
+    const playPromise = Promise.resolve(); // Keep for compatibility with existing code
     
     if (playPromise !== undefined) {
         playPromise.then(() => {
@@ -3913,37 +3974,23 @@ function playAgeIntroVideoForStoryMode() {
         return;
     }
     
-    // Update video source
-    cinematicVideo.src = 'video/intro/Age intro.mp4';
-    
+    // Update video source - using lite-youtube-embed
+    setYouTubeVideo('cinematic-video', 'age_intro');
+
     // Show video overlay
     videoOverlay.style.display = 'flex';
-    
-    // Try to play with audio (with fallback)
-    cinematicVideo.currentTime = 0;
-    cinematicVideo.muted = false;
-    
-    const playPromise = cinematicVideo.play();
-    
-    if (playPromise !== undefined) {
-        playPromise.then(() => {
-            console.log('Age intro video started playing');
-        }).catch(e => {
-            console.warn('Autoplay with audio failed, trying muted:', e);
-            cinematicVideo.muted = true;
-            cinematicVideo.play().catch(e2 => {
-                console.error('Video playback failed completely:', e2);
-                unlockFirstCharacter(); // Fallback
-            });
-        });
-    }
-    
-    // When video ends, unlock first character
-    cinematicVideo.onended = () => {
+
+    // Note: lite-youtube-embed handles playback automatically
+    // Video will show thumbnail and play on user click
+
+    // Since lite-youtube doesn't support onended event in the same way,
+    // we'll need to set a timeout or let the user manually proceed
+    // For now, we'll unlock the character after typical video duration (skip button still available)
+    setTimeout(() => {
         console.log('Age intro video ended, unlocking Maili');
         hideVideoOverlay();
         unlockFirstCharacter();
-    };
+    }, 60000); // 60 seconds - adjust based on actual video length
     
     // Skip button functionality
     skipButton.onclick = () => {

@@ -23,6 +23,18 @@ venv/
 *.key
 CLAUDE.md
 
-#files
+# Files
 transcript/
 interviews/
+
+# Video files (now hosted on YouTube)
+video/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Large media files
+*.zip
+*.tar.gz
