@@ -2084,11 +2084,11 @@ function showNavbar() {
 function openPopup(house) {
     document.getElementById('popup-title').textContent = house.title;
 
-    // Update location information - fall back to the resident's name/role so the
-    // header subtitle always reflects who is shown (houses don't define
-    // locationName/interviewCount, which previously left the header blank)
-    document.getElementById('location-name').textContent = house.locationName || house.story?.resident || '';
-    document.getElementById('interview-count').textContent = house.interviewCount || house.profile?.role || '';
+    // Update location information
+    // (Houses intentionally keep a clean header with no subtitle - the resident's
+    // name/role is shown in the profile body, not repeated under the title.)
+    document.getElementById('location-name').textContent = house.locationName || '';
+    document.getElementById('interview-count').textContent = house.interviewCount || '';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
