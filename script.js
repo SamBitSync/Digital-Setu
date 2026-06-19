@@ -1616,11 +1616,19 @@ function openStreetInterviewPopup(location) {
     
     // Update profile section - check for specific participants
     if (location.name === 'Street Interview 3') {
+        // Update header for Maili
+        document.getElementById('location-name').textContent = 'Maili Tamang';
+        document.getElementById('interview-count').textContent = '58-year-old widow from Majhuwa';
+
         document.getElementById('resident-headshot').src = 'interviews/street interview/street interview 3/Maili Tamang.JPG';
         document.getElementById('resident-name').textContent = 'Maili Tamang';
         document.getElementById('resident-role').textContent = '58-year-old widow from Majhuwa';
         document.getElementById('resident-description').textContent = 'Lives contentedly without smartphones - believes she\'s past the age for learning new technology but is at peace with traditional methods.';
     } else if (location.name === 'Street Interview 2') {
+        // Update header for Bijay
+        document.getElementById('location-name').textContent = 'Bijay Tamang';
+        document.getElementById('interview-count').textContent = '17-year-old college student';
+
         document.getElementById('resident-headshot').src = 'photos/headshots/Bijay_tamang.png';
         document.getElementById('resident-name').textContent = 'Bijay Tamang';
         document.getElementById('resident-role').textContent = '17-year-old college student';
@@ -1787,6 +1795,11 @@ function openKhajagharPopup(location) {
     // Check if this is Thaple Khajaghar (formerly Khajaghar 2) or Majuwa Khajaghar
     if (location.name === "Khajaghar 2" || location.name === "Thaple Khajaghar") {
         // Thaple Khajaghar - Aman Tamang (Grade 12 Hotel Management student)
+
+        // Update header for Aman
+        document.getElementById('location-name').textContent = 'Aman Tamang';
+        document.getElementById('interview-count').textContent = 'Grade 12 Hotel Management Student';
+
         document.getElementById('resident-headshot').src = 'photos/headshots/Aman Tamang.png';
         document.getElementById('resident-name').textContent = 'Aman Tamang';
         document.getElementById('resident-role').textContent = 'Grade 12 Hotel Management Student';
