@@ -1637,6 +1637,11 @@ function openStreetInterviewPopup(location) {
         // Use elegant placeholder instead of generic placeholder.com
         const headshotContainer = document.querySelector('.headshot-container');
         headshotContainer.innerHTML = createHeadshotPlaceholder('fa-microphone');
+
+        // Update header to match the participant shown in the body
+        document.getElementById('location-name').textContent = 'Samjhana Lama';
+        document.getElementById('interview-count').textContent = 'Street Interview Participant';
+
         document.getElementById('resident-name').textContent = 'Samjhana Lama';
         document.getElementById('resident-role').textContent = 'Street Interview Participants';
         document.getElementById('resident-description').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community.';
@@ -2078,10 +2083,12 @@ function showNavbar() {
 // Function to open popup with digital divide story
 function openPopup(house) {
     document.getElementById('popup-title').textContent = house.title;
-    
-    // Update location information
-    document.getElementById('location-name').textContent = house.locationName || '';
-    document.getElementById('interview-count').textContent = house.interviewCount || '';
+
+    // Update location information - fall back to the resident's name/role so the
+    // header subtitle always reflects who is shown (houses don't define
+    // locationName/interviewCount, which previously left the header blank)
+    document.getElementById('location-name').textContent = house.locationName || house.story?.resident || '';
+    document.getElementById('interview-count').textContent = house.interviewCount || house.profile?.role || '';
     
     // Update access level badge
     const accessBadge = document.getElementById('access-badge');
