@@ -85,6 +85,62 @@ let markerReferences = {
     areas: []
 };
 
+// Helper function to create iframe with loading spinner
+function createIframeWithSpinner(src, width = "100%", height = "315", allow = "autoplay") {
+    const uniqueId = 'iframe_' + Math.random().toString(36).substr(2, 9);
+    return `
+        <div class="video-loading-container">
+            <div class="video-loading-spinner" id="spinner_${uniqueId}">
+                <div class="spinner"></div>
+                <div class="loading-text">Loading video...</div>
+                <div class="loading-subtext">Please wait a moment</div>
+            </div>
+            <iframe id="${uniqueId}"
+                    src="${src}"
+                    width="${width}"
+                    height="${height}"
+                    frameborder="0"
+                    allow="${allow}"
+                    onload="document.getElementById('spinner_${uniqueId}').classList.add('hidden')">
+            </iframe>
+        </div>
+    `;
+}
+
+// Create placeholder for missing headshot with elegant styling
+function createHeadshotPlaceholder(icon = 'fa-user') {
+    return `<div class="headshot-placeholder">
+        <i class="fa-solid ${icon}"></i>
+    </div>`;
+}
+
+// Create placeholder for missing video with elegant empty state
+function createVideoPlaceholder(message = 'Video not available', subtext = 'Check back later') {
+    return `<div class="video-placeholder">
+        <i class="fa-solid fa-video-slash"></i>
+        <div class="video-placeholder-text">${message}</div>
+        <div class="video-placeholder-subtext">${subtext}</div>
+    </div>`;
+}
+
+// Smooth transition helper - adds fade animation to modal content
+function smoothModalTransition() {
+    const popupBody = document.querySelector('.popup-body');
+    if (popupBody) {
+        // Remove animation to reset
+        popupBody.style.animation = 'none';
+        // Force reflow
+        void popupBody.offsetWidth;
+        // Add animation back
+        popupBody.style.animation = 'contentFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+    }
+    // Scroll to top smoothly
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
 // Async function to load official Nepal government boundaries including disputed territories
 async function loadGeographicBoundaries() {
     console.log('Starting to load official Nepal government boundaries...');
@@ -1518,13 +1574,16 @@ function openShopPopup() {
     
     // Hide statistics section for Kirna Shop
     document.getElementById('resident-stats').style.display = 'none';
-    
+
     modal.style.display = 'block';
     modal.classList.add('show');
     document.getElementById('map').classList.add('map-with-panel');
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+
+    // Add smooth transition animation
+    smoothModalTransition();
 }
 
 // Function to open Street Interview popup
@@ -1567,7 +1626,9 @@ function openStreetInterviewPopup(location) {
         document.getElementById('resident-role').textContent = '17-year-old college student';
         document.getElementById('resident-description').textContent = '17-year-old college student living with parents and younger sister (9-10). Only he and father regularly use mobile phones. Area has decent wifi coverage with about 50% of homes connected. Experienced online scam losing 8-11k rupees buying FreeFire gaming account.';
     } else {
-        document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/6366f1/ffffff?text=🎤';
+        // Use elegant placeholder instead of generic placeholder.com
+        const headshotContainer = document.querySelector('.headshot-container');
+        headshotContainer.innerHTML = createHeadshotPlaceholder('fa-microphone');
         document.getElementById('resident-name').textContent = 'Samjhana Lama';
         document.getElementById('resident-role').textContent = 'Street Interview Participants';
         document.getElementById('resident-description').textContent = 'Street-level conversations capture spontaneous insights about digital access, mobile data usage, and how people navigate digital services while moving through their community.';
@@ -1678,7 +1739,10 @@ function openStreetInterviewPopup(location) {
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
-    
+
+    // Add smooth transition animation
+    smoothModalTransition();
+
     // Check if story mode is active and start viewing timer
     checkAndStartStoryModeViewing(location);
 }
@@ -1703,9 +1767,10 @@ function openKhajagharPopup(location) {
     document.getElementById('resident-content').style.display = 'block';
     document.getElementById('foundation-content').style.display = 'none';
     document.getElementById('resident-stats').style.display = 'block';
-    
-    // Update profile section
-    document.getElementById('resident-headshot').src = 'https://via.placeholder.com/120x120/dc2626/ffffff?text=☕';
+
+    // Update profile section - use elegant placeholder instead of placeholder.com
+    const headshotContainer = document.querySelector('.headshot-container');
+    headshotContainer.innerHTML = createHeadshotPlaceholder('fa-mug-hot');
     document.getElementById('resident-name').textContent = 'Tea Shop Owner';
     document.getElementById('resident-role').textContent = 'Community Hub Keeper';
     document.getElementById('resident-description').textContent = 'Traditional khajaghar serve as important social spaces where community members share information about digital services, help each other with online forms, and discuss the challenges of adapting to digital systems.';
@@ -1819,7 +1884,10 @@ function openKhajagharPopup(location) {
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
-    
+
+    // Add smooth transition animation
+    smoothModalTransition();
+
     // Check if story mode is active and start viewing timer
     checkAndStartStoryModeViewing(location);
 }
@@ -1890,13 +1958,16 @@ function openSchoolPopup() {
     document.getElementById('monthly-cost').textContent = 'Institutional internet';
     document.getElementById('digital-skills').textContent = 'Late adopter, cautious learner';
     document.getElementById('online-services').textContent = 'Educational tools, basic communication';
-    
+
     modal.style.display = 'block';
     modal.classList.add('show');
     document.getElementById('map').classList.add('map-with-panel');
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+
+    // Add smooth transition animation
+    smoothModalTransition();
 }
 
 // Function to open Ward Office popup
@@ -1968,13 +2039,16 @@ function openWardOfficePopup() {
     
     // Hide statistics section for ward office
     document.getElementById('resident-stats').style.display = 'none';
-    
+
     modal.style.display = 'block';
     modal.classList.add('show');
     document.getElementById('map').classList.add('map-with-panel');
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+
+    // Add smooth transition animation
+    smoothModalTransition();
 }
 
 // Function to hide/show navbar
@@ -2017,7 +2091,13 @@ function openPopup(house) {
     document.getElementById('resident-stats').style.display = 'block';
     
     // Update profile section
-    document.getElementById('resident-headshot').src = house.profile?.headshot || 'https://via.placeholder.com/120x120/e2e8f0/64748b?text=Photo';
+    if (house.profile?.headshot) {
+        document.getElementById('resident-headshot').src = house.profile.headshot;
+    } else {
+        // Use elegant placeholder if no headshot available
+        const headshotContainer = document.querySelector('.headshot-container');
+        headshotContainer.innerHTML = createHeadshotPlaceholder('fa-house');
+    }
     document.getElementById('resident-name').textContent = house.story.resident || 'Resident Name';
     document.getElementById('resident-role').textContent = house.profile?.role || 'Community Member';
     document.getElementById('resident-description').textContent = house.profile?.description || house.story.testimonial || '[Profile description to be added]';
@@ -2086,6 +2166,9 @@ function openPopup(house) {
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+
+    // Add smooth transition animation
+    smoothModalTransition();
 }
 
 // Function to handle foundation-specific popup content
@@ -2164,13 +2247,16 @@ function openFoundationPopup(house) {
         `;
         projectsGrid.appendChild(projectDiv);
     });
-    
+
     modal.style.display = 'block';
     modal.classList.add('show');
     document.getElementById('map').classList.add('map-with-panel');
     setTimeout(() => {
         map.invalidateSize();
     }, 300);
+
+    // Add smooth transition animation
+    smoothModalTransition();
 }
 
 // Close modal when clicking X
